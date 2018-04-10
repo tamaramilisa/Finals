@@ -1,0 +1,60 @@
+PODS:
+  - Alamofire (4.6.0)
+  - Differentiator (3.0.2)
+  - EssentialPod (0.3.5)
+  - Realm (3.0.2):
+    - Realm/Headers (= 3.0.2)
+  - Realm/Headers (3.0.2)
+  - RealmSwift (3.0.2):
+    - Realm (= 3.0.2)
+  - RxAlamofire (4.0.0):
+    - RxAlamofire/Core (= 4.0.0)
+  - RxAlamofire/Core (4.0.0):
+    - Alamofire (~> 4.5)
+    - RxSwift (~> 4.0)
+  - RxCocoa (4.1.0):
+    - RxSwift (~> 4.0)
+  - RxDataSources (3.0.2):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxRealm (0.7.5):
+    - RealmSwift (~> 3.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - EssentialPod (from `git@bitbucket.org:degordianmobile/essentialpod.git`, branch `swift4`)
+  - Realm
+  - RxAlamofire
+  - RxCocoa
+  - RxDataSources
+  - RxRealm
+  - RxSwift
+
+EXTERNAL SOURCES:
+  EssentialPod:
+    :branch: swift4
+    :git: git@bitbucket.org:degordianmobile/essentialpod.git
+
+CHECKOUT OPTIONS:
+  EssentialPod:
+    :commit: 6e7de2b97007605967810926296edca86b83d6ec
+    :git: git@bitbucket.org:degordianmobile/essentialpod.git
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
+  EssentialPod: f86ac3434e44e439c9d16648120d4ccc24af98c6
+  Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
+  RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
+  RxAlamofire: 6ea579ac53bf14cb4bc7049a3866e5a769989b1d
+  RxCocoa: cc1fec49cdc8fabe645964de7c51c099a36c2aa8
+  RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
+  RxRealm: a6c6c0a07cb61f34209969ca6657734edfdfff30
+  RxSwift: 4219941c1244c88002901bd87a69d3aea9ae71f0
+
+PODFILE CHECKSUM: b17df4c9324e4aadba7efed36a0f8e58e56430e6
+
+COCOAPODS: 1.3.1

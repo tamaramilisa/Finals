@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32812193207CF1CC00FF4A23 /* AlamofireNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32812192207CF1CC00FF4A23 /* AlamofireNetworking.swift */; };
 		32D34593207CD1B8003CFC7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D34592207CD1B8003CFC7B /* AppDelegate.swift */; };
 		32D3459A207CD1B8003CFC7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32D34599207CD1B8003CFC7B /* Assets.xcassets */; };
 		32D3459D207CD1B9003CFC7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32D3459B207CD1B9003CFC7B /* LaunchScreen.storyboard */; };
 		32D345A8207CD3F9003CFC7B /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D345A5207CD3F8003CFC7B /* BasePresenter.swift */; };
 		32D345A9207CD3F9003CFC7B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D345A6207CD3F8003CFC7B /* BaseViewController.swift */; };
 		32D345AA207CD3F9003CFC7B /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D345A7207CD3F8003CFC7B /* BaseViewModel.swift */; };
-		32D345B6207CD537003CFC7B /* AlamofireNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D345B5207CD536003CFC7B /* AlamofireNetworking.swift */; };
 		32D345B8207CD55B003CFC7B /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D345B7207CD55B003CFC7B /* NavigationService.swift */; };
 		32D345BA207CD563003CFC7B /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D345B9207CD563003CFC7B /* RequestError.swift */; };
 		32D345BC207CD705003CFC7B /* NetworkRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D345BB207CD705003CFC7B /* NetworkRequestHandler.swift */; };
@@ -21,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32812192207CF1CC00FF4A23 /* AlamofireNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireNetworking.swift; sourceTree = "<group>"; };
 		32D3458F207CD1B8003CFC7B /* Finals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32D34592207CD1B8003CFC7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32D34599207CD1B8003CFC7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -29,7 +30,6 @@
 		32D345A5207CD3F8003CFC7B /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		32D345A6207CD3F8003CFC7B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		32D345A7207CD3F8003CFC7B /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
-		32D345B5207CD536003CFC7B /* AlamofireNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlamofireNetworking.swift; path = ../../../../Degordian_projects/mvvmgenerator/AlamofireNetworking.swift; sourceTree = "<group>"; };
 		32D345B7207CD55B003CFC7B /* NavigationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
 		32D345B9207CD563003CFC7B /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		32D345BB207CD705003CFC7B /* NetworkRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestHandler.swift; sourceTree = "<group>"; };
@@ -96,8 +96,8 @@
 		32D345AB207CD453003CFC7B /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				32812192207CF1CC00FF4A23 /* AlamofireNetworking.swift */,
 				32D345B4207CD4A6003CFC7B /* NetworkModels */,
-				32D345B5207CD536003CFC7B /* AlamofireNetworking.swift */,
 				32D345BB207CD705003CFC7B /* NetworkRequestHandler.swift */,
 			);
 			path = Networking;
@@ -293,7 +293,7 @@
 				32D34593207CD1B8003CFC7B /* AppDelegate.swift in Sources */,
 				32D345B8207CD55B003CFC7B /* NavigationService.swift in Sources */,
 				32D345AA207CD3F9003CFC7B /* BaseViewModel.swift in Sources */,
-				32D345B6207CD537003CFC7B /* AlamofireNetworking.swift in Sources */,
+				32812193207CF1CC00FF4A23 /* AlamofireNetworking.swift in Sources */,
 				32D345A8207CD3F9003CFC7B /* BasePresenter.swift in Sources */,
 				32D345A9207CD3F9003CFC7B /* BaseViewController.swift in Sources */,
 				32D345BC207CD705003CFC7B /* NetworkRequestHandler.swift in Sources */,

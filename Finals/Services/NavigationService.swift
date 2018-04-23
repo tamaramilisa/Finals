@@ -16,6 +16,27 @@ struct NavigationService {
 	var rootStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
 	mutating func initWithScreen(window: UIWindow) {
-		
+//        let viewController: LoginViewController = controllerFactory(ViewModelType: LoginViewModel.self, PresenterType: LoginPresenter.self, storyboard: rootStoryboard)
+        
+//        rootNavigationController = RootNavigationController(rootViewController: viewController)
+//        window.rootViewController = rootNavigationController
 	}
+    
+    func pushToLoginScreen(navigationController: UINavigationController?, registration: Bool, fromWelcome: Bool, animated: Bool = true) {
+//        let viewController: LoginViewController = controllerFactory(ViewModelType: LoginViewModel.self, PresenterType: LoginPresenter.self, storyboard: rootStoryboard)
+//
+//        if registration == true {
+//            viewController.registerAppearance = true
+//        }
+//
+//        if fromWelcome == true {
+//            viewController.fromWelcome = true
+//        }
+//
+//        viewController.hidesBottomBarWhenPushed = true
+//        navigationController?.isNavigationBarHidden = false
+//        navigationController?.pushViewController(viewController, animated: animated)
+    }
+
+
 }

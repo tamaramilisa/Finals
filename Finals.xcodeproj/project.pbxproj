@@ -17,6 +17,7 @@
 		32D345B8207CD55B003CFC7B /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D345B7207CD55B003CFC7B /* NavigationService.swift */; };
 		32D345BA207CD563003CFC7B /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D345B9207CD563003CFC7B /* RequestError.swift */; };
 		32D345BC207CD705003CFC7B /* NetworkRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D345BB207CD705003CFC7B /* NetworkRequestHandler.swift */; };
+		32EC491A208E3BE300F89BB2 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EC4919208E3BE300F89BB2 /* RootNavigationController.swift */; };
 		9BF3D7D12FBADCCA2F6B6153 /* Pods_Finals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B2FEA4C594DDA4E012331D5 /* Pods_Finals.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		32D345B7207CD55B003CFC7B /* NavigationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
 		32D345B9207CD563003CFC7B /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		32D345BB207CD705003CFC7B /* NetworkRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestHandler.swift; sourceTree = "<group>"; };
+		32EC4919208E3BE300F89BB2 /* RootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
 		45A7A415B60F798BD152991E /* Pods-Finals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finals.release.xcconfig"; path = "Pods/Target Support Files/Pods-Finals/Pods-Finals.release.xcconfig"; sourceTree = "<group>"; };
 		6B2FEA4C594DDA4E012331D5 /* Pods_Finals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Finals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2984C12BA263CE21A9E5261 /* Pods-Finals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finals.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Finals/Pods-Finals.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				32D345AC207CD45D003CFC7B /* Services */,
 				32D345AB207CD453003CFC7B /* Networking */,
 				32D345A4207CD3E0003CFC7B /* BaseClasses */,
+				32EC4918208E3BCA00F89BB2 /* TopContollers */,
 				32D34592207CD1B8003CFC7B /* AppDelegate.swift */,
 				32D34599207CD1B8003CFC7B /* Assets.xcassets */,
 				32D3459B207CD1B9003CFC7B /* LaunchScreen.storyboard */,
@@ -124,6 +127,14 @@
 				32D345B9207CD563003CFC7B /* RequestError.swift */,
 			);
 			path = NetworkModels;
+			sourceTree = "<group>";
+		};
+		32EC4918208E3BCA00F89BB2 /* TopContollers */ = {
+			isa = PBXGroup;
+			children = (
+				32EC4919208E3BE300F89BB2 /* RootNavigationController.swift */,
+			);
+			path = TopContollers;
 			sourceTree = "<group>";
 		};
 		DC497779F9C16AF8B4943CB7 /* Pods */ = {
@@ -291,6 +302,7 @@
 			files = (
 				32D345BA207CD563003CFC7B /* RequestError.swift in Sources */,
 				32D34593207CD1B8003CFC7B /* AppDelegate.swift in Sources */,
+				32EC491A208E3BE300F89BB2 /* RootNavigationController.swift in Sources */,
 				32D345B8207CD55B003CFC7B /* NavigationService.swift in Sources */,
 				32D345AA207CD3F9003CFC7B /* BaseViewModel.swift in Sources */,
 				32812193207CF1CC00FF4A23 /* AlamofireNetworking.swift in Sources */,

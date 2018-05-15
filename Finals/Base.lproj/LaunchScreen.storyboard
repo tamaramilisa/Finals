@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,15 +22,15 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globe-md" translatesAutoresizingMaskIntoConstraints="NO" id="1ag-z3-hJh">
-                                        <rect key="frame" x="15" y="15" width="345" height="617"/>
+                                        <rect key="frame" x="50" y="50" width="275" height="547"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="1ag-z3-hJh" secondAttribute="trailing" constant="15" id="Z8N-i5-R4m"/>
-                                    <constraint firstAttribute="bottom" secondItem="1ag-z3-hJh" secondAttribute="bottom" constant="15" id="enb-Wd-5A5"/>
-                                    <constraint firstItem="1ag-z3-hJh" firstAttribute="top" secondItem="EWJ-aL-EQo" secondAttribute="top" constant="15" id="ogR-1k-SDN"/>
-                                    <constraint firstItem="1ag-z3-hJh" firstAttribute="leading" secondItem="EWJ-aL-EQo" secondAttribute="leading" constant="15" id="pGg-qq-CLu"/>
+                                    <constraint firstAttribute="trailing" secondItem="1ag-z3-hJh" secondAttribute="trailing" constant="50" id="Z8N-i5-R4m"/>
+                                    <constraint firstAttribute="bottom" secondItem="1ag-z3-hJh" secondAttribute="bottom" constant="50" id="enb-Wd-5A5"/>
+                                    <constraint firstItem="1ag-z3-hJh" firstAttribute="top" secondItem="EWJ-aL-EQo" secondAttribute="top" constant="50" id="ogR-1k-SDN"/>
+                                    <constraint firstItem="1ag-z3-hJh" firstAttribute="leading" secondItem="EWJ-aL-EQo" secondAttribute="leading" constant="50" id="pGg-qq-CLu"/>
                                 </constraints>
                             </view>
                         </subviews>

@@ -7,3 +7,22 @@
 //
 
 import Foundation
+import RxSwift
+import Alamofire
+//import FBSDKLoginKit
+
+class LoginViewModel: BaseViewModel {
+    
+    var navigationService: NavigationService!
+    var networking: AlamofireNetworking!
+//    var realmManager = RealmManager()
+    
+    required init() {}
+    
+//    func logout() {
+//        GIDSignIn.sharedInstance().signOut()
+//        let manager = FBSDKLoginManager()
+//        manager.logOut()
+//    }
+    
+}

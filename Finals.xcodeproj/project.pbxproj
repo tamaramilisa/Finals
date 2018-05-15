@@ -21,6 +21,8 @@
 		321D26FD2098C5960089B2E0 /* LearnSinglePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321D26FC2098C5960089B2E0 /* LearnSinglePresenter.swift */; };
 		321D26FF2098C6430089B2E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321D26FE2098C6430089B2E0 /* Main.storyboard */; };
 		32812193207CF1CC00FF4A23 /* AlamofireNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32812192207CF1CC00FF4A23 /* AlamofireNetworking.swift */; };
+		329F002520AB36390018466D /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 329F002420AB36380018466D /* TPKeyboardAvoidingScrollView.m */; };
+		329F002820AB391D0018466D /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 329F002720AB391D0018466D /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		32D34593207CD1B8003CFC7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D34592207CD1B8003CFC7B /* AppDelegate.swift */; };
 		32D3459A207CD1B8003CFC7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32D34599207CD1B8003CFC7B /* Assets.xcassets */; };
 		32D3459D207CD1B9003CFC7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32D3459B207CD1B9003CFC7B /* LaunchScreen.storyboard */; };
@@ -49,6 +51,11 @@
 		321D26FC2098C5960089B2E0 /* LearnSinglePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnSinglePresenter.swift; sourceTree = "<group>"; };
 		321D26FE2098C6430089B2E0 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		32812192207CF1CC00FF4A23 /* AlamofireNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireNetworking.swift; sourceTree = "<group>"; };
+		329F002220AB362F0018466D /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		329F002320AB36380018466D /* Finals-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Finals-Bridging-Header.h"; sourceTree = "<group>"; };
+		329F002420AB36380018466D /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		329F002620AB38EE0018466D /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		329F002720AB391D0018466D /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		32D3458F207CD1B8003CFC7B /* Finals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32D34592207CD1B8003CFC7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32D34599207CD1B8003CFC7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -138,6 +145,11 @@
 		3247F15220A97A40000791F4 /* TPKeyboardAvoiding */ = {
 			isa = PBXGroup;
 			children = (
+				329F002220AB362F0018466D /* TPKeyboardAvoidingScrollView.h */,
+				329F002420AB36380018466D /* TPKeyboardAvoidingScrollView.m */,
+				329F002320AB36380018466D /* Finals-Bridging-Header.h */,
+				329F002620AB38EE0018466D /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				329F002720AB391D0018466D /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
 			);
 			path = TPKeyboardAvoiding;
 			sourceTree = "<group>";
@@ -284,6 +296,7 @@
 				TargetAttributes = {
 					32D3458E207CD1B8003CFC7B = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -402,6 +415,7 @@
 				321D26F92098C5700089B2E0 /* LearnSingleViewModel.swift in Sources */,
 				32D34593207CD1B8003CFC7B /* AppDelegate.swift in Sources */,
 				32EC491A208E3BE300F89BB2 /* RootNavigationController.swift in Sources */,
+				329F002820AB391D0018466D /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				32D345B8207CD55B003CFC7B /* NavigationService.swift in Sources */,
 				321D26EA2098C4D00089B2E0 /* MainViewModel.swift in Sources */,
 				32D345AA207CD3F9003CFC7B /* BaseViewModel.swift in Sources */,
@@ -413,6 +427,7 @@
 				321D26EE2098C4E80089B2E0 /* MainPresenter.swift in Sources */,
 				32D345A9207CD3F9003CFC7B /* BaseViewController.swift in Sources */,
 				321D26FD2098C5960089B2E0 /* LearnSinglePresenter.swift in Sources */,
+				329F002520AB36390018466D /* TPKeyboardAvoidingScrollView.m in Sources */,
 				321D26E02098C42B0089B2E0 /* LoginViewModel.swift in Sources */,
 				321D26F32098C53F0089B2E0 /* LearnListViewModel.swift in Sources */,
 				32D345BC207CD705003CFC7B /* NetworkRequestHandler.swift in Sources */,
@@ -546,6 +561,7 @@
 			baseConfigurationReference = A2984C12BA263CE21A9E5261 /* Pods-Finals.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VUF6AAECQH;
 				INFOPLIST_FILE = Finals/Info.plist;
@@ -553,6 +569,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tamara.Finals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Finals/Resources/TPKeyboardAvoiding/Finals-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -563,6 +581,7 @@
 			baseConfigurationReference = 45A7A415B60F798BD152991E /* Pods-Finals.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VUF6AAECQH;
 				INFOPLIST_FILE = Finals/Info.plist;
@@ -570,6 +589,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tamara.Finals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Finals/Resources/TPKeyboardAvoiding/Finals-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

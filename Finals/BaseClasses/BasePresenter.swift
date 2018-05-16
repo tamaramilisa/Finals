@@ -11,5 +11,5 @@ protocol BasePresenter {
 
 	init()
 
-	weak var baseViewController: BaseViewController! { get set }
+    var baseViewController: BaseViewController! { get set }
 }

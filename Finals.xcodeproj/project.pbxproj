@@ -33,6 +33,8 @@
 		32D345BA207CD563003CFC7B /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D345B9207CD563003CFC7B /* RequestError.swift */; };
 		32D345BC207CD705003CFC7B /* NetworkRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D345BB207CD705003CFC7B /* NetworkRequestHandler.swift */; };
 		32EC491A208E3BE300F89BB2 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EC4919208E3BE300F89BB2 /* RootNavigationController.swift */; };
+		32FFAB8220AC7A1100A5D9CB /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FFAB8120AC7A1100A5D9CB /* LoginTextField.swift */; };
+		32FFAB8520AC810600A5D9CB /* GeneralExstension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FFAB8420AC810600A5D9CB /* GeneralExstension.swift */; };
 		9BF3D7D12FBADCCA2F6B6153 /* Pods_Finals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B2FEA4C594DDA4E012331D5 /* Pods_Finals.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +70,8 @@
 		32D345B9207CD563003CFC7B /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		32D345BB207CD705003CFC7B /* NetworkRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestHandler.swift; sourceTree = "<group>"; };
 		32EC4919208E3BE300F89BB2 /* RootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
+		32FFAB8120AC7A1100A5D9CB /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		32FFAB8420AC810600A5D9CB /* GeneralExstension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralExstension.swift; sourceTree = "<group>"; };
 		45A7A415B60F798BD152991E /* Pods-Finals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finals.release.xcconfig"; path = "Pods/Target Support Files/Pods-Finals/Pods-Finals.release.xcconfig"; sourceTree = "<group>"; };
 		6B2FEA4C594DDA4E012331D5 /* Pods_Finals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Finals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2984C12BA263CE21A9E5261 /* Pods-Finals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finals.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Finals/Pods-Finals.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 				321D26DF2098C42B0089B2E0 /* LoginViewModel.swift */,
 				321D26E12098C4380089B2E0 /* LoginViewController.swift */,
 				321D26E32098C4440089B2E0 /* LoginPresenter.swift */,
+				32FFAB8020AC79FF00A5D9CB /* Views */,
 			);
 			path = LoginScreen;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 		32D34591207CD1B8003CFC7B /* Finals */ = {
 			isa = PBXGroup;
 			children = (
+				32FFAB8320AC80F500A5D9CB /* Extensions */,
 				3247F15120A97A28000791F4 /* Resources */,
 				32D345AD207CD463003CFC7B /* DatabaseManagment */,
 				32D345AC207CD45D003CFC7B /* Services */,
@@ -242,6 +248,22 @@
 				32EC4919208E3BE300F89BB2 /* RootNavigationController.swift */,
 			);
 			path = TopContollers;
+			sourceTree = "<group>";
+		};
+		32FFAB8020AC79FF00A5D9CB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				32FFAB8120AC7A1100A5D9CB /* LoginTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		32FFAB8320AC80F500A5D9CB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				32FFAB8420AC810600A5D9CB /* GeneralExstension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		DC497779F9C16AF8B4943CB7 /* Pods */ = {
@@ -418,6 +440,7 @@
 				329F002820AB391D0018466D /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				32D345B8207CD55B003CFC7B /* NavigationService.swift in Sources */,
 				321D26EA2098C4D00089B2E0 /* MainViewModel.swift in Sources */,
+				32FFAB8220AC7A1100A5D9CB /* LoginTextField.swift in Sources */,
 				32D345AA207CD3F9003CFC7B /* BaseViewModel.swift in Sources */,
 				321D26EC2098C4DD0089B2E0 /* MainViewController.swift in Sources */,
 				321D26F52098C54C0089B2E0 /* LearnListViewController.swift in Sources */,
@@ -426,6 +449,7 @@
 				321D26F72098C5570089B2E0 /* LearnListPresenter.swift in Sources */,
 				321D26EE2098C4E80089B2E0 /* MainPresenter.swift in Sources */,
 				32D345A9207CD3F9003CFC7B /* BaseViewController.swift in Sources */,
+				32FFAB8520AC810600A5D9CB /* GeneralExstension.swift in Sources */,
 				321D26FD2098C5960089B2E0 /* LearnSinglePresenter.swift in Sources */,
 				329F002520AB36390018466D /* TPKeyboardAvoidingScrollView.m in Sources */,
 				321D26E02098C42B0089B2E0 /* LoginViewModel.swift in Sources */,

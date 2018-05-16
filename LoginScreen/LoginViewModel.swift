@@ -19,10 +19,5 @@ class LoginViewModel: BaseViewModel {
     
     required init() {}
     
-//    func logout() {
-//        GIDSignIn.sharedInstance().signOut()
-//        let manager = FBSDKLoginManager()
-//        manager.logOut()
-//    }
     
 }

@@ -19,5 +19,4 @@ class LoginViewModel: BaseViewModel {
     
     required init() {}
     
-    
 }

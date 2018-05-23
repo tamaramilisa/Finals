@@ -27,15 +27,6 @@ class RootNavigationController: UINavigationController {
         navigationBar.shadowImage = UIImage()
         navigationBar.backIndicatorImage = UIImage()
         
-        addBarTintColor()
-    }
-    
-    func addBarTintColor() {
-//        let layer = CAGradientLayer()
-//        guard let firstColor = UIColor.AppColors.GradientOrangeSecondNavigationBar?.cgColor, let secondColor = UIColor.AppColors.GradientOrangeFirstNavigationBar?.cgColor else { return }
-//        layer.setHorizontalGradientForBounds(bounds: navigationBar.bounds, colors: [firstColor, secondColor])
-//        guard let image = layer.getImage() else { return }
-//        navigationBar.barTintColor = UIColor(patternImage: image)
     }
     
 }

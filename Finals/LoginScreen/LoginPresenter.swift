@@ -30,7 +30,7 @@ class LoginPresenter: BasePresenter {
         static var recoveryMailSent: String { get { return "Email za obnovu lozinke je uspješno poslan.".localized() } }
     }
     
-    required init() { }
+    required init() {}
     
     weak var baseViewController: BaseViewController!
     weak var viewController: LoginViewController! {
@@ -38,7 +38,7 @@ class LoginPresenter: BasePresenter {
     }
     
     func setUp() {
-        
+    
         let screenWidth = UIScreen.main.bounds.width
         
         addBorderToTextField(textField: viewController.nameTextField, corners: [UIRectCorner.topLeft, UIRectCorner.topRight], radius: 5)
@@ -86,7 +86,7 @@ class LoginPresenter: BasePresenter {
             viewController.signinButton.setTitle(LoginStatic.login.uppercased(), for: .normal)
         }
     }
-    
+
     func addRightView(textField: LoginTextField, text: String) {
         textField.rightViewMode = UITextFieldViewMode.never
         let label = UILabel(frame: CGRect(x: 0, y: 10, width: 180, height: 30))
@@ -96,25 +96,25 @@ class LoginPresenter: BasePresenter {
         label.textAlignment = NSTextAlignment.center
         textField.rightView = label
     }
-    
+
     func addBorderToTextField(textField: LoginTextField, corners: UIRectCorner, radius: CGFloat) {
         let screenWidth = UIScreen.main.bounds.width
         var height: CGFloat = viewController.stackView.frame.size.height/4 + 0.75
-        
+
         if textField == viewController.passwordTextField {
             height = viewController.stackView.frame.size.height/4 - 0.25
         }
         let frame = CGRect(x: textField.bounds.origin.x, y: textField.bounds.origin.y, width: screenWidth-32, height: height)
-        
+
         let maskLayer = CAShapeLayer()
         maskLayer.path = UIBezierPath(roundedRect: frame, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius)).cgPath
-        
+
         let borderLayer = CAShapeLayer()
         borderLayer.path = maskLayer.path
         borderLayer.fillColor = UIColor.clear.cgColor
         borderLayer.strokeColor = UIColor(red: 0/255, green: 144/255, blue: 81/255, alpha: 1).cgColor
         borderLayer.lineWidth = 1
-        
+
         textField.layer.sublayers?.first?.removeFromSuperlayer()
         textField.layer.mask = maskLayer
         textField.layer.addSublayer(borderLayer)

@@ -13,10 +13,15 @@ import RxCocoa
 //import NVActivityIndicatorView
 //import firebase
 
-class LoginViewController: BaseViewController, UITextFieldDelegate {
+class LoginViewController: BaseViewController , UITextFieldDelegate {
 
-    @IBOutlet weak var myNavigationItem: UINavigationItem!
-    @IBOutlet weak var navigationBar: UINavigationBar!
+    var viewModel: LoginViewModel! {
+        return baseViewModel as! LoginViewModel
+    }
+    var presenter: LoginPresenter! {
+        return basePresenter as! LoginPresenter
+    }
+    
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var underlineView: UIView!
@@ -34,21 +39,14 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     @IBOutlet weak var scrollViewTopPadding: NSLayoutConstraint!
     @IBOutlet weak var leadingGreenUnderlineView: NSLayoutConstraint!
     
-    var viewModel: LoginViewModel! {
-        return baseViewModel as! LoginViewModel
-    }
-    
-    var presenter: LoginPresenter! {
-        return basePresenter as! LoginPresenter
-    }
-    
     let bag = DisposeBag()
     var registerAppearance: Bool = false
+    var fromWelcome: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        presenter.setUp()
+        presenter.setUp()
         
         nameTextField.delegate = self
         lastNameTextField.delegate = self
@@ -62,14 +60,8 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = false
+        navigationController?.isNavigationBarHidden = true
         
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        
-//        presenter.setUp()
     }
     
     func handleLoginStatus() {
@@ -98,7 +90,7 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
             self.emptyLabel.isHidden = false
             self.presenter.addBorderToTextField(textField: self.emailTextField, corners: [UIRectCorner.topLeft, UIRectCorner.topRight], radius: 5)
             self.presenter.changeSignInButtonTitle(toRegister: false)
-//            self.clearAllTextFields()
+            self.clearAllTextFields()
             }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)
         
         
@@ -118,7 +110,7 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
             })
             self.presenter.addBorderToTextField(textField: self.emailTextField, corners: UIRectCorner.allCorners, radius: 0)
             self.presenter.changeSignInButtonTitle(toRegister: true)
-//            self.clearAllTextFields()
+            self.clearAllTextFields()
             }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)
         
         forgotPassButton.rx.tap.subscribe(onNext: { [weak self] () in
@@ -135,12 +127,12 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     
     func showAlertController() {
         let alertController = UIAlertController(title: LoginPresenter.LoginStatic.forgotPassTitle, message: LoginPresenter.LoginStatic.forgotPassMessage, preferredStyle: UIAlertControllerStyle.alert)
-        
+
         alertController.addTextField { (textField) in
             textField.placeholder = LoginPresenter.LoginStatic.alertEmailPlaceholder
             textField.keyboardType = UIKeyboardType.emailAddress
         }
-        
+
         let sendAction = UIAlertAction(title: LoginPresenter.LoginStatic.sendAction, style: UIAlertActionStyle.default) { [weak self] (action) in
             guard let `self` = self else { return }
             if let emailTextFieldText = alertController.textFields![0].text {
@@ -156,7 +148,7 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
         alertController.addAction(sendAction)
         let cancelAction = UIAlertAction(title: LoginPresenter.LoginStatic.cancelAction, style: UIAlertActionStyle.cancel, handler: nil)
         alertController.addAction(cancelAction)
-        
+
         self.present(alertController, animated: true, completion: nil)
     }
     

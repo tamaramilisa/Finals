@@ -2,6 +2,13 @@ PODS:
   - Alamofire (4.6.0)
   - Differentiator (3.0.2)
   - EssentialPod (0.3.5)
+  - NVActivityIndicatorView (4.1.1):
+    - NVActivityIndicatorView/Presenter (= 4.1.1)
+  - NVActivityIndicatorView/Presenter (4.1.1)
+  - ObjectMapper (3.1.0)
+  - ObjectMapper+Realm (0.5):
+    - ObjectMapper
+    - RealmSwift
   - Realm (3.0.2):
     - Realm/Headers (= 3.0.2)
   - Realm/Headers (3.0.2)
@@ -22,16 +29,22 @@ PODS:
     - RealmSwift (~> 3.0)
     - RxSwift (~> 4.0)
   - RxSwift (4.1.0)
+  - SVProgressHUD (2.2.2)
+  - Whisper (6.0.2)
 
 DEPENDENCIES:
   - Alamofire
   - EssentialPod (from `git@bitbucket.org:degordianmobile/essentialpod.git`, branch `swift4`)
+  - NVActivityIndicatorView
+  - ObjectMapper+Realm
   - Realm
   - RxAlamofire
   - RxCocoa
   - RxDataSources
   - RxRealm
   - RxSwift
+  - SVProgressHUD
+  - Whisper
 
 EXTERNAL SOURCES:
   EssentialPod:
@@ -47,6 +60,9 @@ SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
   EssentialPod: f86ac3434e44e439c9d16648120d4ccc24af98c6
+  NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  ObjectMapper+Realm: 3188789fb77c189c7a83cb625333a607eb61a08f
   Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
   RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
   RxAlamofire: 6ea579ac53bf14cb4bc7049a3866e5a769989b1d
@@ -54,7 +70,9 @@ SPEC CHECKSUMS:
   RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
   RxRealm: a6c6c0a07cb61f34209969ca6657734edfdfff30
   RxSwift: 4219941c1244c88002901bd87a69d3aea9ae71f0
+  SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  Whisper: 169760fc4bab0abf24d5529f9276f95c25cf1025
 
-PODFILE CHECKSUM: b17df4c9324e4aadba7efed36a0f8e58e56430e6
+PODFILE CHECKSUM: 8c5bd619d170ad7104814f93ddb434de37ec329b
 
 COCOAPODS: 1.3.1

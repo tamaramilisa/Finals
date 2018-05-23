@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-//import Whisper
+import Whisper
 import CoreLocation
 import MapKit
 import RxSwift
@@ -18,16 +18,16 @@ extension UIViewController {
     
     func announceError(error: String?) {
         if let errorMsg = error {
-//            let message = Announcement(title: errorMsg, subtitle: "", image: UIImage(named: "alert"), duration: 3, action: nil)
-//            Whisper.show(shout: message, to: self)
+            let message = Announcement(title: errorMsg, subtitle: "", image: UIImage(named: "alert"), duration: 3, action: nil)
+            Whisper.show(shout: message, to: self)
         }
     }
     
     
     func announceSuccess(success: String?) {
         if let successMsg = success {
-//            let message = Announcement(title: successMsg, subtitle: "", image: UIImage(named: "success-icon"), duration: 3, action: nil)
-//            Whisper.show(shout: message, to: self)
+            let message = Announcement(title: successMsg, subtitle: "", image: UIImage(named: "success-icon"), duration: 3, action: nil)
+            Whisper.show(shout: message, to: self)
         }
     }
 

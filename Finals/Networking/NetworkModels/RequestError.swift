@@ -7,9 +7,20 @@
 //
 
 import Foundation
+import ObjectMapper
 
-class RequestError: Codable, Error {
-
+class RequestError: Mappable, Error {
 	var message: String?
 
+    init(message: String) {
+        self.message = message
+    }
+    
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        message <- map["message"]
+    }
 }

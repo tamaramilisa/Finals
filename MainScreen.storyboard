@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="jif-QE-W69">
+            <objects>
+                <viewController id="OEI-YT-EG1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oir-Dg-B4q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globe-md" translatesAutoresizingMaskIntoConstraints="NO" id="tI1-KE-m12">
+                                <rect key="frame" x="0.0" y="100" width="375" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="999" constant="150" id="paZ-zO-O11"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9G-3h-b4w">
+                                <rect key="frame" x="24" y="310" width="327" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="uW8-os-yyy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="KATEGORIJE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6S-l7-ddq">
+                                <rect key="frame" x="24" y="410" width="327" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="kWQ-fg-5ol"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="MEDALJE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qKx-IA-tkX">
+                                <rect key="frame" x="309" y="28" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Z72-iB-2OU"/>
+                                    <constraint firstAttribute="width" constant="50" id="f5g-lT-uDA"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lvC-gs-dhM" firstAttribute="trailing" secondItem="tI1-KE-m12" secondAttribute="trailing" id="4Uf-O5-Pkg"/>
+                            <constraint firstItem="lvC-gs-dhM" firstAttribute="trailing" secondItem="G9G-3h-b4w" secondAttribute="trailing" constant="24" id="EiZ-AE-LzP"/>
+                            <constraint firstItem="qKx-IA-tkX" firstAttribute="top" secondItem="lvC-gs-dhM" secondAttribute="top" constant="8" id="MJX-4e-fA5"/>
+                            <constraint firstItem="tI1-KE-m12" firstAttribute="leading" secondItem="lvC-gs-dhM" secondAttribute="leading" id="QAz-kc-Ajk"/>
+                            <constraint firstItem="e6S-l7-ddq" firstAttribute="top" secondItem="G9G-3h-b4w" secondAttribute="bottom" constant="40" id="R0Y-I3-YBF"/>
+                            <constraint firstItem="G9G-3h-b4w" firstAttribute="leading" secondItem="lvC-gs-dhM" secondAttribute="leading" constant="24" id="RuJ-gZ-cbB"/>
+                            <constraint firstItem="tI1-KE-m12" firstAttribute="top" secondItem="lvC-gs-dhM" secondAttribute="top" constant="80" id="UJW-pz-WyK"/>
+                            <constraint firstItem="e6S-l7-ddq" firstAttribute="leading" secondItem="lvC-gs-dhM" secondAttribute="leading" constant="24" id="Xad-ex-ziI"/>
+                            <constraint firstItem="lvC-gs-dhM" firstAttribute="trailing" secondItem="qKx-IA-tkX" secondAttribute="trailing" constant="16" id="aYf-sr-DSc"/>
+                            <constraint firstItem="G9G-3h-b4w" firstAttribute="top" secondItem="tI1-KE-m12" secondAttribute="bottom" constant="60" id="mUQ-ay-sh3"/>
+                            <constraint firstItem="lvC-gs-dhM" firstAttribute="trailing" secondItem="e6S-l7-ddq" secondAttribute="trailing" constant="24" id="rvq-jD-Krj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lvC-gs-dhM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Flo-0D-QoZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1" y="154"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="globe-md" width="299" height="297"/>
+    </resources>
+</document>

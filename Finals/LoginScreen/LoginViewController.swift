@@ -10,8 +10,7 @@ import Foundation
 import UIKit
 import RxSwift
 import RxCocoa
-//import NVActivityIndicatorView
-//import firebase
+import NVActivityIndicatorView
 
 class LoginViewController: BaseViewController , UITextFieldDelegate {
 
@@ -41,7 +40,6 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
     
     let bag = DisposeBag()
     var registerAppearance: Bool = false
-    var fromWelcome: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,33 +53,31 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
         
         setupRx()
         
-        handleLoginStatus()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter.setUp()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
-        
     }
     
-    func handleLoginStatus() {
-//        print("LoginToken:")
-//        print(UserStorage.shared.accessToken as Any)
-//        if UserStorage.shared.accessToken != nil {
-//            nfc.removeObserver(self)
-//        }
-    }
     
     func setupRx() {
         let screenWidth = UIScreen.main.bounds.width
         
         loginButton.rx.tap.subscribe(onNext: { [weak self] () in
             guard let `self` = self else { return }
+            
             self.title = LoginPresenter.LoginStatic.login
-            self.emailTextField.resignFirstResponder()
-            self.passwordTextField.resignFirstResponder()
             self.nameTextField.resignFirstResponder()
             self.lastNameTextField.resignFirstResponder()
+            self.emailTextField.resignFirstResponder()
+            self.passwordTextField.resignFirstResponder()
             self.leadingGreenUnderlineView.constant = 0
             self.animateUnderline()
             self.passwordButtonView.isHidden = false
@@ -91,11 +87,11 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
             self.presenter.addBorderToTextField(textField: self.emailTextField, corners: [UIRectCorner.topLeft, UIRectCorner.topRight], radius: 5)
             self.presenter.changeSignInButtonTitle(toRegister: false)
             self.clearAllTextFields()
-            }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)
-        
+        }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)
         
         registerButton.rx.tap.subscribe(onNext: { [weak self] () in
             guard let `self` = self else { return }
+            
             self.title = LoginPresenter.LoginStatic.registration
             self.emailTextField.resignFirstResponder()
             self.passwordTextField.resignFirstResponder()
@@ -117,6 +113,11 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
             self?.showAlertController()
             }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)
         
+        signinButton.rx.tap.subscribe(onNext: { [weak self] () in
+            guard let `self` = self else { return }
+            
+            self.viewModel.navigationService.pushToMainScreen(navigationController: self.navigationController)
+        }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)
     }
     
     func animateUnderline() {
@@ -139,10 +140,10 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
                 if emailTextFieldText.isValidEmailFormat() {
                     self.forgottenPassword(email: emailTextFieldText)
                 } else {
-//                    self.announceError(error: LoginPresenter.LoginStatic.emailError)
+                    self.announceError(error: LoginPresenter.LoginStatic.emailError)
                 }
             } else {
-//                self.announceError(error: LoginPresenter.LoginStatic.emailError)
+                self.announceError(error: LoginPresenter.LoginStatic.emailError)
             }
         }
         alertController.addAction(sendAction)

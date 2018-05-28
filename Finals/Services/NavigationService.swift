@@ -15,6 +15,7 @@ struct NavigationService {
 	var networking = AlamofireNetworking()
     var realmManager = RealmManager()
 	let rootStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    let mainScreenStroyboard = UIStoryboard(name: "MainScreen", bundle: nil)
     
     var rootNavigationController: RootNavigationController!
 
@@ -38,13 +39,17 @@ struct NavigationService {
             viewController.registerAppearance = true
         }
 
-        if fromWelcome == true {
-            viewController.fromWelcome = true
-        }
-
         viewController.hidesBottomBarWhenPushed = true
         navigationController?.isNavigationBarHidden = false
         navigationController?.pushViewController(viewController, animated: animated)
+    }
+    
+    func pushToMainScreen(navigationController: UINavigationController?) {
+        let viewController: MainViewController = controllerFactory(ViewModelType: MainViewModel.self, PresenterType: MainPresenter.self, storyboard: mainScreenStroyboard)
+        
+        viewController.hidesBottomBarWhenPushed = true
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     func popController(navigationController: UINavigationController?) {

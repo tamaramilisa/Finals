@@ -7,3 +7,26 @@
 //
 
 import Foundation
+import RxSwift
+import NVActivityIndicatorView
+
+class MainViewController: BaseViewController {
+    
+    var viewModel: MainViewModel! {
+        return baseViewModel as! MainViewModel
+    }
+    var presenter: MainPresenter! {
+        return basePresenter as! MainPresenter
+    }
+    
+    let bag = DisposeBag()
+    var registerAppearance: Bool = false
+    var nfc = NotificationCenter.default
+    
+    var fromWelcome: Bool = false
+//    var activityView: ActivityIndicatorInitializer!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}

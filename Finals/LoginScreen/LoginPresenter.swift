@@ -119,4 +119,5 @@ class LoginPresenter: BasePresenter {
         textField.layer.mask = maskLayer
         textField.layer.addSublayer(borderLayer)
     }
+    
 }

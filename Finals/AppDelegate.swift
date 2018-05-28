@@ -11,7 +11,7 @@ import RealmSwift
 import CoreLocation
 import RxSwift
 import MessageUI
-//import UserNotifications
+import SVProgressHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,29 +20,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var navigationService: NavigationService!
     
     var realmManager: RealmManager!
-//    var apnService: APNService!
+    var appIsStarting: Bool!
     let bag = DisposeBag()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-//        initAPNS()
         configureRealm()
-        
         initNavigationService()
         
         return true
     }
-    
-//    func initAPNS() {
-//        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-//        UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { (_, _) in
-//
-//        }
-//        UIApplication.shared.registerForRemoteNotifications()
-//    }
-
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+class MainPresenter: BasePresenter {
+    
+    required init() { }
+    
+    weak var baseViewController: BaseViewController!
+    weak var viewController: MainViewController! {
+        return baseViewController as! MainViewController
+    }
+    
+    func setUp() {
+        
+    }
+}

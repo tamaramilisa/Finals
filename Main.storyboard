@@ -246,16 +246,16 @@
                         <outlet property="emailTextField" destination="P6n-yR-dvP" id="l6g-fB-gQe"/>
                         <outlet property="emptyLabel" destination="Uod-kg-CId" id="tGy-US-UST"/>
                         <outlet property="forgotPassButton" destination="pTg-Vv-zeQ" id="g4p-TV-Tjs"/>
-                        <outlet property="greenUnderlineView" destination="D1D-mj-HZu" id="dCs-eU-X77"/>
+                        <outlet property="greenUnderlineView" destination="D1D-mj-HZu" id="18f-zH-OAF"/>
                         <outlet property="lastNameTextField" destination="qiR-ct-nal" id="HHL-5z-vLi"/>
-                        <outlet property="leadingGreenUnderlineView" destination="bY0-xy-k9c" id="uC2-IN-Abt"/>
+                        <outlet property="leadingGreenUnderlineView" destination="bY0-xy-k9c" id="SFk-iU-bF0"/>
                         <outlet property="loginButton" destination="PZZ-jH-R0P" id="uD5-b9-jxf"/>
                         <outlet property="nameTextField" destination="Hif-Af-rv0" id="W2x-mP-qyZ"/>
                         <outlet property="passwordButtonView" destination="zcy-W8-NQC" id="mcj-Mr-Hbg"/>
                         <outlet property="passwordTextField" destination="iXe-cJ-g81" id="elt-0c-Mk6"/>
                         <outlet property="registerButton" destination="M1J-fq-ShT" id="MHk-rG-9XZ"/>
                         <outlet property="scrollViewTopPadding" destination="MCs-wo-Qjr" id="SI0-8m-8Mj"/>
-                        <outlet property="signinButton" destination="1Fu-LP-Dzl" id="Guk-CO-y7w"/>
+                        <outlet property="signinButton" destination="1Fu-LP-Dzl" id="l3p-Sp-v4Q"/>
                         <outlet property="stackView" destination="LQD-xa-kaa" id="MLa-FL-Cgv"/>
                         <outlet property="stackViewHeight" destination="owr-tR-pXt" id="YgY-y7-Z7x"/>
                         <outlet property="underlineView" destination="De9-b2-lLX" id="AtA-gn-OKK"/>

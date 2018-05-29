@@ -110,7 +110,7 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
             }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)
         
         forgotPassButton.rx.tap.subscribe(onNext: { [weak self] () in
-            self?.showAlertController()
+//            self?.showAlertController()
             }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)
         
         signinButton.rx.tap.subscribe(onNext: { [weak self] () in
@@ -124,65 +124,6 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
         UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations:{ [weak self] in
             self?.underlineView.layoutIfNeeded()
             }, completion: nil)
-    }
-    
-    func showAlertController() {
-        let alertController = UIAlertController(title: LoginPresenter.LoginStatic.forgotPassTitle, message: LoginPresenter.LoginStatic.forgotPassMessage, preferredStyle: UIAlertControllerStyle.alert)
-
-        alertController.addTextField { (textField) in
-            textField.placeholder = LoginPresenter.LoginStatic.alertEmailPlaceholder
-            textField.keyboardType = UIKeyboardType.emailAddress
-        }
-
-        let sendAction = UIAlertAction(title: LoginPresenter.LoginStatic.sendAction, style: UIAlertActionStyle.default) { [weak self] (action) in
-            guard let `self` = self else { return }
-            if let emailTextFieldText = alertController.textFields![0].text {
-                if emailTextFieldText.isValidEmailFormat() {
-                    self.forgottenPassword(email: emailTextFieldText)
-                } else {
-                    self.announceError(error: LoginPresenter.LoginStatic.emailError)
-                }
-            } else {
-                self.announceError(error: LoginPresenter.LoginStatic.emailError)
-            }
-        }
-        alertController.addAction(sendAction)
-        let cancelAction = UIAlertAction(title: LoginPresenter.LoginStatic.cancelAction, style: UIAlertActionStyle.cancel, handler: nil)
-        alertController.addAction(cancelAction)
-
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
-    func forgottenPassword(email: String) {
-        
-//        activityView.startAnimating()
-//
-//        viewModel.forgottenPass(email: email).subscribe(onNext: { [weak self] (result) in
-//            guard let `self` = self else { return }
-//
-//            self.activityView.stopAnimating()
-//
-//            switch result {
-//            case .success(let success):
-//                guard let succ = success else { return }
-//
-//                if succ == true {
-//                    self.announceSuccess(success: LoginPresenter.LoginStatic.recoveryMailSent)
-//                }
-//
-//            case .failure(let error):
-//                if let requestError = error as? RequestError {
-//                    self.announceError(error: requestError.message)
-//                }
-//            }
-//            }, onError: { [weak self] (error) in
-//                self?.activityView.stopAnimating()
-//                self?.announceError(error: error.localizedDescription)
-//            }, onCompleted: {
-//
-//        }) {
-//
-//            }.disposed(by: bag)
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

@@ -10,25 +10,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="jif-QE-W69">
             <objects>
-                <viewController id="OEI-YT-EG1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="OEI-YT-EG1" customClass="MainViewController" customModule="Finals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oir-Dg-B4q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globe-md" translatesAutoresizingMaskIntoConstraints="NO" id="tI1-KE-m12">
-                                <rect key="frame" x="0.0" y="100" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="999" constant="150" id="paZ-zO-O11"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9G-3h-b4w">
-                                <rect key="frame" x="24" y="310" width="327" height="60"/>
+                                <rect key="frame" x="24" y="330" width="327" height="75"/>
                                 <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="uW8-os-yyy"/>
+                                    <constraint firstAttribute="height" constant="75" id="uW8-os-yyy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <state key="normal" title="KATEGORIJE">
@@ -41,10 +41,10 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6S-l7-ddq">
-                                <rect key="frame" x="24" y="410" width="327" height="60"/>
+                                <rect key="frame" x="24" y="445" width="327" height="75"/>
                                 <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="kWQ-fg-5ol"/>
+                                    <constraint firstAttribute="height" constant="75" id="kWQ-fg-5ol"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <state key="normal" title="MEDALJE">
@@ -77,7 +77,7 @@
                             <constraint firstItem="tI1-KE-m12" firstAttribute="leading" secondItem="lvC-gs-dhM" secondAttribute="leading" id="QAz-kc-Ajk"/>
                             <constraint firstItem="e6S-l7-ddq" firstAttribute="top" secondItem="G9G-3h-b4w" secondAttribute="bottom" constant="40" id="R0Y-I3-YBF"/>
                             <constraint firstItem="G9G-3h-b4w" firstAttribute="leading" secondItem="lvC-gs-dhM" secondAttribute="leading" constant="24" id="RuJ-gZ-cbB"/>
-                            <constraint firstItem="tI1-KE-m12" firstAttribute="top" secondItem="lvC-gs-dhM" secondAttribute="top" constant="80" id="UJW-pz-WyK"/>
+                            <constraint firstItem="tI1-KE-m12" firstAttribute="top" secondItem="lvC-gs-dhM" secondAttribute="top" constant="100" id="UJW-pz-WyK"/>
                             <constraint firstItem="e6S-l7-ddq" firstAttribute="leading" secondItem="lvC-gs-dhM" secondAttribute="leading" constant="24" id="Xad-ex-ziI"/>
                             <constraint firstItem="lvC-gs-dhM" firstAttribute="trailing" secondItem="qKx-IA-tkX" secondAttribute="trailing" constant="16" id="aYf-sr-DSc"/>
                             <constraint firstItem="G9G-3h-b4w" firstAttribute="top" secondItem="tI1-KE-m12" secondAttribute="bottom" constant="60" id="mUQ-ay-sh3"/>

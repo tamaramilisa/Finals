@@ -41,9 +41,6 @@ class LoginPresenter: BasePresenter {
     
         let screenWidth = UIScreen.main.bounds.width
         
-        addBorderToTextField(textField: viewController.nameTextField, corners: [UIRectCorner.topLeft, UIRectCorner.topRight], radius: 5)
-        addBorderToTextField(textField: viewController.passwordTextField, corners: [UIRectCorner.bottomLeft, UIRectCorner.bottomRight], radius: 5)
-        
         if viewController.registerAppearance == true {
             viewController.title = LoginStatic.registration
             
@@ -53,18 +50,14 @@ class LoginPresenter: BasePresenter {
             viewController.lastNameTextField.isHidden = false
             viewController.emptyLabel.isHidden = true
             
-            addBorderToTextField(textField: viewController.lastNameTextField, corners: UIRectCorner.allCorners, radius: 0)
-            addBorderToTextField(textField: viewController.emailTextField, corners: UIRectCorner.allCorners, radius: 0)
             changeSignInButtonTitle(toRegister: true)
-            
         } else {
             viewController.title = LoginStatic.login
             
             viewController.passwordButtonView.isHidden = false
             viewController.nameTextField.isHidden = true
             viewController.lastNameTextField.isHidden = true
-            
-            addBorderToTextField(textField: viewController.emailTextField, corners: [UIRectCorner.topLeft, UIRectCorner.topRight], radius: 5)
+
             changeSignInButtonTitle(toRegister: false)
             
         }
@@ -95,29 +88,6 @@ class LoginPresenter: BasePresenter {
         label.font = UIFont(name: "Helvetica", size: 10)
         label.textAlignment = NSTextAlignment.center
         textField.rightView = label
-    }
-
-    func addBorderToTextField(textField: LoginTextField, corners: UIRectCorner, radius: CGFloat) {
-        let screenWidth = UIScreen.main.bounds.width
-        var height: CGFloat = viewController.stackView.frame.size.height/4 + 0.75
-
-        if textField == viewController.passwordTextField {
-            height = viewController.stackView.frame.size.height/4 - 0.25
-        }
-        let frame = CGRect(x: textField.bounds.origin.x, y: textField.bounds.origin.y, width: screenWidth-32, height: height)
-
-        let maskLayer = CAShapeLayer()
-        maskLayer.path = UIBezierPath(roundedRect: frame, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius)).cgPath
-
-        let borderLayer = CAShapeLayer()
-        borderLayer.path = maskLayer.path
-        borderLayer.fillColor = UIColor.clear.cgColor
-        borderLayer.strokeColor = UIColor(red: 0/255, green: 144/255, blue: 81/255, alpha: 1).cgColor
-        borderLayer.lineWidth = 1
-
-        textField.layer.sublayers?.first?.removeFromSuperlayer()
-        textField.layer.mask = maskLayer
-        textField.layer.addSublayer(borderLayer)
     }
     
 }

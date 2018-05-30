@@ -44,7 +44,7 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter.setUp()
+        //presenter.setUp()
         
         nameTextField.delegate = self
         lastNameTextField.delegate = self
@@ -57,10 +57,9 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        presenter.setUp()
-        
+        //presenter.setUp()
     }
-    
+//
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
@@ -74,24 +73,20 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
             guard let `self` = self else { return }
             
             self.title = LoginPresenter.LoginStatic.login
-            self.nameTextField.resignFirstResponder()
-            self.lastNameTextField.resignFirstResponder()
-            self.emailTextField.resignFirstResponder()
-            self.passwordTextField.resignFirstResponder()
+            self.view.endEditing(true)
             self.leadingGreenUnderlineView.constant = 0
             self.animateUnderline()
             self.passwordButtonView.isHidden = false
             self.nameTextField.isHidden = true
             self.lastNameTextField.isHidden = true
             self.emptyLabel.isHidden = false
-            self.presenter.addBorderToTextField(textField: self.emailTextField, corners: [UIRectCorner.topLeft, UIRectCorner.topRight], radius: 5)
             self.presenter.changeSignInButtonTitle(toRegister: false)
             self.clearAllTextFields()
         }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)
         
         registerButton.rx.tap.subscribe(onNext: { [weak self] () in
             guard let `self` = self else { return }
-            
+
             self.title = LoginPresenter.LoginStatic.registration
             self.emailTextField.resignFirstResponder()
             self.passwordTextField.resignFirstResponder()
@@ -101,10 +96,6 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
             self.nameTextField.isHidden = false
             self.lastNameTextField.isHidden = false
             self.emptyLabel.isHidden = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.025, execute: {
-                self.presenter.addBorderToTextField(textField: self.lastNameTextField, corners: UIRectCorner.allCorners, radius: 0)
-            })
-            self.presenter.addBorderToTextField(textField: self.emailTextField, corners: UIRectCorner.allCorners, radius: 0)
             self.presenter.changeSignInButtonTitle(toRegister: true)
             self.clearAllTextFields()
             }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)

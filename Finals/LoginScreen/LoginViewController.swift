@@ -44,7 +44,7 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //presenter.setUp()
+        presenter.setUp()
         
         nameTextField.delegate = self
         lastNameTextField.delegate = self
@@ -57,9 +57,9 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        //presenter.setUp()
+        presenter.setUp()
     }
-//
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true

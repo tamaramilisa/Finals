@@ -15,7 +15,8 @@ struct NavigationService {
 	var networking = AlamofireNetworking()
     var realmManager = RealmManager()
 	let rootStoryboard = UIStoryboard(name: "Main", bundle: nil)
-    let mainScreenStroyboard = UIStoryboard(name: "MainScreen", bundle: nil)
+    let mainStroyboard = UIStoryboard(name: "MainScreen", bundle: nil)
+    let categoriesStoryboard = UIStoryboard(name: "Categories", bundle: nil)
     
     var rootNavigationController: RootNavigationController!
 
@@ -45,7 +46,31 @@ struct NavigationService {
     }
     
     func pushToMainScreen(navigationController: UINavigationController?) {
-        let viewController: MainViewController = controllerFactory(ViewModelType: MainViewModel.self, PresenterType: MainPresenter.self, storyboard: mainScreenStroyboard)
+        let viewController: MainViewController = controllerFactory(ViewModelType: MainViewModel.self, PresenterType: MainPresenter.self, storyboard: mainStroyboard)
+        
+        viewController.hidesBottomBarWhenPushed = true
+        navigationController?.isNavigationBarHidden = true
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func pushToLearnListScreen(navigationController: UINavigationController?) {
+        let viewController: LearnListViewController = controllerFactory(ViewModelType: LearnListViewModel.self, PresenterType: LearnListPresenter.self, storyboard: categoriesStoryboard)
+        
+        viewController.hidesBottomBarWhenPushed = true
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func pushToProfileScreen(navigationController: UINavigationController?) {
+        let viewController: ProfileViewController = controllerFactory(ViewModelType: ProfileViewModel.self, PresenterType: ProfilePresenter.self, storyboard: mainStroyboard)
+        
+        viewController.hidesBottomBarWhenPushed = true
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func pushToSettingsScreen(navigationController: UINavigationController?) {
+        let viewController: SettingsViewController = controllerFactory(ViewModelType: SettingsViewModel.self, PresenterType: SettingsPresenter.self, storyboard: mainStroyboard)
         
         viewController.hidesBottomBarWhenPushed = true
         navigationController?.isNavigationBarHidden = true

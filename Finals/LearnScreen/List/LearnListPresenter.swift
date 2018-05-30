@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+class LearnListPresenter: BasePresenter {
+    required init() { }
+    
+    weak var baseViewController: BaseViewController!
+    weak var viewController: LearnListViewController! {
+        return baseViewController as! LearnListViewController
+    }
+    
+    func setUp() {
+        
+    }
+}

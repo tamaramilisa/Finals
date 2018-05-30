@@ -7,3 +7,27 @@
 //
 
 import Foundation
+import RxSwift
+import SVProgressHUD
+
+class LearnListViewController: BaseViewController {
+    
+    var viewModel: LearnListViewModel! {
+        return baseViewModel as! LearnListViewModel
+    }
+    var presenter: LearnListPresenter! {
+        return basePresenter as! LearnListPresenter
+    }
+    
+    let bag = DisposeBag()
+    var registerAppearance: Bool = false
+    var nfc = NotificationCenter.default
+    
+    var fromWelcome: Bool = false
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    
+}

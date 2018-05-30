@@ -19,14 +19,39 @@ class MainViewController: BaseViewController {
         return basePresenter as! MainPresenter
     }
     
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var medalsButton: UIButton!
+    @IBOutlet weak var categoriesButton: UIButton!
+    
     let bag = DisposeBag()
     var registerAppearance: Bool = false
     var nfc = NotificationCenter.default
     
     var fromWelcome: Bool = false
-//    var activityView: ActivityIndicatorInitializer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupRx()
     }
+    
+    func setupRx() {
+        
+        let tapRecognizer = UITapGestureRecognizer()
+        profileImageView.addGestureRecognizer(tapRecognizer)
+        tapRecognizer.rx.event.asDriver().drive(onNext: { [weak self] (sender) in
+            guard let `self` = self else { return }
+            
+            self.viewModel.navigationService.pushToProfileScreen(navigationController: self.navigationController)
+        }, onCompleted: nil, onDisposed: nil).disposed(by: bag)
+        
+        categoriesButton.rx.tap.asDriver().drive(onNext: { [weak self] in
+            guard let `self` = self else { return }
+        
+            self.viewModel.navigationService.pushToLearnListScreen(navigationController: self.navigationController)
+        }, onCompleted: nil, onDisposed: nil).disposed(by: bag)
+        
+    }
+    
 }

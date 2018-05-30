@@ -56,7 +56,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qKx-IA-tkX">
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noimage_male" translatesAutoresizingMaskIntoConstraints="NO" id="qKx-IA-tkX">
                                 <rect key="frame" x="309" y="28" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Z72-iB-2OU"/>
@@ -85,13 +85,147 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lvC-gs-dhM"/>
                     </view>
+                    <connections>
+                        <outlet property="categoriesButton" destination="G9G-3h-b4w" id="SSF-ig-DCT"/>
+                        <outlet property="logoImageView" destination="tI1-KE-m12" id="F9R-n9-8M3"/>
+                        <outlet property="medalsButton" destination="e6S-l7-ddq" id="okG-4F-DFK"/>
+                        <outlet property="profileImageView" destination="qKx-IA-tkX" id="xdC-D7-GMJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Flo-0D-QoZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1" y="154"/>
+            <point key="canvasLocation" x="-9" y="152"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="RKz-in-bhb">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="OkM-s0-QCY" customClass="ProfileViewController" customModule="Finals" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q78-qI-JDm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noimage_male" translatesAutoresizingMaskIntoConstraints="NO" id="1Kh-qD-CZi">
+                                <rect key="frame" x="127" y="120" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="SDH-Hw-pX4"/>
+                                    <constraint firstAttribute="height" constant="120" id="XaA-TV-o2g"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="60"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SE9-ur-3rK">
+                                <rect key="frame" x="24" y="304" width="327" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="k8q-74-sBC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="Smisli nesto">
+                                    <color key="titleColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1h-3k-87k">
+                                <rect key="frame" x="24" y="378" width="327" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WlA-L3-99z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="Postavke">
+                                    <color key="titleColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wpr-sM-R0G">
+                                <rect key="frame" x="24" y="452" width="327" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="w8w-jU-GnC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="Odjava">
+                                    <color key="titleColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BGL-4I-6Vk" firstAttribute="trailing" secondItem="H1h-3k-87k" secondAttribute="trailing" constant="24" id="2rD-Fz-zCu"/>
+                            <constraint firstItem="H1h-3k-87k" firstAttribute="top" secondItem="SE9-ur-3rK" secondAttribute="bottom" constant="24" id="90q-bd-7Ug"/>
+                            <constraint firstItem="SE9-ur-3rK" firstAttribute="top" secondItem="1Kh-qD-CZi" secondAttribute="bottom" constant="64" id="AQv-bt-Nas"/>
+                            <constraint firstItem="Wpr-sM-R0G" firstAttribute="leading" secondItem="BGL-4I-6Vk" secondAttribute="leading" constant="24" id="FT9-pJ-aJ7"/>
+                            <constraint firstItem="BGL-4I-6Vk" firstAttribute="trailing" secondItem="Wpr-sM-R0G" secondAttribute="trailing" constant="24" id="Jrc-mX-uO6"/>
+                            <constraint firstItem="1Kh-qD-CZi" firstAttribute="top" secondItem="BGL-4I-6Vk" secondAttribute="top" constant="100" id="P9m-oD-Nf5"/>
+                            <constraint firstItem="1Kh-qD-CZi" firstAttribute="centerX" secondItem="Q78-qI-JDm" secondAttribute="centerX" id="glD-Yd-brE"/>
+                            <constraint firstItem="BGL-4I-6Vk" firstAttribute="trailing" secondItem="SE9-ur-3rK" secondAttribute="trailing" constant="24" id="grw-kp-sNS"/>
+                            <constraint firstItem="SE9-ur-3rK" firstAttribute="leading" secondItem="BGL-4I-6Vk" secondAttribute="leading" constant="24" id="p7k-b5-Eux"/>
+                            <constraint firstItem="H1h-3k-87k" firstAttribute="leading" secondItem="BGL-4I-6Vk" secondAttribute="leading" constant="24" id="r3H-Wa-Reo"/>
+                            <constraint firstItem="Wpr-sM-R0G" firstAttribute="top" secondItem="H1h-3k-87k" secondAttribute="bottom" constant="24" id="w9X-Bl-MXw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BGL-4I-6Vk"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstButton" destination="SE9-ur-3rK" id="zIx-cG-zVn"/>
+                        <outlet property="logoutButton" destination="Wpr-sM-R0G" id="Z0J-HA-o2o"/>
+                        <outlet property="profileImageView" destination="1Kh-qD-CZi" id="5WL-2p-ZhS"/>
+                        <outlet property="settingsButton" destination="H1h-3k-87k" id="lvx-Hm-sZo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rq6-Ip-eUz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="695" y="153"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="6qe-LQ-unH">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="VpO-Ee-xza" customClass="SettingsViewController" customModule="Finals" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F9v-gW-368">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noimage_male" translatesAutoresizingMaskIntoConstraints="NO" id="Qe1-7T-18i">
+                                <rect key="frame" x="24" y="84" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="3f1-Vm-KF1"/>
+                                    <constraint firstAttribute="height" constant="80" id="gi9-Cg-Du1"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promjeni sliku" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Em2-tg-61o">
+                                <rect key="frame" x="128" y="102.5" width="223" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="xX4-8d-DDU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VD3-h9-Mjj" firstAttribute="trailing" secondItem="Em2-tg-61o" secondAttribute="trailing" constant="24" id="Bwz-ws-9ek"/>
+                            <constraint firstItem="Em2-tg-61o" firstAttribute="leading" secondItem="Qe1-7T-18i" secondAttribute="trailing" constant="24" id="aw1-Hb-nNA"/>
+                            <constraint firstItem="Qe1-7T-18i" firstAttribute="top" secondItem="VD3-h9-Mjj" secondAttribute="top" constant="64" id="ede-CV-RQq"/>
+                            <constraint firstItem="Em2-tg-61o" firstAttribute="centerY" secondItem="Qe1-7T-18i" secondAttribute="centerY" id="mDo-bv-wKo"/>
+                            <constraint firstItem="Qe1-7T-18i" firstAttribute="leading" secondItem="VD3-h9-Mjj" secondAttribute="leading" constant="24" id="mhY-aO-XvD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VD3-h9-Mjj"/>
+                    </view>
+                    <connections>
+                        <outlet property="changeImageLabel" destination="Em2-tg-61o" id="w2a-u3-DtT"/>
+                        <outlet property="profileImageView" destination="Qe1-7T-18i" id="NUi-Zq-cUt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qrq-nd-z3H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1406" y="152"/>
         </scene>
     </scenes>
     <resources>
         <image name="globe-md" width="299" height="297"/>
+        <image name="noimage_male" width="512" height="512"/>
     </resources>
 </document>

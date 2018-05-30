@@ -73,7 +73,7 @@ struct NavigationService {
         let viewController: SettingsViewController = controllerFactory(ViewModelType: SettingsViewModel.self, PresenterType: SettingsPresenter.self, storyboard: mainStroyboard)
         
         viewController.hidesBottomBarWhenPushed = true
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.isNavigationBarHidden = false
         navigationController?.pushViewController(viewController, animated: true)
     }
     

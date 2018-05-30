@@ -17,12 +17,8 @@ class RootNavigationController: UINavigationController {
         navigationBar.tintColor = UIColor.white
         navigationBar.isTranslucent = true
         navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 18, weight: .semibold)]
-        navigationBar.barStyle = UIBarStyle.black
-        
-        if #available(iOS 11.0, *) {
-            navigationBar.prefersLargeTitles = true
-            navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white, NSAttributedStringKey.font:UIFont.systemFont(ofSize: 34, weight: .bold)]
-        }
+        navigationBar.barStyle = UIBarStyle.blackOpaque
+        navigationBar.barTintColor = UIColor(red: 0/255, green: 144/255, blue: 81/255, alpha: 1.0)
         
         navigationBar.shadowImage = UIImage()
         navigationBar.backIndicatorImage = UIImage()

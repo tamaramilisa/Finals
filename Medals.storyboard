@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Medals View Controller-->
+        <scene sceneID="f1Q-4H-L16">
+            <objects>
+                <viewController storyboardIdentifier="MedalsViewController" id="fFN-XG-91v" customClass="MedalsViewController" customModule="Finals" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3ZC-k4-eLM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy-singIn" translatesAutoresizingMaskIntoConstraints="NO" id="vhZ-Oi-H9X">
+                                <rect key="frame" x="35.5" y="149.5" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="58C-Ad-cvK"/>
+                                    <constraint firstAttribute="width" constant="80" id="oBh-s8-oi5"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="3Jf-do-EDY">
+                                <rect key="frame" x="147.5" y="149.5" width="80" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3-stars" translatesAutoresizingMaskIntoConstraints="NO" id="gvY-ex-Pau">
+                                <rect key="frame" x="259.5" y="149.5" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boxWithFireworks" translatesAutoresizingMaskIntoConstraints="NO" id="yRl-GO-vYs">
+                                <rect key="frame" x="147" y="293.5" width="80" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Question-marks" translatesAutoresizingMaskIntoConstraints="NO" id="hXv-xE-pw1">
+                                <rect key="frame" x="35" y="293.5" width="80" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5 stars" translatesAutoresizingMaskIntoConstraints="NO" id="aQd-Ne-PoF">
+                                <rect key="frame" x="259" y="293.5" width="80" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CKg-tt-AEQ">
+                                <rect key="frame" x="147.5" y="437.5" width="80" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NIf-hU-iOL">
+                                <rect key="frame" x="259.5" y="437.5" width="80" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LZi-Ii-xL8">
+                                <rect key="frame" x="35" y="437" width="80" height="80"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CKg-tt-AEQ" firstAttribute="width" secondItem="hXv-xE-pw1" secondAttribute="width" id="0lh-iL-SfB"/>
+                            <constraint firstItem="3Jf-do-EDY" firstAttribute="leading" secondItem="vhZ-Oi-H9X" secondAttribute="trailing" constant="32" id="2hX-EV-8vn"/>
+                            <constraint firstItem="vhZ-Oi-H9X" firstAttribute="width" secondItem="hXv-xE-pw1" secondAttribute="width" id="7T9-bo-axR"/>
+                            <constraint firstItem="yRl-GO-vYs" firstAttribute="width" secondItem="hXv-xE-pw1" secondAttribute="width" id="7TD-gP-baC"/>
+                            <constraint firstItem="3Jf-do-EDY" firstAttribute="centerX" secondItem="3ZC-k4-eLM" secondAttribute="centerX" id="7bY-fj-X3e"/>
+                            <constraint firstItem="CKg-tt-AEQ" firstAttribute="leading" secondItem="LZi-Ii-xL8" secondAttribute="trailing" constant="32" id="7s4-IZ-uDl"/>
+                            <constraint firstItem="aQd-Ne-PoF" firstAttribute="height" secondItem="hXv-xE-pw1" secondAttribute="height" id="8hb-eZ-lGg"/>
+                            <constraint firstItem="vhZ-Oi-H9X" firstAttribute="height" secondItem="hXv-xE-pw1" secondAttribute="height" id="9C7-Xl-8xK"/>
+                            <constraint firstItem="3Jf-do-EDY" firstAttribute="height" secondItem="hXv-xE-pw1" secondAttribute="height" id="9Tv-5u-YGE"/>
+                            <constraint firstItem="gvY-ex-Pau" firstAttribute="width" secondItem="hXv-xE-pw1" secondAttribute="width" id="Cy9-v0-0WC"/>
+                            <constraint firstItem="gvY-ex-Pau" firstAttribute="height" secondItem="hXv-xE-pw1" secondAttribute="height" id="Dzp-qk-Kk4"/>
+                            <constraint firstItem="3Jf-do-EDY" firstAttribute="top" secondItem="vhZ-Oi-H9X" secondAttribute="top" id="GZN-oZ-qiM"/>
+                            <constraint firstItem="NIf-hU-iOL" firstAttribute="leading" secondItem="CKg-tt-AEQ" secondAttribute="trailing" constant="32" id="I6l-43-2cN"/>
+                            <constraint firstItem="aQd-Ne-PoF" firstAttribute="top" secondItem="yRl-GO-vYs" secondAttribute="top" id="K23-t2-kGY"/>
+                            <constraint firstItem="3Jf-do-EDY" firstAttribute="width" secondItem="hXv-xE-pw1" secondAttribute="width" id="KJP-ar-wf8"/>
+                            <constraint firstItem="gvY-ex-Pau" firstAttribute="leading" secondItem="3Jf-do-EDY" secondAttribute="trailing" constant="32" id="PET-OY-NIM"/>
+                            <constraint firstItem="LZi-Ii-xL8" firstAttribute="width" secondItem="hXv-xE-pw1" secondAttribute="width" id="Qib-eg-5fY"/>
+                            <constraint firstItem="yRl-GO-vYs" firstAttribute="leading" secondItem="hXv-xE-pw1" secondAttribute="trailing" constant="32" id="RCU-c7-dOL"/>
+                            <constraint firstItem="yRl-GO-vYs" firstAttribute="top" secondItem="hXv-xE-pw1" secondAttribute="top" id="SHm-3E-2Yw"/>
+                            <constraint firstItem="yRl-GO-vYs" firstAttribute="centerX" secondItem="3ZC-k4-eLM" secondAttribute="centerX" id="Sgf-IZ-EPz"/>
+                            <constraint firstItem="NIf-hU-iOL" firstAttribute="height" secondItem="hXv-xE-pw1" secondAttribute="height" id="SoA-ab-X75"/>
+                            <constraint firstItem="aQd-Ne-PoF" firstAttribute="width" secondItem="hXv-xE-pw1" secondAttribute="width" id="Ti4-45-1Pi"/>
+                            <constraint firstItem="yRl-GO-vYs" firstAttribute="height" secondItem="hXv-xE-pw1" secondAttribute="height" id="Wri-ge-tsk"/>
+                            <constraint firstItem="CKg-tt-AEQ" firstAttribute="centerX" secondItem="3ZC-k4-eLM" secondAttribute="centerX" id="bQp-qo-8gL"/>
+                            <constraint firstItem="NIf-hU-iOL" firstAttribute="top" secondItem="CKg-tt-AEQ" secondAttribute="top" id="bZ2-8E-yLS"/>
+                            <constraint firstItem="CKg-tt-AEQ" firstAttribute="height" secondItem="hXv-xE-pw1" secondAttribute="height" id="bbl-g8-w1G"/>
+                            <constraint firstItem="LZi-Ii-xL8" firstAttribute="height" secondItem="hXv-xE-pw1" secondAttribute="height" id="crm-bu-78n"/>
+                            <constraint firstItem="gvY-ex-Pau" firstAttribute="top" secondItem="3Jf-do-EDY" secondAttribute="top" id="f5v-bQ-qRR"/>
+                            <constraint firstItem="yRl-GO-vYs" firstAttribute="top" secondItem="3Jf-do-EDY" secondAttribute="bottom" constant="64" id="n4h-cf-fAJ"/>
+                            <constraint firstItem="CKg-tt-AEQ" firstAttribute="top" secondItem="yRl-GO-vYs" secondAttribute="bottom" constant="64" id="rhd-M5-gj5"/>
+                            <constraint firstItem="NIf-hU-iOL" firstAttribute="width" secondItem="hXv-xE-pw1" secondAttribute="width" id="rpJ-eV-tDa"/>
+                            <constraint firstItem="CKg-tt-AEQ" firstAttribute="top" secondItem="LZi-Ii-xL8" secondAttribute="top" id="sJe-ai-l4K"/>
+                            <constraint firstItem="yRl-GO-vYs" firstAttribute="centerY" secondItem="3ZC-k4-eLM" secondAttribute="centerY" id="tLP-9v-jsB"/>
+                            <constraint firstItem="aQd-Ne-PoF" firstAttribute="leading" secondItem="yRl-GO-vYs" secondAttribute="trailing" constant="32" id="uKj-Us-bp5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="R8J-B9-9VB"/>
+                    </view>
+                    <connections>
+                        <outlet property="fifthMedalImageView" destination="yRl-GO-vYs" id="Xmg-pc-Yfm"/>
+                        <outlet property="firstMedalImageView" destination="3Jf-do-EDY" id="bLp-Jh-zxn"/>
+                        <outlet property="fourthMedalImageView" destination="hXv-xE-pw1" id="ond-yb-WDJ"/>
+                        <outlet property="secondMedalImageView" destination="3Jf-do-EDY" id="p5E-1G-zGZ"/>
+                        <outlet property="sixthMedalImageView" destination="aQd-Ne-PoF" id="uZW-nD-4DC"/>
+                        <outlet property="thirdMedalImageView" destination="gvY-ex-Pau" id="EKl-gd-Rnj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VrL-I3-g1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="160.56971514242881"/>
+        </scene>
+        <!--Medals Popover View Controller-->
+        <scene sceneID="9mQ-FB-39M">
+            <objects>
+                <viewController storyboardIdentifier="MedalsPopoverViewController" id="jP6-VR-0lv" customClass="MedalsPopoverViewController" customModule="Finals" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wsr-Tj-Ifq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="JaL-OU-K6E"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lld-Rs-FUb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820" y="161"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="3-stars" width="427" height="154"/>
+        <image name="5 stars" width="400" height="144"/>
+        <image name="Question-marks" width="800" height="387"/>
+        <image name="boxWithFireworks" width="289" height="280"/>
+        <image name="star" width="427" height="154"/>
+        <image name="trophy-singIn" width="800" height="600"/>
+    </resources>
+</document>

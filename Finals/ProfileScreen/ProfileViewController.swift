@@ -25,8 +25,6 @@ class ProfileViewController: BaseViewController {
     @IBOutlet weak var logoutButton: UIButton!
     
     let bag = DisposeBag()
-    var registerAppearance: Bool = false
-    var nfc = NotificationCenter.default
     
     var fromWelcome: Bool = false
     

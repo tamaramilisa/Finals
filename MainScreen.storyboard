@@ -56,7 +56,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noimage_male" translatesAutoresizingMaskIntoConstraints="NO" id="qKx-IA-tkX">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noimage_male" translatesAutoresizingMaskIntoConstraints="NO" id="qKx-IA-tkX">
                                 <rect key="frame" x="309" y="28" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Z72-iB-2OU"/>
@@ -104,7 +104,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noimage_male" translatesAutoresizingMaskIntoConstraints="NO" id="1Kh-qD-CZi">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noimage_male" translatesAutoresizingMaskIntoConstraints="NO" id="1Kh-qD-CZi">
                                 <rect key="frame" x="127" y="120" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="SDH-Hw-pX4"/>
@@ -182,7 +182,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noimage_male" translatesAutoresizingMaskIntoConstraints="NO" id="Qe1-7T-18i">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noimage_male" translatesAutoresizingMaskIntoConstraints="NO" id="Qe1-7T-18i">
                                 <rect key="frame" x="24" y="84" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="3f1-Vm-KF1"/>

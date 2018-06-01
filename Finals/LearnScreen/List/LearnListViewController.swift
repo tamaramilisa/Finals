@@ -20,8 +20,6 @@ class LearnListViewController: BaseViewController {
     }
     
     let bag = DisposeBag()
-    var registerAppearance: Bool = false
-    var nfc = NotificationCenter.default
     
     var fromWelcome: Bool = false
     

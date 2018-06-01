@@ -25,8 +25,6 @@ class MainViewController: BaseViewController {
     @IBOutlet weak var categoriesButton: UIButton!
     
     let bag = DisposeBag()
-    var registerAppearance: Bool = false
-    var nfc = NotificationCenter.default
     
     var fromWelcome: Bool = false
     
@@ -56,6 +54,12 @@ class MainViewController: BaseViewController {
             guard let `self` = self else { return }
         
             self.viewModel.navigationService.pushToLearnListScreen(navigationController: self.navigationController)
+        }, onCompleted: nil, onDisposed: nil).disposed(by: bag)
+        
+        medalsButton.rx.tap.asDriver().drive(onNext: { [weak self] in
+            guard let `self` = self else { return }
+            
+            self.viewModel.navigationService.pushToMedalsScreen(navigationController: self.navigationController)
         }, onCompleted: nil, onDisposed: nil).disposed(by: bag)
         
     }

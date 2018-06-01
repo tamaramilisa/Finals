@@ -17,6 +17,7 @@ struct NavigationService {
 	let rootStoryboard = UIStoryboard(name: "Main", bundle: nil)
     let mainStroyboard = UIStoryboard(name: "MainScreen", bundle: nil)
     let categoriesStoryboard = UIStoryboard(name: "Categories", bundle: nil)
+    let medalsStoryboard = UIStoryboard(name: "Medals", bundle: nil)
     
     var rootNavigationController: RootNavigationController!
 
@@ -71,6 +72,15 @@ struct NavigationService {
     
     func pushToSettingsScreen(navigationController: UINavigationController?) {
         let viewController: SettingsViewController = controllerFactory(ViewModelType: SettingsViewModel.self, PresenterType: SettingsPresenter.self, storyboard: mainStroyboard)
+        
+        viewController.hidesBottomBarWhenPushed = true
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    //dodaj u pozivu usera i spremi u varijablu u contr.
+    func pushToMedalsScreen(navigationController: UINavigationController?) {
+        let viewController: MedalsViewController = controllerFactory(ViewModelType: MedalsViewModel.self, PresenterType: MedalsPresenter.self, storyboard: medalsStoryboard)
         
         viewController.hidesBottomBarWhenPushed = true
         navigationController?.isNavigationBarHidden = false

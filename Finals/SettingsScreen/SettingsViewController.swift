@@ -23,8 +23,6 @@ class SettingsViewController: BaseViewController {
     @IBOutlet weak var changeImageLabel: UILabel!
     
     let bag = DisposeBag()
-    var registerAppearance: Bool = false
-    var nfc = NotificationCenter.default
     
     var fromWelcome: Bool = false
     

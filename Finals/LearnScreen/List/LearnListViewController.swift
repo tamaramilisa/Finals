@@ -19,12 +19,23 @@ class LearnListViewController: BaseViewController {
         return basePresenter as! LearnListPresenter
     }
     
+    @IBOutlet weak var tableView: UITableView!
     let bag = DisposeBag()
     
     var fromWelcome: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter.setUp()
+    }
+    
+    func setupRx() {
+        tableView.registerWithNib(CategoryCell.self)
+        
+        let cell: CategoryCell = tableView.dequeueReusableCell()
+        presenter.configureCategoryCell(cell: cell, title: "Prva kategorija")
+        
     }
     
     

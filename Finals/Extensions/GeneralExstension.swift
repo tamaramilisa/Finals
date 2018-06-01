@@ -30,5 +30,5 @@ extension UIViewController {
             Whisper.show(shout: message, to: self)
         }
     }
-
+    
 }

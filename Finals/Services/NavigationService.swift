@@ -34,7 +34,7 @@ struct NavigationService {
         rootNavigationController = RootNavigationController(rootViewController: viewController)
         window.rootViewController = rootNavigationController    }
     
-    func pushToLoginScreen(navigationController: UINavigationController?, registration: Bool, fromWelcome: Bool, animated: Bool = true) {
+    func pushToLoginScreen(navigationController: UINavigationController?, registration: Bool, animated: Bool = true) {
         let viewController: LoginViewController = controllerFactory(ViewModelType: LoginViewModel.self, PresenterType: LoginPresenter.self, storyboard: rootStoryboard)
 
         if registration == true {
@@ -64,14 +64,6 @@ struct NavigationService {
     
     func pushToProfileScreen(navigationController: UINavigationController?) {
         let viewController: ProfileViewController = controllerFactory(ViewModelType: ProfileViewModel.self, PresenterType: ProfilePresenter.self, storyboard: mainStroyboard)
-        
-        viewController.hidesBottomBarWhenPushed = true
-        navigationController?.isNavigationBarHidden = false
-        navigationController?.pushViewController(viewController, animated: true)
-    }
-    
-    func pushToSettingsScreen(navigationController: UINavigationController?) {
-        let viewController: SettingsViewController = controllerFactory(ViewModelType: SettingsViewModel.self, PresenterType: SettingsPresenter.self, storyboard: mainStroyboard)
         
         viewController.hidesBottomBarWhenPushed = true
         navigationController?.isNavigationBarHidden = false

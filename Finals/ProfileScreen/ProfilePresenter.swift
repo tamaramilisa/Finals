@@ -19,5 +19,23 @@ class ProfilePresenter: BasePresenter {
     
     func setUp() {
         
+        viewController.navigationItem.title = "Profil"
+        addBorder(button: viewController.firstButton)
+        addBorder(button: viewController.settingsButton)
+        
+    }
+    
+    func addBorder(button: UIButton) {
+        button.layer.borderWidth = 1.0
+        button.layer.borderColor = UIColor(red: 0/255, green: 144/255, blue: 81/255, alpha: 1.0).cgColor
+    }
+    
+    
+    func configureHeader(image: UIImage? = nil, url: URL? = nil) {
+        if let img = image {
+            viewController.profileImageView.image = img
+            return
+        }
+//        viewController.profileImageView.associatedUrl = url
     }
 }

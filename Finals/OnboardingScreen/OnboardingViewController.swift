@@ -37,7 +37,7 @@ class OnboardingViewController: BaseViewController {
     }
     
     @IBAction func goToWelcomeScreen(_ sender: Any) {
-        viewModel.navigationService.pushToLoginScreen(navigationController: navigationController, registration: true, fromWelcome: true)
+        viewModel.navigationService.pushToLoginScreen(navigationController: navigationController, registration: true)
     }
     
     

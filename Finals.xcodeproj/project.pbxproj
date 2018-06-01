@@ -25,13 +25,13 @@
 		3229148B20C13415001EEC8B /* MedalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3229148A20C13415001EEC8B /* MedalsViewModel.swift */; };
 		3229148D20C13420001EEC8B /* MedalsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3229148C20C13420001EEC8B /* MedalsPresenter.swift */; };
 		3229149020C141FF001EEC8B /* MedalsPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3229148F20C141FF001EEC8B /* MedalsPopoverViewController.swift */; };
+		3229149320C179FB001EEC8B /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3229149120C179FB001EEC8B /* CategoryCell.swift */; };
+		3229149420C179FB001EEC8B /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3229149220C179FB001EEC8B /* CategoryCell.xib */; };
+		3229149620C185D4001EEC8B /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3229149520C185D4001EEC8B /* Question.storyboard */; };
 		327E3F9A20BEBA01006ABE32 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 327E3F9920BEBA01006ABE32 /* Categories.storyboard */; };
 		327E3F9E20BEBDC2006ABE32 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327E3F9D20BEBDC2006ABE32 /* ProfileViewModel.swift */; };
 		327E3FA020BEBDCE006ABE32 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327E3F9F20BEBDCE006ABE32 /* ProfileViewController.swift */; };
 		327E3FA220BEBDD9006ABE32 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327E3FA120BEBDD9006ABE32 /* ProfilePresenter.swift */; };
-		327E3FA520BEC1D7006ABE32 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327E3FA420BEC1D7006ABE32 /* SettingsViewModel.swift */; };
-		327E3FA720BEC1E3006ABE32 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327E3FA620BEC1E3006ABE32 /* SettingsViewController.swift */; };
-		327E3FA920BEC1EF006ABE32 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327E3FA820BEC1EF006ABE32 /* SettingsPresenter.swift */; };
 		32812193207CF1CC00FF4A23 /* AlamofireNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32812192207CF1CC00FF4A23 /* AlamofireNetworking.swift */; };
 		3294175020BC54C80050A497 /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3294174F20BC54C80050A497 /* MainScreen.storyboard */; };
 		329F002520AB36390018466D /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 329F002420AB36380018466D /* TPKeyboardAvoidingScrollView.m */; };
@@ -74,13 +74,13 @@
 		3229148A20C13415001EEC8B /* MedalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalsViewModel.swift; sourceTree = "<group>"; };
 		3229148C20C13420001EEC8B /* MedalsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalsPresenter.swift; sourceTree = "<group>"; };
 		3229148F20C141FF001EEC8B /* MedalsPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalsPopoverViewController.swift; sourceTree = "<group>"; };
+		3229149120C179FB001EEC8B /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		3229149220C179FB001EEC8B /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		3229149520C185D4001EEC8B /* Question.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Question.storyboard; sourceTree = "<group>"; };
 		327E3F9920BEBA01006ABE32 /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
 		327E3F9D20BEBDC2006ABE32 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		327E3F9F20BEBDCE006ABE32 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		327E3FA120BEBDD9006ABE32 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
-		327E3FA420BEC1D7006ABE32 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		327E3FA620BEC1E3006ABE32 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		327E3FA820BEC1EF006ABE32 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		32812192207CF1CC00FF4A23 /* AlamofireNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireNetworking.swift; sourceTree = "<group>"; };
 		3294174F20BC54C80050A497 /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
 		329F002220AB362F0018466D /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
@@ -216,6 +216,8 @@
 		327E3F9B20BEBD52006ABE32 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				3229149120C179FB001EEC8B /* CategoryCell.swift */,
+				3229149220C179FB001EEC8B /* CategoryCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -228,16 +230,6 @@
 				327E3FA120BEBDD9006ABE32 /* ProfilePresenter.swift */,
 			);
 			path = ProfileScreen;
-			sourceTree = "<group>";
-		};
-		327E3FA320BEC1C3006ABE32 /* SettingsScreen */ = {
-			isa = PBXGroup;
-			children = (
-				327E3FA420BEC1D7006ABE32 /* SettingsViewModel.swift */,
-				327E3FA620BEC1E3006ABE32 /* SettingsViewController.swift */,
-				327E3FA820BEC1EF006ABE32 /* SettingsPresenter.swift */,
-			);
-			path = SettingsScreen;
 			sourceTree = "<group>";
 		};
 		32BC1C9120B2FAA2008B9CFD /* OnboardingScreen */ = {
@@ -257,6 +249,7 @@
 				321D26FE2098C6430089B2E0 /* Main.storyboard */,
 				3294174F20BC54C80050A497 /* MainScreen.storyboard */,
 				327E3F9920BEBA01006ABE32 /* Categories.storyboard */,
+				3229149520C185D4001EEC8B /* Question.storyboard */,
 				3229148520C13237001EEC8B /* Medals.storyboard */,
 				32D34590207CD1B8003CFC7B /* Products */,
 				DC497779F9C16AF8B4943CB7 /* Pods */,
@@ -290,7 +283,6 @@
 				321D26DE2098C3ED0089B2E0 /* LoginScreen */,
 				321D26E82098C4BE0089B2E0 /* MainScreen */,
 				327E3F9C20BEBDAE006ABE32 /* ProfileScreen */,
-				327E3FA320BEC1C3006ABE32 /* SettingsScreen */,
 				321D26EF2098C4F40089B2E0 /* LearnScreen */,
 				3229148720C133EB001EEC8B /* MedalsScreen */,
 			);
@@ -446,6 +438,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				327E3F9A20BEBA01006ABE32 /* Categories.storyboard in Resources */,
+				3229149420C179FB001EEC8B /* CategoryCell.xib in Resources */,
+				3229149620C185D4001EEC8B /* Question.storyboard in Resources */,
 				321D26FF2098C6430089B2E0 /* Main.storyboard in Resources */,
 				3294175020BC54C80050A497 /* MainScreen.storyboard in Resources */,
 				32D3459D207CD1B9003CFC7B /* LaunchScreen.storyboard in Resources */,
@@ -553,7 +547,6 @@
 				3229148920C13408001EEC8B /* MedalsViewController.swift in Sources */,
 				32EC491A208E3BE300F89BB2 /* RootNavigationController.swift in Sources */,
 				329F002820AB391D0018466D /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
-				327E3FA520BEC1D7006ABE32 /* SettingsViewModel.swift in Sources */,
 				32D345B8207CD55B003CFC7B /* NavigationService.swift in Sources */,
 				321D26EA2098C4D00089B2E0 /* MainViewModel.swift in Sources */,
 				32FFAB8220AC7A1100A5D9CB /* LoginTextField.swift in Sources */,
@@ -562,6 +555,7 @@
 				32D345AA207CD3F9003CFC7B /* BaseViewModel.swift in Sources */,
 				3229148B20C13415001EEC8B /* MedalsViewModel.swift in Sources */,
 				321D26EC2098C4DD0089B2E0 /* MainViewController.swift in Sources */,
+				3229149320C179FB001EEC8B /* CategoryCell.swift in Sources */,
 				321D26F52098C54C0089B2E0 /* LearnListViewController.swift in Sources */,
 				32A5F25E20B2F2560047020A /* RealmManager.swift in Sources */,
 				3229148D20C13420001EEC8B /* MedalsPresenter.swift in Sources */,
@@ -576,12 +570,10 @@
 				327E3F9E20BEBDC2006ABE32 /* ProfileViewModel.swift in Sources */,
 				327E3FA220BEBDD9006ABE32 /* ProfilePresenter.swift in Sources */,
 				321D26E02098C42B0089B2E0 /* LoginViewModel.swift in Sources */,
-				327E3FA720BEC1E3006ABE32 /* SettingsViewController.swift in Sources */,
 				321D26F32098C53F0089B2E0 /* LearnListViewModel.swift in Sources */,
 				32BC1C9720B2FADD008B9CFD /* OnboardingPresenter.swift in Sources */,
 				32D345BC207CD705003CFC7B /* NetworkRequestHandler.swift in Sources */,
 				321D26E22098C4380089B2E0 /* LoginViewController.swift in Sources */,
-				327E3FA920BEC1EF006ABE32 /* SettingsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

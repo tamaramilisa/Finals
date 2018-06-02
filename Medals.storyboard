@@ -18,27 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy-singIn" translatesAutoresizingMaskIntoConstraints="NO" id="vhZ-Oi-H9X">
+                            <imageView clipsSubviews="YES" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy-singIn" translatesAutoresizingMaskIntoConstraints="NO" id="vhZ-Oi-H9X">
                                 <rect key="frame" x="35.5" y="149.5" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="58C-Ad-cvK"/>
                                     <constraint firstAttribute="width" constant="80" id="oBh-s8-oi5"/>
                                 </constraints>
                             </imageView>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="3Jf-do-EDY">
+                            <imageView alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="3Jf-do-EDY">
                                 <rect key="frame" x="147.5" y="149.5" width="80" height="80"/>
                             </imageView>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3-stars" translatesAutoresizingMaskIntoConstraints="NO" id="gvY-ex-Pau">
+                            <imageView alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3-stars" translatesAutoresizingMaskIntoConstraints="NO" id="gvY-ex-Pau">
                                 <rect key="frame" x="259.5" y="149.5" width="80" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boxWithFireworks" translatesAutoresizingMaskIntoConstraints="NO" id="yRl-GO-vYs">
+                            <imageView alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boxWithFireworks" translatesAutoresizingMaskIntoConstraints="NO" id="yRl-GO-vYs">
                                 <rect key="frame" x="147" y="293.5" width="80" height="80"/>
                             </imageView>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Question-marks" translatesAutoresizingMaskIntoConstraints="NO" id="hXv-xE-pw1">
+                            <imageView alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Question-marks" translatesAutoresizingMaskIntoConstraints="NO" id="hXv-xE-pw1">
                                 <rect key="frame" x="35" y="293.5" width="80" height="80"/>
                             </imageView>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5 stars" translatesAutoresizingMaskIntoConstraints="NO" id="aQd-Ne-PoF">
+                            <imageView alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5 stars" translatesAutoresizingMaskIntoConstraints="NO" id="aQd-Ne-PoF">
                                 <rect key="frame" x="259" y="293.5" width="80" height="80"/>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CKg-tt-AEQ">

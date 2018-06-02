@@ -59,7 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             fatalError("No window")
         }
         navigationService = NavigationService()
-        navigationService.initWithOnboardingTutorial(window: window)
+        navigationService.initWithScreen(window: window)
     }
     
     func configureRealm() {

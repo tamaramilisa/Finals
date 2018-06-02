@@ -26,9 +26,23 @@ class MedalsPresenter: BasePresenter {
         viewController.navigationItem.title = MedalStatic.title.uppercased()
         
         //dohvai medalje i stavi alphu onima koje nema
-        viewController.secondMedalImageView.alpha = 0.2
-        viewController.fourthMedalImageView.alpha = 0.2
-        viewController.sixthMedalImageView.alpha = 0.2
+        addAlphaAndSetUserInteraction(imageView: viewController.firstMedalImageView, has: true)
+        addAlphaAndSetUserInteraction(imageView: viewController.secondMedalImageView, has: false)
+        addAlphaAndSetUserInteraction(imageView: viewController.thirdMedalImageView, has: true)
+        addAlphaAndSetUserInteraction(imageView: viewController.fourthMedalImageView, has: false)
+        addAlphaAndSetUserInteraction(imageView: viewController.fifthMedalImageView, has: true)
+        addAlphaAndSetUserInteraction(imageView: viewController.sixthMedalImageView, has: false)
         
     }
+    
+    func addAlphaAndSetUserInteraction(imageView: UIImageView, has: Bool) {
+        if has {
+            imageView.isUserInteractionEnabled = true
+            imageView.alpha = 1.0
+        } else {
+            imageView.isUserInteractionEnabled = false
+            imageView.alpha = 0.2
+        }
+    }
+    
 }

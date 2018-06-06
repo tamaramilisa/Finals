@@ -34,6 +34,7 @@
 		3253C99820C7EC3B003E71AE /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3253C99720C7EC3B003E71AE /* StatisticsViewModel.swift */; };
 		3253C99A20C7EC4B003E71AE /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3253C99920C7EC4B003E71AE /* StatisticsViewController.swift */; };
 		3253C99C20C7EC59003E71AE /* StatisticsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3253C99B20C7EC59003E71AE /* StatisticsPresenter.swift */; };
+		3253C99E20C8251D003E71AE /* FinalsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3253C99D20C8251D003E71AE /* FinalsRouter.swift */; };
 		327E3F9A20BEBA01006ABE32 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 327E3F9920BEBA01006ABE32 /* Categories.storyboard */; };
 		327E3F9E20BEBDC2006ABE32 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327E3F9D20BEBDC2006ABE32 /* ProfileViewModel.swift */; };
 		327E3FA020BEBDCE006ABE32 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327E3F9F20BEBDCE006ABE32 /* ProfileViewController.swift */; };
@@ -95,6 +96,7 @@
 		3253C99720C7EC3B003E71AE /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
 		3253C99920C7EC4B003E71AE /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		3253C99B20C7EC59003E71AE /* StatisticsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsPresenter.swift; sourceTree = "<group>"; };
+		3253C99D20C8251D003E71AE /* FinalsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalsRouter.swift; sourceTree = "<group>"; };
 		327E3F9920BEBA01006ABE32 /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
 		327E3F9D20BEBDC2006ABE32 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		327E3F9F20BEBDCE006ABE32 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 				32812192207CF1CC00FF4A23 /* AlamofireNetworking.swift */,
 				32D345B4207CD4A6003CFC7B /* NetworkModels */,
 				32D345BB207CD705003CFC7B /* NetworkRequestHandler.swift */,
+				3253C99D20C8251D003E71AE /* FinalsRouter.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				32D345B8207CD55B003CFC7B /* NavigationService.swift in Sources */,
 				321D26EA2098C4D00089B2E0 /* MainViewModel.swift in Sources */,
 				32FFAB8220AC7A1100A5D9CB /* LoginTextField.swift in Sources */,
+				3253C99E20C8251D003E71AE /* FinalsRouter.swift in Sources */,
 				32BC1C9520B2FACE008B9CFD /* OnboardingViewController.swift in Sources */,
 				327E3FA020BEBDCE006ABE32 /* ProfileViewController.swift in Sources */,
 				32D345AA207CD3F9003CFC7B /* BaseViewModel.swift in Sources */,

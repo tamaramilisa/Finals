@@ -11,14 +11,6 @@ import Alamofire
 import RxAlamofire
 import RxSwift
 
-protocol AlamofireRouter {
-	var method: HTTPMethod { get }
-	var params: [String: AnyObject]? { get }
-	var url: URL { get }
-	var encoding: ParameterEncoding { get }
-	var headers: [String: String]? { get }
-}
-
 struct AlamofireNetworking {
 
 	func request(router : AlamofireRouter) -> Observable<(HTTPURLResponse, Any)> {

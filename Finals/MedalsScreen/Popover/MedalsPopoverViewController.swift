@@ -44,27 +44,27 @@ class MedalsPopoverViewController: UIViewController {
     func setupRx() {
         
         switch medalNo {
-        case "1":
+        case "1"?:
             medalImageView.image = UIImage(named: "trophy-singIn")
             descMedalLabel.text = MedalsPopoverSTatic.successfulLogin
             descLabelBottom.constant = 32
-        case "2":
+        case "2"?:
             medalImageView.image = UIImage(named: "star")
             descMedalLabel.text = MedalsPopoverSTatic.firstStar
             descLabelBottom.constant = 16
-        case "3":
+        case "3"?:
             medalImageView.image = UIImage(named: "3-stars")
             descMedalLabel.text = MedalsPopoverSTatic.threeStars
             descLabelBottom.constant = 32
-        case "4":
+        case "4"?:
             medalImageView.image = UIImage(named: "Question-marks")
             descMedalLabel.text = MedalsPopoverSTatic.allQuestions
             descLabelBottom.constant = 16
-        case "5":
+        case "5"?:
             medalImageView.image = UIImage(named: "boxWithFireworks")
             descMedalLabel.text = MedalsPopoverSTatic.oneLevelCleared
             descLabelBottom.constant = 16
-        case "6":
+        case "6"?:
             medalImageView.image = UIImage(named: "5 stars")
             descMedalLabel.text = MedalsPopoverSTatic.fiveStars
             descLabelBottom.constant = 32

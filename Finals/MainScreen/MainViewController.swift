@@ -22,6 +22,7 @@ class MainViewController: BaseViewController {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var medalsButton: UIButton!
+    @IBOutlet weak var topListButton: UIButton!
     @IBOutlet weak var categoriesButton: UIButton!
     
     let bag = DisposeBag()
@@ -60,6 +61,12 @@ class MainViewController: BaseViewController {
             guard let `self` = self else { return }
             
             self.viewModel.navigationService.pushToMedalsScreen(navigationController: self.navigationController)
+        }, onCompleted: nil, onDisposed: nil).disposed(by: bag)
+        
+        topListButton.rx.tap.asDriver().drive(onNext: { [weak self] in
+            guard let `self` = self else { return }
+            
+            self.viewModel.navigationService.pushToTopListScreen(navigationController: self.navigationController)
         }, onCompleted: nil, onDisposed: nil).disposed(by: bag)
         
     }

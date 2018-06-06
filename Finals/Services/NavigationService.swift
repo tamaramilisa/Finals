@@ -79,6 +79,22 @@ struct NavigationService {
         navigationController?.pushViewController(viewController, animated: true)
     }
     
+    func pushToStatisticsScreen(navigationController: UINavigationController?) {
+        let viewController: StatisticsViewController = controllerFactory(ViewModelType: StatisticsViewModel.self, PresenterType: StatisticsPresenter.self, storyboard: mainStroyboard)
+        
+        viewController.hidesBottomBarWhenPushed = true
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func pushToTopListScreen(navigationController: UINavigationController?) {
+        let viewController: TopListViewController = controllerFactory(ViewModelType: TopListViewModel.self, PresenterType: TopListPresenter.self, storyboard: mainStroyboard)
+        
+        viewController.hidesBottomBarWhenPushed = true
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
     func popController(navigationController: UINavigationController?) {
         _ = navigationController?.popViewController(animated: true)
     }

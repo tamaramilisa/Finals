@@ -25,6 +25,7 @@ class ProfileViewController: BaseViewController {
     @IBOutlet weak var firstButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet weak var statisticsButton: UIButton!
     
     let bag = DisposeBag()
     let pickerController = UIImagePickerController()
@@ -48,6 +49,12 @@ class ProfileViewController: BaseViewController {
         tapRecognizer.rx.event.asDriver().drive(onNext: { [weak self] (sender) in
             
             self?.showModalAlert()
+        }, onCompleted: nil, onDisposed: nil).disposed(by: bag)
+        
+        statisticsButton.rx.tap.asDriver().drive(onNext: { [weak self] in
+            guard let `self` = self else { return }
+            
+            self.viewModel.navigationService.pushToStatisticsScreen(navigationController: self.navigationController)
         }, onCompleted: nil, onDisposed: nil).disposed(by: bag)
         
         logoutButton.rx.tap.asDriver().drive(onNext: { [weak self] in

@@ -22,7 +22,7 @@ class ProfilePresenter: BasePresenter {
         viewController.navigationItem.title = "Profil"
         addBorder(button: viewController.firstButton)
         addBorder(button: viewController.settingsButton)
-        addBorder(button: viewController.statisticsButton)
+//        addBorder(button: viewController.statisticsButton)
         
     }
     

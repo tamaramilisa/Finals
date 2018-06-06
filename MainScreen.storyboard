@@ -125,7 +125,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noimage_male" translatesAutoresizingMaskIntoConstraints="NO" id="1Kh-qD-CZi">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noimage_male" translatesAutoresizingMaskIntoConstraints="NO" id="1Kh-qD-CZi">
                                 <rect key="frame" x="127.5" y="92" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="SDH-Hw-pX4"/>
@@ -138,7 +138,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SE9-ur-3rK">
-                                <rect key="frame" x="24" y="276" width="327" height="50"/>
+                                <rect key="frame" x="24" y="262" width="327" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="k8q-74-sBC"/>
                                 </constraints>
@@ -153,7 +153,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1h-3k-87k">
-                                <rect key="frame" x="24" y="342" width="327" height="50"/>
+                                <rect key="frame" x="24" y="328" width="327" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="WlA-L3-99z"/>
                                 </constraints>
@@ -184,13 +184,14 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71i-m2-Sar">
-                                <rect key="frame" x="24" y="408" width="327" height="50"/>
+                                <rect key="frame" x="24" y="394" width="327" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="XfZ-bD-bYg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <state key="normal" title="Statistika">
-                                    <color key="titleColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -203,7 +204,7 @@
                         <constraints>
                             <constraint firstItem="BGL-4I-6Vk" firstAttribute="trailing" secondItem="H1h-3k-87k" secondAttribute="trailing" constant="24" id="2rD-Fz-zCu"/>
                             <constraint firstItem="H1h-3k-87k" firstAttribute="top" secondItem="SE9-ur-3rK" secondAttribute="bottom" constant="16" id="90q-bd-7Ug"/>
-                            <constraint firstItem="SE9-ur-3rK" firstAttribute="top" secondItem="1Kh-qD-CZi" secondAttribute="bottom" constant="64" id="AQv-bt-Nas"/>
+                            <constraint firstItem="SE9-ur-3rK" firstAttribute="top" secondItem="1Kh-qD-CZi" secondAttribute="bottom" constant="50" id="AQv-bt-Nas"/>
                             <constraint firstItem="Wpr-sM-R0G" firstAttribute="leading" secondItem="BGL-4I-6Vk" secondAttribute="leading" constant="24" id="FT9-pJ-aJ7"/>
                             <constraint firstItem="BGL-4I-6Vk" firstAttribute="trailing" secondItem="Wpr-sM-R0G" secondAttribute="trailing" constant="24" id="Jrc-mX-uO6"/>
                             <constraint firstItem="1Kh-qD-CZi" firstAttribute="top" secondItem="BGL-4I-6Vk" secondAttribute="top" constant="72" id="P9m-oD-Nf5"/>

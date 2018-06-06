@@ -35,6 +35,11 @@
                             <constraint firstAttribute="height" constant="16" id="z9f-ug-I01"/>
                         </constraints>
                         <color key="progressTintColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </progressView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uE9-A0-pxj">
                         <rect key="frame" x="0.0" y="86" width="397" height="1"/>

@@ -8,6 +8,9 @@
 
 import Foundation
 
+protocol ModelType {
+    var errors: Array<RequestError>? { get set}
+}
 
 protocol BaseViewModel {
 	var navigationService: NavigationService! { get set }
@@ -17,3 +20,17 @@ protocol BaseViewModel {
 
 }
 
+extension BaseViewModel {
+    
+    func extractError(response: HTTPURLResponse, data: ModelType?) -> Error? {
+        if response.statusCode != 200 {
+            return response.statusCode as? Error
+        }
+        if data?.errors?.count != 0 {
+            return data?.errors?.first
+        }
+        
+        return nil
+    }
+    
+}

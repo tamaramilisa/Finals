@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3202456020C8833C006646BB /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3202455F20C8833C006646BB /* UserStorage.swift */; };
+		3202456220C88800006646BB /* UserLoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3202456120C88800006646BB /* UserLoginData.swift */; };
 		321D26E02098C42B0089B2E0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321D26DF2098C42B0089B2E0 /* LoginViewModel.swift */; };
 		321D26E22098C4380089B2E0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321D26E12098C4380089B2E0 /* LoginViewController.swift */; };
 		321D26E42098C4440089B2E0 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321D26E32098C4440089B2E0 /* LoginPresenter.swift */; };
@@ -69,6 +71,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3202455F20C8833C006646BB /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
+		3202456120C88800006646BB /* UserLoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginData.swift; sourceTree = "<group>"; };
 		321D26DF2098C42B0089B2E0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		321D26E12098C4380089B2E0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		321D26E32098C4440089B2E0 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
@@ -375,6 +379,7 @@
 			isa = PBXGroup;
 			children = (
 				32D345B7207CD55B003CFC7B /* NavigationService.swift */,
+				3202455F20C8833C006646BB /* UserStorage.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -392,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				32D345B9207CD563003CFC7B /* RequestError.swift */,
+				3202456120C88800006646BB /* UserLoginData.swift */,
 			);
 			path = NetworkModels;
 			sourceTree = "<group>";
@@ -612,6 +618,7 @@
 				3229148920C13408001EEC8B /* MedalsViewController.swift in Sources */,
 				32EC491A208E3BE300F89BB2 /* RootNavigationController.swift in Sources */,
 				329F002820AB391D0018466D /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				3202456220C88800006646BB /* UserLoginData.swift in Sources */,
 				32D345B8207CD55B003CFC7B /* NavigationService.swift in Sources */,
 				321D26EA2098C4D00089B2E0 /* MainViewModel.swift in Sources */,
 				32FFAB8220AC7A1100A5D9CB /* LoginTextField.swift in Sources */,
@@ -644,6 +651,7 @@
 				329F002520AB36390018466D /* TPKeyboardAvoidingScrollView.m in Sources */,
 				3253C99120C7E609003E71AE /* TopListViewModel.swift in Sources */,
 				327E3F9E20BEBDC2006ABE32 /* ProfileViewModel.swift in Sources */,
+				3202456020C8833C006646BB /* UserStorage.swift in Sources */,
 				327E3FA220BEBDD9006ABE32 /* ProfilePresenter.swift in Sources */,
 				321D26E02098C42B0089B2E0 /* LoginViewModel.swift in Sources */,
 				321D26F32098C53F0089B2E0 /* LearnListViewModel.swift in Sources */,

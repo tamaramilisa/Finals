@@ -30,6 +30,8 @@ class LearnListPresenter: BasePresenter {
         cell.titleLabel.text = title
         cell.progressBar.setProgress(0.2, animated: true)
         
+        cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, 2000)
+        
         return cell
     }
 }

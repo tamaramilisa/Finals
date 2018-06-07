@@ -94,6 +94,17 @@ struct NavigationService {
         navigationController?.isNavigationBarHidden = false
         navigationController?.pushViewController(viewController, animated: true)
     }
+
+    //prenesi cijelu kategoriju, za sad samo title
+    func pushToLearnSingleScreen(navigationController: UINavigationController?, title: String) {
+        let viewController: LearnSingleViewController = controllerFactory(ViewModelType: LearnSingleViewModel.self, PresenterType: LearnSinglePresenter.self, storyboard: categoriesStoryboard)
+        
+        viewController.titlee = title
+        
+        viewController.hidesBottomBarWhenPushed = true
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.pushViewController(viewController, animated: true)
+    }
     
     func popController(navigationController: UINavigationController?) {
         _ = navigationController?.popViewController(animated: true)

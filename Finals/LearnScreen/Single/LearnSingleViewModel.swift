@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+class LearnSingleViewModel: BaseViewModel {
+    
+    var navigationService: NavigationService!
+    var networking: AlamofireNetworking!
+    var realmManager = RealmManager()
+    
+    required init() {}
+    
+}

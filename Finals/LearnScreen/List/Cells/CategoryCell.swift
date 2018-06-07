@@ -14,12 +14,21 @@ class CategoryCell: UITableViewCell {
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var learnButton: UIButton!
     @IBOutlet weak var challengeButton: UIButton!
-    @IBOutlet weak var challengeButtonBottom: NSLayoutConstraint!
+    @IBOutlet weak var contentViewTop: NSLayoutConstraint!
+    @IBOutlet weak var contentViewBottom: NSLayoutConstraint!
+    @IBOutlet weak var stuffView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        challengeButtonBottom.constant = 0
+        selectionStyle = .none
+        
+        stuffView.layer.borderWidth = 1.0
+        stuffView.layer.borderColor = UIColor(red: 0/255, green: 144/255, blue: 81/255, alpha: 1.0).cgColor
+        
+        contentViewTop.constant = 8
+        contentViewBottom.constant = 8
+        
     }
     
 }

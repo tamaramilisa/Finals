@@ -45,8 +45,8 @@ class LearnListViewController: BaseViewController {
             guard let `self` = self else { return UITableViewCell() }
             
             let cell: CategoryCell = tv.dequeueReusableCell()
-            print(item)
             
+            self.listenToCellTaps(cell: cell)
             return self.presenter.configureCategoryCell(cell: cell, title: item.name!)
         })
         
@@ -64,6 +64,15 @@ class LearnListViewController: BaseViewController {
 //
 //            }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)
         
+    }
+    
+    func listenToCellTaps(cell: CategoryCell) {
+        
+        cell.learnButton.rx.tap.subscribe(onNext: { [weak self] () in
+            guard let `self` = self else { return }
+            
+            self.viewModel.navigationService.pushToLearnSingleScreen(navigationController: self.navigationController, title: "Naslov")
+            },onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)
     }
     
     

@@ -27,6 +27,12 @@ class RMCategory: Object, Mappable {
         self.init()
     }
     
+    convenience init(id: Int, name: String) {
+        self.init()
+        self.id = id
+        self.name = name
+    }
+    
     func mapping(map: Map) {
         id <- (map["id"], TransformOf<Int, String>(fromJSON: { Int($0!) }, toJSON: { $0.map { String($0) } }))
         name <- map["name"]

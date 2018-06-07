@@ -17,16 +17,16 @@ struct AlamofireNetworking {
 		return RxAlamofire.requestJSON(router.method, router.url, parameters: router.params, encoding: router.encoding, headers: router.headers).observeOn(MainScheduler.instance)
 	}
     
-    func createUser(firstName: String, lastName: String, email:String, password: String) -> Observable<(HTTPURLResponse, Any)> {
-        
-        let params: [String: Any]? = [
-            "first_name" : firstName,
-            "last_name" : lastName,
-            "email" : email,
-            "password" : password,
-            "confirm_password" : password
-        ]
-        
-        return request(router: FinalsRouter.PostNoAuth(path: "/signup", params: params as [String : AnyObject]?)).debug()
-    }
+//    func createUser(firstName: String, lastName: String, email:String, password: String) -> Observable<(HTTPURLResponse, Any)> {
+//
+//        let params: [String: Any]? = [
+//            "first_name" : firstName,
+//            "last_name" : lastName,
+//            "email" : email,
+//            "password" : password,
+//            "confirm_password" : password
+//        ]
+//
+//        return request(router: FinalsRouter.PostNoAuth(path: "/signup", params: params as [String : AnyObject]?)).debug()
+//    }
 }

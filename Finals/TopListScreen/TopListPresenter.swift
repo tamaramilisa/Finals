@@ -11,7 +11,7 @@ import Foundation
 class TopListPresenter: BasePresenter {
     
     private struct TopListStatic {
-        static var title: String { get { return "Top lista" } }
+        static var title: String { get { return "Top liste" } }
     }
     
     required init() { }
@@ -27,4 +27,12 @@ class TopListPresenter: BasePresenter {
         
     }
 
+    func configureTopListCell(cell: TopListCell, item: String) -> TopListCell {
+        
+        cell.titleLabel.setTitle(item, for: .normal)
+    
+        cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, 2000)
+        
+        return cell
+    }
 }

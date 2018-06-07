@@ -28,9 +28,47 @@ class TopListViewController: BaseViewController {
         super.viewDidLoad()
         
         presenter.setUp()
+        
+        setupRx()
     }
     
     func setupRx() {
+        
+        tableView.registerWithNib(TopListCell.self)
+        
+        let dataSource = RxTableViewSectionedReloadDataSource<TopListSectionModel>(configureCell: { [weak self] (dataSrc, tv, idxPath, item) in
+            guard let `self` = self else { return UITableViewCell() }
+            
+            let cell: TopListCell = tv.dequeueReusableCell()
+            
+            return self.presenter.configureTopListCell(cell: cell, item: item)
+
+        })
+        
+        viewModel.topListVariable.asObservable().bind(to: tableView.rx.items(dataSource: dataSource)).disposed(by: bag)
+
+        tableView.rx.itemSelected.subscribe(onNext: { [weak self] (indexPath) in
+            guard let `self` = self else { return }
+            self.tableView.deselectRow(at: indexPath, animated: true)
+            if indexPath.section == 0 {
+                if dataSource[indexPath] == Lists.basic {
+
+                }
+                if dataSource[indexPath] == Lists.flags {
+
+                }
+                if dataSource[indexPath] == Lists.europe {
+
+                }
+                if dataSource[indexPath] == Lists.cro {
+
+                }
+                if dataSource[indexPath] == Lists.all {
+
+                }
+            }
+
+            }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)
         
     }
         

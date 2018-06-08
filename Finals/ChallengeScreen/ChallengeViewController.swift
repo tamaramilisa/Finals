@@ -31,10 +31,23 @@ class ChallengeViewController: BaseViewController {
         super.viewDidLoad()
         
         presenter.setUp()
+        
+        setupRx()
     }
     
     func setupRx() {
+        tableView.registerWithNib(LevelCell.self)
         
+        let dataSource = RxTableViewSectionedReloadDataSource<ChallengeSectionModel>(configureCell: { [weak self] (dataSrc, tv, idxPath, item) in
+            guard let `self` = self else { return UITableViewCell() }
+            
+            let cell: LevelCell = tv.dequeueReusableCell()
+            
+            return self.presenter.configureLevelCell(cell: cell, item: item)
+            
+        })
+        
+        viewModel.challengeVariable.asObservable().bind(to: tableView.rx.items(dataSource: dataSource)).disposed(by: bag)
     }
     
 }

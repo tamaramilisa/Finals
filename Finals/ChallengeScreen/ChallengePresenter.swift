@@ -28,4 +28,12 @@ class ChallengePresenter: BasePresenter {
         
     }
     
+    func configureLevelCell(cell: LevelCell, item: String) -> LevelCell {
+        cell.titleLabel.text = item
+        
+        cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, 2000)
+        
+        return cell
+    }
+    
 }

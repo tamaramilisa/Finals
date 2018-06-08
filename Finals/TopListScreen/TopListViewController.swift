@@ -52,19 +52,19 @@ class TopListViewController: BaseViewController {
             self.tableView.deselectRow(at: indexPath, animated: true)
             if indexPath.section == 0 {
                 if dataSource[indexPath] == Lists.basic {
-
+                    self.viewModel.navigationService.pushToTopListSingleScreen(navigationController: self.navigationController, topList: dataSource[indexPath])
                 }
                 if dataSource[indexPath] == Lists.flags {
-
+                    self.viewModel.navigationService.pushToTopListSingleScreen(navigationController: self.navigationController, topList: dataSource[indexPath])
                 }
                 if dataSource[indexPath] == Lists.europe {
-
+                    self.viewModel.navigationService.pushToTopListSingleScreen(navigationController: self.navigationController, topList: dataSource[indexPath])
                 }
                 if dataSource[indexPath] == Lists.cro {
-
+                    self.viewModel.navigationService.pushToTopListSingleScreen(navigationController: self.navigationController, topList: dataSource[indexPath])
                 }
                 if dataSource[indexPath] == Lists.all {
-
+                    self.viewModel.navigationService.pushToTopListSingleScreen(navigationController: self.navigationController, topList: dataSource[indexPath])
                 }
             }
 

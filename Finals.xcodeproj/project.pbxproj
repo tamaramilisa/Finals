@@ -50,6 +50,10 @@
 		327E3FA220BEBDD9006ABE32 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327E3FA120BEBDD9006ABE32 /* ProfilePresenter.swift */; };
 		32812193207CF1CC00FF4A23 /* AlamofireNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32812192207CF1CC00FF4A23 /* AlamofireNetworking.swift */; };
 		3294175020BC54C80050A497 /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3294174F20BC54C80050A497 /* MainScreen.storyboard */; };
+		3294A4A820CAB1800008204F /* TopList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3294A4A720CAB1800008204F /* TopList.storyboard */; };
+		3294A4AB20CAB1ED0008204F /* TopListSingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3294A4AA20CAB1ED0008204F /* TopListSingleViewController.swift */; };
+		3294A4AD20CAB1FC0008204F /* TopListSingleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3294A4AC20CAB1FC0008204F /* TopListSingleViewModel.swift */; };
+		3294A4AF20CAB2130008204F /* TopListSinglePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3294A4AE20CAB2130008204F /* TopListSinglePresenter.swift */; };
 		329F002520AB36390018466D /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 329F002420AB36380018466D /* TPKeyboardAvoidingScrollView.m */; };
 		329F002820AB391D0018466D /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 329F002720AB391D0018466D /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		32A2B0A420C534DA00FD6736 /* RMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A2B0A320C534DA00FD6736 /* RMUser.swift */; };
@@ -121,6 +125,10 @@
 		327E3FA120BEBDD9006ABE32 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		32812192207CF1CC00FF4A23 /* AlamofireNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireNetworking.swift; sourceTree = "<group>"; };
 		3294174F20BC54C80050A497 /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
+		3294A4A720CAB1800008204F /* TopList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TopList.storyboard; sourceTree = "<group>"; };
+		3294A4AA20CAB1ED0008204F /* TopListSingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListSingleViewController.swift; sourceTree = "<group>"; };
+		3294A4AC20CAB1FC0008204F /* TopListSingleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListSingleViewModel.swift; sourceTree = "<group>"; };
+		3294A4AE20CAB2130008204F /* TopListSinglePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListSinglePresenter.swift; sourceTree = "<group>"; };
 		329F002220AB362F0018466D /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
 		329F002320AB36380018466D /* Finals-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Finals-Bridging-Header.h"; sourceTree = "<group>"; };
 		329F002420AB36380018466D /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
@@ -300,6 +308,7 @@
 				3253C99220C7E619003E71AE /* TopListViewController.swift */,
 				3253C99420C7E625003E71AE /* TopListPresenter.swift */,
 				32505AE420C994210030CB6C /* Cells */,
+				3294A4A920CAB1D10008204F /* Single */,
 			);
 			path = TopListScreen;
 			sourceTree = "<group>";
@@ -333,6 +342,16 @@
 			path = ProfileScreen;
 			sourceTree = "<group>";
 		};
+		3294A4A920CAB1D10008204F /* Single */ = {
+			isa = PBXGroup;
+			children = (
+				3294A4AC20CAB1FC0008204F /* TopListSingleViewModel.swift */,
+				3294A4AA20CAB1ED0008204F /* TopListSingleViewController.swift */,
+				3294A4AE20CAB2130008204F /* TopListSinglePresenter.swift */,
+			);
+			path = Single;
+			sourceTree = "<group>";
+		};
 		32A2B0A220C534C600FD6736 /* RealmModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -362,6 +381,7 @@
 				32D34591207CD1B8003CFC7B /* Finals */,
 				321D26FE2098C6430089B2E0 /* Main.storyboard */,
 				3294174F20BC54C80050A497 /* MainScreen.storyboard */,
+				3294A4A720CAB1800008204F /* TopList.storyboard */,
 				327E3F9920BEBA01006ABE32 /* Categories.storyboard */,
 				3229149520C185D4001EEC8B /* Question.storyboard */,
 				3229148520C13237001EEC8B /* Medals.storyboard */,
@@ -568,6 +588,7 @@
 				32D3459D207CD1B9003CFC7B /* LaunchScreen.storyboard in Resources */,
 				3229148620C13237001EEC8B /* Medals.storyboard in Resources */,
 				32505AE320C971080030CB6C /* LevelCell.xib in Resources */,
+				3294A4A820CAB1800008204F /* TopList.storyboard in Resources */,
 				32D3459A207CD1B8003CFC7B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -675,6 +696,7 @@
 				32EC491A208E3BE300F89BB2 /* RootNavigationController.swift in Sources */,
 				329F002820AB391D0018466D /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				3202456220C88800006646BB /* UserLoginData.swift in Sources */,
+				3294A4AB20CAB1ED0008204F /* TopListSingleViewController.swift in Sources */,
 				32D345B8207CD55B003CFC7B /* NavigationService.swift in Sources */,
 				321D26EA2098C4D00089B2E0 /* MainViewModel.swift in Sources */,
 				32FFAB8220AC7A1100A5D9CB /* LoginTextField.swift in Sources */,
@@ -688,9 +710,11 @@
 				321D26F52098C54C0089B2E0 /* LearnListViewController.swift in Sources */,
 				32A5F25E20B2F2560047020A /* RealmManager.swift in Sources */,
 				3229148D20C13420001EEC8B /* MedalsPresenter.swift in Sources */,
+				3294A4AF20CAB2130008204F /* TopListSinglePresenter.swift in Sources */,
 				32A2B0A620C5350100FD6736 /* RMCategory.swift in Sources */,
 				32505ADA20C96FB20030CB6C /* ChallengeViewModel.swift in Sources */,
 				3253C99C20C7EC59003E71AE /* StatisticsPresenter.swift in Sources */,
+				3294A4AD20CAB1FC0008204F /* TopListSingleViewModel.swift in Sources */,
 				32A2B0AA20C5351A00FD6736 /* RMQuestion.swift in Sources */,
 				32812193207CF1CC00FF4A23 /* AlamofireNetworking.swift in Sources */,
 				32D345A8207CD3F9003CFC7B /* BasePresenter.swift in Sources */,

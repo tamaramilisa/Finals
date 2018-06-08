@@ -231,37 +231,6 @@
             </objects>
             <point key="canvasLocation" x="695" y="153"/>
         </scene>
-        <!--Top List View Controller-->
-        <scene sceneID="LHZ-E6-KWW">
-            <objects>
-                <viewController storyboardIdentifier="TopListViewController" id="BtT-sf-QBb" customClass="TopListViewController" customModule="Finals" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NCw-sA-UVD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o1M-Fx-idy">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="separatorInset" minX="2000" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="dyx-sN-mI1" firstAttribute="bottom" secondItem="o1M-Fx-idy" secondAttribute="bottom" id="MDL-iK-jjB"/>
-                            <constraint firstItem="o1M-Fx-idy" firstAttribute="top" secondItem="dyx-sN-mI1" secondAttribute="top" id="fVc-0S-YCc"/>
-                            <constraint firstItem="o1M-Fx-idy" firstAttribute="leading" secondItem="dyx-sN-mI1" secondAttribute="leading" id="pwH-4K-yfJ"/>
-                            <constraint firstItem="dyx-sN-mI1" firstAttribute="trailing" secondItem="o1M-Fx-idy" secondAttribute="trailing" id="tQp-hs-vUw"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="dyx-sN-mI1"/>
-                    </view>
-                    <connections>
-                        <outlet property="tableView" destination="o1M-Fx-idy" id="Yzx-lK-lnu"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g4T-1I-apu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1399" y="152"/>
-        </scene>
         <!--Statistics View Controller-->
         <scene sceneID="nn1-b9-bn7">
             <objects>
@@ -369,6 +338,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vL4-Hc-y8F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2103" y="152"/>
+        </scene>
+        <!--TopListViewController-->
+        <scene sceneID="BCn-YO-Kdo">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="TopListViewController" storyboardName="TopList" referencedIdentifier="TopListViewController" id="DWX-Gy-X9L" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PHm-RO-HXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1399" y="152"/>
         </scene>
     </scenes>
     <resources>

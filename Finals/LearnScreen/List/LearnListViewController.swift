@@ -72,7 +72,13 @@ class LearnListViewController: BaseViewController {
             guard let `self` = self else { return }
             
             self.viewModel.navigationService.pushToLearnSingleScreen(navigationController: self.navigationController, title: "Naslov")
-            },onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)
+            },onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: cell.bag)
+        
+        cell.challengeButton.rx.tap.subscribe(onNext: { [weak self] () in
+            guard let `self` = self else { return }
+            
+            self.viewModel.navigationService.pushToChallengeScreen(navigationController: self.navigationController)
+            },onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: cell.bag)
     }
     
     

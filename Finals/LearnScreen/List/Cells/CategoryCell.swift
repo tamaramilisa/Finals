@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class CategoryCell: UITableViewCell {
 
@@ -17,6 +18,8 @@ class CategoryCell: UITableViewCell {
     @IBOutlet weak var contentViewTop: NSLayoutConstraint!
     @IBOutlet weak var contentViewBottom: NSLayoutConstraint!
     @IBOutlet weak var stuffView: UIView!
+    
+    private(set) var bag = DisposeBag()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,6 +32,11 @@ class CategoryCell: UITableViewCell {
         contentViewTop.constant = 8
         contentViewBottom.constant = 8
         
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        bag = DisposeBag()
     }
     
 }

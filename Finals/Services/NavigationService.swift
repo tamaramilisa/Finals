@@ -18,6 +18,7 @@ struct NavigationService {
     let mainStroyboard = UIStoryboard(name: "MainScreen", bundle: nil)
     let categoriesStoryboard = UIStoryboard(name: "Categories", bundle: nil)
     let medalsStoryboard = UIStoryboard(name: "Medals", bundle: nil)
+    let topListStoryboard = UIStoryboard(name: "TopList", bundle: nil)
     
     var rootNavigationController: RootNavigationController!
 
@@ -50,7 +51,7 @@ struct NavigationService {
         let viewController: MainViewController = controllerFactory(ViewModelType: MainViewModel.self, PresenterType: MainPresenter.self, storyboard: mainStroyboard)
         
         viewController.hidesBottomBarWhenPushed = true
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.isNavigationBarHidden = false
         navigationController?.pushViewController(viewController, animated: true)
     }
     
@@ -88,18 +89,36 @@ struct NavigationService {
     }
     
     func pushToTopListScreen(navigationController: UINavigationController?) {
-        let viewController: TopListViewController = controllerFactory(ViewModelType: TopListViewModel.self, PresenterType: TopListPresenter.self, storyboard: mainStroyboard)
+        let viewController: TopListViewController = controllerFactory(ViewModelType: TopListViewModel.self, PresenterType: TopListPresenter.self, storyboard: topListStoryboard)
         
         viewController.hidesBottomBarWhenPushed = true
         navigationController?.isNavigationBarHidden = false
         navigationController?.pushViewController(viewController, animated: true)
     }
 
+    func pushToTopListSingleScreen(navigationController: UINavigationController?, topList: String) {
+        let viewController: TopListSingleViewController = controllerFactory(ViewModelType: TopListSingleViewModel.self, PresenterType: TopListSinglePresenter.self, storyboard: topListStoryboard)
+        
+        viewController.name = topList
+        
+        viewController.hidesBottomBarWhenPushed = true
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
     //prenesi cijelu kategoriju, za sad samo title
     func pushToLearnSingleScreen(navigationController: UINavigationController?, title: String) {
         let viewController: LearnSingleViewController = controllerFactory(ViewModelType: LearnSingleViewModel.self, PresenterType: LearnSinglePresenter.self, storyboard: categoriesStoryboard)
         
         viewController.titlee = title
+        
+        viewController.hidesBottomBarWhenPushed = true
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func pushToChallengeScreen(navigationController: UINavigationController?) {
+        let viewController: ChallengeViewController = controllerFactory(ViewModelType: ChallengeViewModel.self, PresenterType: ChallengePresenter.self, storyboard: categoriesStoryboard)
         
         viewController.hidesBottomBarWhenPushed = true
         navigationController?.isNavigationBarHidden = false

@@ -265,13 +265,6 @@
 			path = TPKeyboardAvoiding;
 			sourceTree = "<group>";
 		};
-		32505AD720C96F640030CB6C /* Question */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Question;
-			sourceTree = "<group>";
-		};
 		32505AD820C96F900030CB6C /* ChallengeScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,7 +412,6 @@
 				327E3F9C20BEBDAE006ABE32 /* ProfileScreen */,
 				321D26EF2098C4F40089B2E0 /* LearnScreen */,
 				32505AD820C96F900030CB6C /* ChallengeScreen */,
-				32505AD720C96F640030CB6C /* Question */,
 				3229148720C133EB001EEC8B /* MedalsScreen */,
 				3253C98F20C7E5E4003E71AE /* TopListScreen */,
 				3253C99620C7EC23003E71AE /* StatisticsScreen */,

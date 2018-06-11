@@ -18,6 +18,7 @@ protocol BaseViewModel {
 
 	init()
 
+    func extractError(response: HTTPURLResponse, data: ModelType?) -> Error?
 }
 
 extension BaseViewModel {

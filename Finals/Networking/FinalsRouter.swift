@@ -21,7 +21,7 @@ protocol AlamofireRouter {
 enum FinalsRouter: URLRequestConvertible, AlamofireRouter {
     
     static var baseURLString: String {
-        return "https://api.likeus.hr/v2"
+        return "http://172.20.10.8:3000"
     }
     
     case Get(path: String, params: [String: AnyObject]?)

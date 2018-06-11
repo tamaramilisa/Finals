@@ -11,6 +11,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import NVActivityIndicatorView
+import SVProgressHUD
 
 class LoginViewController: BaseViewController , UITextFieldDelegate {
 
@@ -107,7 +108,14 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
         signinButton.rx.tap.subscribe(onNext: { [weak self] () in
             guard let `self` = self else { return }
             
-            self.viewModel.navigationService.pushToMainScreen(navigationController: self.navigationController)
+            if self.textFieldsValid() {
+                if self.nameTextField.isHidden == true {
+
+                } else {
+                    self.register()
+                }
+            }
+//            self.viewModel.navigationService.pushToMainScreen(navigationController: self.navigationController)
         }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)
     }
     
@@ -223,6 +231,35 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
         textField.setNeedsDisplay()
         
         return false
+    }
+    
+    func register() {
+        nameTextField.resignFirstResponder()
+        lastNameTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        
+        SVProgressHUD.show()
+        
+        viewModel.createUser(firstName: nameTextField.text!, lastName: lastNameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!).subscribe(onNext: { [weak self] (result) in
+            guard let `self` = self else { return }
+            
+            SVProgressHUD.dismiss()
+            
+            switch result {
+            case .success(_):
+                self.viewModel.navigationService.pushToMainScreen(navigationController: self.navigationController)
+            case .failure(let error):
+                if let requestError = error as? RequestError {
+                    self.announceError(error: requestError.message)
+                }
+            }
+            }, onError: { [weak self] (error) in
+                SVProgressHUD.dismiss()
+                self?.announceError(error: error.localizedDescription)
+        }, onCompleted: nil).disposed(by: bag)
+        
+        
     }
     
     

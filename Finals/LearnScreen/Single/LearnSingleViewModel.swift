@@ -16,4 +16,5 @@ class LearnSingleViewModel: BaseViewModel {
     
     required init() {}
     
+    
 }

@@ -10,12 +10,25 @@ import Foundation
 import RxSwift
 import Alamofire
 
-class LoginViewModel: BaseViewModel {
+class LoginViewModel: BaseViewModel, NetworkRequestHandler {
     
     var navigationService: NavigationService!
     var networking: AlamofireNetworking!
     var realmManager = RealmManager()
     
     required init() {}
+    
+    func createUser(firstName: String, lastName: String, email: String, password: String) -> Observable<Result<RMUser?>> {
+        
+        return networking.createUser(firstName: firstName, lastName: lastName, email: email, password: password).map { (response, data) -> Result<RMUser?> in
+            let userData = UserLoginData(JSON: data as! Dictionary<String, AnyObject>)
+            
+            if let err = self.extractError(response: response, data: userData) {
+                return .failure(err)
+            } else {
+                return .success(userData?.user)
+            }
+        }
+    }
     
 }

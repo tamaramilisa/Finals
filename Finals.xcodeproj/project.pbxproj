@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		3202456020C8833C006646BB /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3202455F20C8833C006646BB /* UserStorage.swift */; };
 		3202456220C88800006646BB /* UserLoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3202456120C88800006646BB /* UserLoginData.swift */; };
+		320DFD0E20D2300E00A62D10 /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320DFD0D20D2300E00A62D10 /* QuestionViewModel.swift */; };
+		320DFD1020D2301C00A62D10 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320DFD0F20D2301C00A62D10 /* QuestionViewController.swift */; };
+		320DFD1220D2302800A62D10 /* QuestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320DFD1120D2302800A62D10 /* QuestionPresenter.swift */; };
+		320DFD1620D2339600A62D10 /* AllMedalsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320DFD1420D2339600A62D10 /* AllMedalsCell.swift */; };
+		320DFD1720D2339600A62D10 /* AllMedalsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 320DFD1520D2339600A62D10 /* AllMedalsCell.xib */; };
+		320DFD1A20D233AC00A62D10 /* TypeMedalsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320DFD1820D233AC00A62D10 /* TypeMedalsCell.swift */; };
+		320DFD1B20D233AC00A62D10 /* TypeMedalsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 320DFD1920D233AC00A62D10 /* TypeMedalsCell.xib */; };
 		321D26E02098C42B0089B2E0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321D26DF2098C42B0089B2E0 /* LoginViewModel.swift */; };
 		321D26E22098C4380089B2E0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321D26E12098C4380089B2E0 /* LoginViewController.swift */; };
 		321D26E42098C4440089B2E0 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321D26E32098C4440089B2E0 /* LoginPresenter.swift */; };
@@ -84,6 +91,13 @@
 /* Begin PBXFileReference section */
 		3202455F20C8833C006646BB /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
 		3202456120C88800006646BB /* UserLoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginData.swift; sourceTree = "<group>"; };
+		320DFD0D20D2300E00A62D10 /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
+		320DFD0F20D2301C00A62D10 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		320DFD1120D2302800A62D10 /* QuestionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPresenter.swift; sourceTree = "<group>"; };
+		320DFD1420D2339600A62D10 /* AllMedalsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMedalsCell.swift; sourceTree = "<group>"; };
+		320DFD1520D2339600A62D10 /* AllMedalsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllMedalsCell.xib; sourceTree = "<group>"; };
+		320DFD1820D233AC00A62D10 /* TypeMedalsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeMedalsCell.swift; sourceTree = "<group>"; };
+		320DFD1920D233AC00A62D10 /* TypeMedalsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TypeMedalsCell.xib; sourceTree = "<group>"; };
 		321D26DF2098C42B0089B2E0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		321D26E12098C4380089B2E0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		321D26E32098C4440089B2E0 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
@@ -175,6 +189,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		320DFD0C20D22FEE00A62D10 /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				320DFD0D20D2300E00A62D10 /* QuestionViewModel.swift */,
+				320DFD0F20D2301C00A62D10 /* QuestionViewController.swift */,
+				320DFD1120D2302800A62D10 /* QuestionPresenter.swift */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
+		320DFD1320D2337D00A62D10 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				320DFD1420D2339600A62D10 /* AllMedalsCell.swift */,
+				320DFD1520D2339600A62D10 /* AllMedalsCell.xib */,
+				320DFD1820D233AC00A62D10 /* TypeMedalsCell.swift */,
+				320DFD1920D233AC00A62D10 /* TypeMedalsCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		321D26DE2098C3ED0089B2E0 /* LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +267,7 @@
 				3229148A20C13415001EEC8B /* MedalsViewModel.swift */,
 				3229148820C13408001EEC8B /* MedalsViewController.swift */,
 				3229148C20C13420001EEC8B /* MedalsPresenter.swift */,
+				320DFD1320D2337D00A62D10 /* Cells */,
 				3229148E20C141E8001EEC8B /* Popover */,
 			);
 			path = MedalsScreen;
@@ -412,6 +448,7 @@
 				327E3F9C20BEBDAE006ABE32 /* ProfileScreen */,
 				321D26EF2098C4F40089B2E0 /* LearnScreen */,
 				32505AD820C96F900030CB6C /* ChallengeScreen */,
+				320DFD0C20D22FEE00A62D10 /* Question */,
 				3229148720C133EB001EEC8B /* MedalsScreen */,
 				3253C98F20C7E5E4003E71AE /* TopListScreen */,
 				3253C99620C7EC23003E71AE /* StatisticsScreen */,
@@ -571,11 +608,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				320DFD1B20D233AC00A62D10 /* TypeMedalsCell.xib in Resources */,
 				327E3F9A20BEBA01006ABE32 /* Categories.storyboard in Resources */,
 				32505AE820C994360030CB6C /* TopListCell.xib in Resources */,
 				3229149420C179FB001EEC8B /* CategoryCell.xib in Resources */,
 				3229149620C185D4001EEC8B /* Question.storyboard in Resources */,
 				321D26FF2098C6430089B2E0 /* Main.storyboard in Resources */,
+				320DFD1720D2339600A62D10 /* AllMedalsCell.xib in Resources */,
 				3294175020BC54C80050A497 /* MainScreen.storyboard in Resources */,
 				32D3459D207CD1B9003CFC7B /* LaunchScreen.storyboard in Resources */,
 				3229148620C13237001EEC8B /* Medals.storyboard in Resources */,
@@ -696,12 +735,14 @@
 				32BC1C9520B2FACE008B9CFD /* OnboardingViewController.swift in Sources */,
 				327E3FA020BEBDCE006ABE32 /* ProfileViewController.swift in Sources */,
 				32D345AA207CD3F9003CFC7B /* BaseViewModel.swift in Sources */,
+				320DFD1220D2302800A62D10 /* QuestionPresenter.swift in Sources */,
 				3229148B20C13415001EEC8B /* MedalsViewModel.swift in Sources */,
 				321D26EC2098C4DD0089B2E0 /* MainViewController.swift in Sources */,
 				3229149320C179FB001EEC8B /* CategoryCell.swift in Sources */,
 				321D26F52098C54C0089B2E0 /* LearnListViewController.swift in Sources */,
 				32A5F25E20B2F2560047020A /* RealmManager.swift in Sources */,
 				3229148D20C13420001EEC8B /* MedalsPresenter.swift in Sources */,
+				320DFD1620D2339600A62D10 /* AllMedalsCell.swift in Sources */,
 				3294A4AF20CAB2130008204F /* TopListSinglePresenter.swift in Sources */,
 				32A2B0A620C5350100FD6736 /* RMCategory.swift in Sources */,
 				32505ADA20C96FB20030CB6C /* ChallengeViewModel.swift in Sources */,
@@ -712,7 +753,9 @@
 				32D345A8207CD3F9003CFC7B /* BasePresenter.swift in Sources */,
 				32A2B0AE20C5353B00FD6736 /* RMMedal.swift in Sources */,
 				3253C99320C7E619003E71AE /* TopListViewController.swift in Sources */,
+				320DFD1020D2301C00A62D10 /* QuestionViewController.swift in Sources */,
 				321D26F72098C5570089B2E0 /* LearnListPresenter.swift in Sources */,
+				320DFD0E20D2300E00A62D10 /* QuestionViewModel.swift in Sources */,
 				32A2B0A420C534DA00FD6736 /* RMUser.swift in Sources */,
 				321D26EE2098C4E80089B2E0 /* MainPresenter.swift in Sources */,
 				32D345A9207CD3F9003CFC7B /* BaseViewController.swift in Sources */,
@@ -733,6 +776,7 @@
 				321D26F32098C53F0089B2E0 /* LearnListViewModel.swift in Sources */,
 				32BC1C9720B2FADD008B9CFD /* OnboardingPresenter.swift in Sources */,
 				32D345BC207CD705003CFC7B /* NetworkRequestHandler.swift in Sources */,
+				320DFD1A20D233AC00A62D10 /* TypeMedalsCell.swift in Sources */,
 				321D26E22098C4380089B2E0 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

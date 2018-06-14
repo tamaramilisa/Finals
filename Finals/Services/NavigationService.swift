@@ -19,6 +19,7 @@ struct NavigationService {
     let categoriesStoryboard = UIStoryboard(name: "Categories", bundle: nil)
     let medalsStoryboard = UIStoryboard(name: "Medals", bundle: nil)
     let topListStoryboard = UIStoryboard(name: "TopList", bundle: nil)
+    let questionStoryboard = UIStoryboard(name: "Question", bundle: nil)
     
     var rootNavigationController: RootNavigationController!
 
@@ -124,6 +125,15 @@ struct NavigationService {
         navigationController?.isNavigationBarHidden = false
         navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    func pushToQuestionScreen(navigationController: UINavigationController?) {
+        let viewController: QuestionViewController = controllerFactory(ViewModelType: QuestionViewModel.self, PresenterType: QuestionPresenter.self, storyboard: questionStoryboard)
+        
+        viewController.hidesBottomBarWhenPushed = true
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
     
     func popController(navigationController: UINavigationController?) {
         _ = navigationController?.popViewController(animated: true)

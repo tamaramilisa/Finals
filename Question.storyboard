@@ -82,46 +82,46 @@
             </objects>
             <point key="canvasLocation" x="104.8" y="154.27286356821591"/>
         </scene>
-        <!--View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="XIM-Ra-ykY">
             <objects>
-                <viewController id="LnR-hU-xrK" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestionViewController" id="LnR-hU-xrK" customClass="QuestionViewController" customModule="Finals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tdt-sv-TB2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7wg-DL-hea">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spain" translatesAutoresizingMaskIntoConstraints="NO" id="7wg-DL-hea">
                                 <rect key="frame" x="32" y="60" width="311" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="waG-oM-ci7"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNv-lx-i1O">
-                                <rect key="frame" x="24" y="250" width="327" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ovo je zastava koje države?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNv-lx-i1O">
+                                <rect key="frame" x="24" y="250" width="327" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdf-8f-Tan">
-                                <rect key="frame" x="24" y="322" width="327" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Portugal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdf-8f-Tan">
+                                <rect key="frame" x="24" y="325.5" width="327" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeG-R9-ngL">
-                                <rect key="frame" x="24" y="358.5" width="327" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Španjolska" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeG-R9-ngL">
+                                <rect key="frame" x="24" y="370" width="327" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDX-zz-TSI">
-                                <rect key="frame" x="24" y="395" width="327" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Francuska" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDX-zz-TSI">
+                                <rect key="frame" x="24" y="414.5" width="327" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1B-SY-h7r">
-                                <rect key="frame" x="24" y="431.5" width="327" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Belgija" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1B-SY-h7r">
+                                <rect key="frame" x="24" y="459" width="327" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -129,13 +129,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="K1B-SY-h7r" firstAttribute="top" secondItem="ZDX-zz-TSI" secondAttribute="bottom" constant="16" id="4NV-Qi-Qwe"/>
+                            <constraint firstItem="K1B-SY-h7r" firstAttribute="top" secondItem="ZDX-zz-TSI" secondAttribute="bottom" constant="24" id="4NV-Qi-Qwe"/>
                             <constraint firstItem="ZDX-zz-TSI" firstAttribute="leading" secondItem="hwj-hP-ENI" secondAttribute="leading" constant="24" id="77I-gC-wMP"/>
                             <constraint firstItem="7wg-DL-hea" firstAttribute="leading" secondItem="hwj-hP-ENI" secondAttribute="leading" constant="32" id="Aag-22-1zN"/>
                             <constraint firstItem="yNv-lx-i1O" firstAttribute="top" secondItem="7wg-DL-hea" secondAttribute="bottom" constant="40" id="BXE-ry-3kK"/>
                             <constraint firstItem="Tdf-8f-Tan" firstAttribute="leading" secondItem="hwj-hP-ENI" secondAttribute="leading" constant="24" id="EE1-2D-AhT"/>
                             <constraint firstItem="7wg-DL-hea" firstAttribute="top" secondItem="hwj-hP-ENI" secondAttribute="top" constant="40" id="U5X-eD-016"/>
-                            <constraint firstItem="eeG-R9-ngL" firstAttribute="top" secondItem="Tdf-8f-Tan" secondAttribute="bottom" constant="16" id="YfP-1e-k72"/>
+                            <constraint firstItem="eeG-R9-ngL" firstAttribute="top" secondItem="Tdf-8f-Tan" secondAttribute="bottom" constant="24" id="YfP-1e-k72"/>
                             <constraint firstItem="hwj-hP-ENI" firstAttribute="trailing" secondItem="K1B-SY-h7r" secondAttribute="trailing" constant="24" id="YtO-Ga-8sL"/>
                             <constraint firstItem="hwj-hP-ENI" firstAttribute="trailing" secondItem="7wg-DL-hea" secondAttribute="trailing" constant="32" id="a0B-Iw-7KS"/>
                             <constraint firstItem="hwj-hP-ENI" firstAttribute="trailing" secondItem="yNv-lx-i1O" secondAttribute="trailing" constant="24" id="bUY-hY-3vc"/>
@@ -146,7 +146,7 @@
                             <constraint firstItem="K1B-SY-h7r" firstAttribute="leading" secondItem="hwj-hP-ENI" secondAttribute="leading" constant="24" id="v8v-Ri-mCi"/>
                             <constraint firstItem="hwj-hP-ENI" firstAttribute="trailing" secondItem="ZDX-zz-TSI" secondAttribute="trailing" constant="24" id="vrA-7m-Urj"/>
                             <constraint firstItem="yNv-lx-i1O" firstAttribute="leading" secondItem="hwj-hP-ENI" secondAttribute="leading" constant="24" id="xZ7-78-Qp3"/>
-                            <constraint firstItem="ZDX-zz-TSI" firstAttribute="top" secondItem="eeG-R9-ngL" secondAttribute="bottom" constant="16" id="yCy-2R-QLc"/>
+                            <constraint firstItem="ZDX-zz-TSI" firstAttribute="top" secondItem="eeG-R9-ngL" secondAttribute="bottom" constant="24" id="yCy-2R-QLc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hwj-hP-ENI"/>
                     </view>
@@ -158,5 +158,6 @@
     </scenes>
     <resources>
         <image name="gray star" width="225" height="225"/>
+        <image name="spain" width="252" height="200"/>
     </resources>
 </document>

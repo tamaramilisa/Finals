@@ -48,6 +48,13 @@ class ChallengeViewController: BaseViewController {
         })
         
         viewModel.challengeVariable.asObservable().bind(to: tableView.rx.items(dataSource: dataSource)).disposed(by: bag)
+        
+        tableView.rx.itemSelected.subscribe( onNext: { [weak self] (indexPath) in
+            guard let `self` = self else { return }
+            
+            self.viewModel.navigationService.pushToQuestionScreen(navigationController: self.navigationController)
+        }).disposed(by: bag)
+        
     }
     
 }

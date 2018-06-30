@@ -14,14 +14,13 @@ protocol AlamofireRouter {
     var params: [String: AnyObject]? { get }
     var url: URL { get }
     var encoding: ParameterEncoding { get }
-    var headers: [String: String]? { get }
 }
 
 
 enum FinalsRouter: URLRequestConvertible, AlamofireRouter {
     
     static var baseURLString: String {
-        return "http://172.20.10.8:3000"
+        return "http://10.129.136.166:3000"
     }
     
     case Get(path: String, params: [String: AnyObject]?)
@@ -72,25 +71,6 @@ enum FinalsRouter: URLRequestConvertible, AlamofireRouter {
     
     var encoding: ParameterEncoding {
         return URLEncoding.default
-    }
-    
-    var headers: [String: String]? {
-        switch self {
-        case .PostNoAuth(_, _):
-            return ["Accept-Language" : "language"]
-        case .UserLogin(_, let username, let password):
-            let uncodedString = username + ":" + password
-            let encodedString = uncodedString.data(using: String.Encoding.utf8)!.base64EncodedString()
-            return ["Authorization" : "Basic " + encodedString, "Accept-Language" : "language"]
-        default:
-//            guard let token = "UserStorage.shared.accessToken" else { return nil }
-            let uncodedString = "token" + ":"
-            if let encodedString = uncodedString.data(using: String.Encoding.utf8)?.base64EncodedString() {
-                return ["Authorization" : "Basic " + encodedString, "Accept-Language" : "language"]
-            } else {
-                return nil
-            }
-        }
     }
     
     func asURLRequest() throws -> URLRequest {

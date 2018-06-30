@@ -14,7 +14,7 @@ import RxSwift
 struct AlamofireNetworking {
 
 	func request(router : AlamofireRouter) -> Observable<(HTTPURLResponse, Any)> {
-		return RxAlamofire.requestJSON(router.method, router.url, parameters: router.params, encoding: router.encoding, headers: router.headers).observeOn(MainScheduler.instance)
+		return RxAlamofire.requestJSON(router.method, router.url, parameters: router.params, encoding: router.encoding, headers: nil).observeOn(MainScheduler.instance)
 	}
     
     func createUser(firstName: String, lastName: String, email:String, password: String) -> Observable<(HTTPURLResponse, Any)> {
@@ -28,5 +28,15 @@ struct AlamofireNetworking {
         ]
 
         return request(router: FinalsRouter.PostNoAuth(path: "/signup", params: params as [String : AnyObject]?)).debug()
+    }
+    
+    func login(username: String, password: String) -> Observable<(HTTPURLResponse, Any)> {
+        
+//        let params: [String: Any]? = [
+//            "username" : username,
+//            "password" : password
+//        ]
+        
+        return request(router: FinalsRouter.UserLogin(path: "/auth/login", username: username, password: password)).debug()
     }
 }

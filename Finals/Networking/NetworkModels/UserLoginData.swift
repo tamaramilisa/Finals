@@ -14,7 +14,7 @@ class UserLoginData: Mappable, ModelType {
     var status: Bool?
     var user: RMUser?
     var token: String?
-    var registered: Bool?
+//    var registered: Bool?
     var errors: Array<RequestError>?
     
     required init?(map: Map) {
@@ -22,9 +22,9 @@ class UserLoginData: Mappable, ModelType {
     
     func mapping(map: Map) {
         user <- map["data.user"]
-        token <- map["data.access_token"]
+        token <- map["data.auth_token"]
         status <- map["success"]
-        registered <- map["data.now_registered"]
+//        registered <- map["data.now_registered"]
         errors <- map["error"]
     }
     

@@ -108,14 +108,14 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
         signinButton.rx.tap.subscribe(onNext: { [weak self] () in
             guard let `self` = self else { return }
             
-//            if self.textFieldsValid() {
-//                if self.nameTextField.isHidden == true {
-//
-//                } else {
-//                    self.register()
-//                }
-//            }
-            self.viewModel.navigationService.pushToMainScreen(navigationController: self.navigationController)
+            if self.textFieldsValid() {
+                if self.nameTextField.isHidden == true {
+                    self.login()
+                } else {
+                    self.register()
+                }
+            }
+//            self.viewModel.navigationService.pushToMainScreen(navigationController: self.navigationController)
         }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)
     }
     
@@ -258,8 +258,34 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
                 SVProgressHUD.dismiss()
                 self?.announceError(error: error.localizedDescription)
         }, onCompleted: nil).disposed(by: bag)
+    }
+    
+    func login() {
+        nameTextField.resignFirstResponder()
+        lastNameTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
         
+        SVProgressHUD.show()
         
+        viewModel.login(username: emailTextField.text!, password: passwordTextField.text!).subscribe(onNext: { [weak self] (result) in
+            guard let `self` = self else { return }
+            
+            SVProgressHUD.dismiss()
+            
+            switch result {
+            case .success(let token):
+                UserStorage.shared.accessToken = token
+                self.viewModel.navigationService.pushToMainScreen(navigationController: self.navigationController)
+            case .failure(let error):
+                if let requestError = error as? RequestError {
+                    self.announceError(error: requestError.message)
+                }
+            }
+            }, onError: { [weak self] (error) in
+                SVProgressHUD.dismiss()
+                self?.announceError(error: error.localizedDescription)
+            }, onCompleted: nil, onDisposed: nil).disposed(by: bag)
     }
     
     

@@ -61,14 +61,14 @@ struct RealmManager {
 //    func getUser() -> RMUser? {
 //        return getMe().first
 //    }
-//
-//
-//    func saveUser(user: RMUser) {
-//        let theRealm = try! Realm()
-//        try! theRealm.write {
-//            theRealm.add(user, update: true)
-//        }
-//    }
+
+
+    func saveUser(user: RMUser) {
+        let theRealm = try! Realm()
+        try! theRealm.write {
+            theRealm.add(user, update: true)
+        }
+    }
     
     
     

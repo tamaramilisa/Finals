@@ -32,11 +32,6 @@ struct AlamofireNetworking {
     
     func login(username: String, password: String) -> Observable<(HTTPURLResponse, Any)> {
         
-//        let params: [String: Any]? = [
-//            "username" : username,
-//            "password" : password
-//        ]
-        
         return request(router: FinalsRouter.UserLogin(path: "/auth/login", username: username, password: password)).debug()
     }
 }

@@ -21,7 +21,7 @@ protocol AlamofireRouter {
 enum FinalsRouter: URLRequestConvertible, AlamofireRouter {
     
     static var baseURLString: String {
-        return "http://10.129.136.166:3000"
+        return "http://169.254.193.92:3000"
     }
     
     case Get(path: String, params: [String: AnyObject]?)
@@ -72,7 +72,7 @@ enum FinalsRouter: URLRequestConvertible, AlamofireRouter {
 
     var headers: [String : String]? {
         let authToken = UserStorage.shared.accessToken ?? ""
-        
+
         switch self {
         case .PostNoAuth(_, _):
             return nil

@@ -274,7 +274,11 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
             SVProgressHUD.dismiss()
             
             switch result {
-            case .success(let token):
+            case .success(let usr, let token):
+                guard let user = usr else { return }
+                
+                self.viewModel.realmManager.saveUser(user: user)
+                UserStorage.shared.userId = user.id
                 UserStorage.shared.accessToken = token
                 self.viewModel.navigationService.pushToMainScreen(navigationController: self.navigationController)
             case .failure(let error):

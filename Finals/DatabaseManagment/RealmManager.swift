@@ -22,6 +22,56 @@ struct RealmManager {
         realm = try! Realm()
     }
     
+//    func getClubWithId(id: Int) -> RMClub? {
+//        let thisRealm = try! Realm()
+//        let deletedPredicate = NSPredicate(format: "deleted == 0")
+//        let idPredicate = NSPredicate(format: "id == %d", id)
+//        let clubs = thisRealm.objects(RMClub.self).filter(deletedPredicate).filter(idPredicate)
+//        return clubs.first
+//    }
+    
+//    func saveClubs(clubs: [RMClub]) {
+//        let theRealm = try! Realm()
+//        try! theRealm.write {
+//            theRealm.add(clubs, update: true)
+//        }
+//    }
+    
+//    func getEvents() -> Results<RMEvent> {
+//        let theRealm = try! Realm()
+//        let deletedPredicate = NSPredicate(format: "deleted == 0")
+//        let events = theRealm.objects(RMEvent.self).filter(deletedPredicate)
+//        return events
+//    }
+    
+//    func getUsers() -> Results<RMUser> {
+//        let thisRealm = try! Realm()
+//        let deletedPredicate = NSPredicate(format: "deleted == 0")
+//        let users = thisRealm.objects(RMUser.self).filter(deletedPredicate)
+//        return users
+//    }
+//
+//    func getMe() -> Results<RMUser> {
+//        let theRealm = try! Realm()
+//        let predicate = NSPredicate(format: "id == %d", UserStorage.shared.userId)
+//        let deletedPredicate = NSPredicate(format: "deleted == 0")
+//        return theRealm.objects(RMUser.self).filter(deletedPredicate).filter(predicate)
+//    }
+//
+//    func getUser() -> RMUser? {
+//        return getMe().first
+//    }
+//
+//
+//    func saveUser(user: RMUser) {
+//        let theRealm = try! Realm()
+//        try! theRealm.write {
+//            theRealm.add(user, update: true)
+//        }
+//    }
+    
+    
+    
     func softDelete() {
         realm.beginWrite()
 //        realm.objects(RMPrize.self).setValue(1, forKey: "deleted")

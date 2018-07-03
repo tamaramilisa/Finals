@@ -14,6 +14,7 @@ protocol AlamofireRouter {
     var params: [String: AnyObject]? { get }
     var url: URL { get }
     var encoding: ParameterEncoding { get }
+    var headers: [String : String]? { get }
 }
 
 
@@ -66,6 +67,21 @@ enum FinalsRouter: URLRequestConvertible, AlamofireRouter {
         switch self {
         case .Get(let path, _), .PostNoAuth(let path, _), .UserLogin(let path, _, _), .Put(let path, _), .Post(let path, _), .Delete(let path, _):
             return URL(string: FinalsRouter.baseURLString + path)!
+        }
+    }
+
+    var headers: [String : String]? {
+        let authToken = UserStorage.shared.accessToken ?? ""
+        
+        switch self {
+        case .PostNoAuth(_, _):
+            return nil
+        case .UserLogin(_):
+            return nil
+        default:
+            let uncodedString = authToken + ":"
+            let encodedString = uncodedString.data(using: String.Encoding.utf8)!.base64EncodedString()
+            return ["Authorization" : "Basic " + encodedString]
         }
     }
     

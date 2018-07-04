@@ -21,7 +21,7 @@ protocol AlamofireRouter {
 enum FinalsRouter: URLRequestConvertible, AlamofireRouter {
     
     static var baseURLString: String {
-        return "http://169.254.193.92:3000"
+        return "http://192.168.1.4:3000"
     }
     
     case Get(path: String, params: [String: AnyObject]?)
@@ -81,7 +81,7 @@ enum FinalsRouter: URLRequestConvertible, AlamofireRouter {
         default:
             let uncodedString = authToken + ":"
             let encodedString = uncodedString.data(using: String.Encoding.utf8)!.base64EncodedString()
-            return ["Authorization" : "Basic " + encodedString]
+            return ["Authorization" : encodedString]
         }
     }
     

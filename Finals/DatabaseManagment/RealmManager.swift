@@ -70,6 +70,13 @@ struct RealmManager {
         }
     }
     
+    func getUserByEmail(email: String) -> Results<RMUser> {
+        let theRealm = try! Realm()
+        let predicate = NSPredicate(format: "email == %s", email)
+//        let deletedPredicate = NSPredicate(format: "deleted == 0")
+        return theRealm.objects(RMUser.self).filter(predicate)
+    }
+    
     
     
     func softDelete() {

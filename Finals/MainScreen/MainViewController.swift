@@ -39,12 +39,15 @@ class MainViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
+        viewModel.getUserByEmail(email: UserStorage.shared.userEmail!)
     }
     
     func setupRx() {
         
         let tapRecognizer = UITapGestureRecognizer()
         profileImageView.addGestureRecognizer(tapRecognizer)
+        let user = self.viewModel.realmManager.getUserByEmail(email: UserStorage.shared.userEmail!)
+        print(user)
         tapRecognizer.rx.event.asDriver().drive(onNext: { [weak self] (sender) in
             guard let `self` = self else { return }
             

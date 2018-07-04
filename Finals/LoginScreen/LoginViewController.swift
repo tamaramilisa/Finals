@@ -108,14 +108,14 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
         signinButton.rx.tap.subscribe(onNext: { [weak self] () in
             guard let `self` = self else { return }
             
-//            if self.textFieldsValid() {
-//                if self.nameTextField.isHidden == true {
-//                    self.login()
-//                } else {
-//                    self.register()
-//                }
-//            }
-            self.viewModel.navigationService.pushToMainScreen(navigationController: self.navigationController)
+            if self.textFieldsValid() {
+                if self.nameTextField.isHidden == true {
+                    self.login()
+                } else {
+                    self.register()
+                }
+            }
+//            self.viewModel.navigationService.pushToMainScreen(navigationController: self.navigationController)
         }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)
     }
     
@@ -274,11 +274,12 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
             SVProgressHUD.dismiss()
             
             switch result {
-            case .success(let usr, let token):
-                guard let user = usr else { return }
+            case .success(let token):
+//                guard let user = usr else { return }
                 
-                self.viewModel.realmManager.saveUser(user: user)
-                UserStorage.shared.userId = user.id
+//                self.viewModel.realmManager.saveUser(user: user)
+//                UserStorage.shared.userId = user.id
+                UserStorage.shared.userEmail = self.emailTextField.text!
                 UserStorage.shared.accessToken = token
                 self.viewModel.navigationService.pushToMainScreen(navigationController: self.navigationController)
             case .failure(let error):

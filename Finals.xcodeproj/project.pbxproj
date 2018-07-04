@@ -56,6 +56,7 @@
 		327E3FA020BEBDCE006ABE32 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327E3F9F20BEBDCE006ABE32 /* ProfileViewController.swift */; };
 		327E3FA220BEBDD9006ABE32 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327E3FA120BEBDD9006ABE32 /* ProfilePresenter.swift */; };
 		32812193207CF1CC00FF4A23 /* AlamofireNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32812192207CF1CC00FF4A23 /* AlamofireNetworking.swift */; };
+		329327CA20ECC1C9007A44F8 /* ObjectResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329327C920ECC1C9007A44F8 /* ObjectResponse.swift */; };
 		3294175020BC54C80050A497 /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3294174F20BC54C80050A497 /* MainScreen.storyboard */; };
 		3294A4A820CAB1800008204F /* TopList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3294A4A720CAB1800008204F /* TopList.storyboard */; };
 		3294A4AB20CAB1ED0008204F /* TopListSingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3294A4AA20CAB1ED0008204F /* TopListSingleViewController.swift */; };
@@ -138,6 +139,7 @@
 		327E3F9F20BEBDCE006ABE32 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		327E3FA120BEBDD9006ABE32 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		32812192207CF1CC00FF4A23 /* AlamofireNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireNetworking.swift; sourceTree = "<group>"; };
+		329327C920ECC1C9007A44F8 /* ObjectResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectResponse.swift; sourceTree = "<group>"; };
 		3294174F20BC54C80050A497 /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
 		3294A4A720CAB1800008204F /* TopList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TopList.storyboard; sourceTree = "<group>"; };
 		3294A4AA20CAB1ED0008204F /* TopListSingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListSingleViewController.swift; sourceTree = "<group>"; };
@@ -500,6 +502,7 @@
 			children = (
 				32D345B9207CD563003CFC7B /* RequestError.swift */,
 				3202456120C88800006646BB /* UserLoginData.swift */,
+				329327C920ECC1C9007A44F8 /* ObjectResponse.swift */,
 			);
 			path = NetworkModels;
 			sourceTree = "<group>";
@@ -770,6 +773,7 @@
 				327E3F9E20BEBDC2006ABE32 /* ProfileViewModel.swift in Sources */,
 				32505ADC20C96FBE0030CB6C /* ChallengeViewController.swift in Sources */,
 				3202456020C8833C006646BB /* UserStorage.swift in Sources */,
+				329327CA20ECC1C9007A44F8 /* ObjectResponse.swift in Sources */,
 				327E3FA220BEBDD9006ABE32 /* ProfilePresenter.swift in Sources */,
 				32505AE720C994360030CB6C /* TopListCell.swift in Sources */,
 				321D26E02098C42B0089B2E0 /* LoginViewModel.swift in Sources */,

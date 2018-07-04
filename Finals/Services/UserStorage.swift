@@ -44,4 +44,22 @@ class UserStorage {
         }
     }
     
+    private var storageUserEmail: String?
+    private let userEmailKey = "user_email"
+    var userEmail: String? {
+        get {
+            storageUserEmail = storageUserEmail ?? UserDefaults.standard.string(forKey: userEmailKey)
+            return storageUserEmail
+        }
+        set {
+            storageUserEmail = newValue
+            if newValue != nil {
+                UserDefaults.standard.setValue(newValue, forKey: userEmailKey)
+            } else {
+                UserDefaults.standard.removeObject(forKey: userEmailKey)
+            }
+            UserDefaults.standard.synchronize()
+        }
+    }
+    
 }

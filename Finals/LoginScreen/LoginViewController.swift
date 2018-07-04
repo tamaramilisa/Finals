@@ -116,9 +116,23 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
 //                }
 //            }
             
-//            UserStorage.shared.questionId = 0
+            UserStorage.shared.questionId = 0
+            UserStorage.shared.question2Id = 0
+            UserStorage.shared.question3Id = 0
+            UserStorage.shared.question4Id = 0
+            UserStorage.shared.noStars = 0
+            UserStorage.shared.counter = 0
             if UserStorage.shared.questionId == 0 {
                 UserStorage.shared.questionId = 1
+            }
+            if UserStorage.shared.question2Id == 0 {
+                UserStorage.shared.question2Id = 1
+            }
+            if UserStorage.shared.question3Id == 0 {
+                UserStorage.shared.question3Id = 1
+            }
+            if UserStorage.shared.question4Id == 0 {
+                UserStorage.shared.question4Id = 1
             }
             self.viewModel.navigationService.pushToMainScreen(navigationController: self.navigationController)
         }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)

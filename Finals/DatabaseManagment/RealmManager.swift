@@ -85,7 +85,7 @@ struct RealmManager {
     
     func getQuestionById(id: Int, type: Int) -> Results<RMQuestion> {
         let theRealm = try! Realm()
-        let predicate = NSPredicate(format: "id == %d", id)
+        let predicate = NSPredicate(format: "prKey == %d", id)
         let typePredicate = NSPredicate(format: "type == %d", type)
         return theRealm.objects(RMQuestion.self).filter(typePredicate).filter(predicate)
     }

@@ -17,6 +17,7 @@ class RMCategory: Object, Mappable {
     @objc dynamic var id: Int = 0
     @objc dynamic var name: String?
     @objc dynamic var desc: String?
+//    @objc dynamic var progress: Int = 0
 //    @objc dynamic var email: String?
     
     
@@ -33,6 +34,7 @@ class RMCategory: Object, Mappable {
         self.id = id
         self.name = name
         self.desc = desc
+//        self.progress = progress
     }
     
     func mapping(map: Map) {

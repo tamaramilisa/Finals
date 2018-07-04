@@ -142,4 +142,74 @@ class UserStorage {
         }
     }
     
+    private var storageQuestion2Id: Int = 0
+    private let question2IdKey = "question_id"
+    var question2Id: Int {
+        get {
+            storageQuestion2Id = UserDefaults.standard.integer(forKey: question2IdKey)
+            return storageQuestion2Id
+        }
+        set {
+            storageQuestion2Id = newValue
+            UserDefaults.standard.setValue(newValue, forKey: question2IdKey)
+            UserDefaults.standard.synchronize()
+        }
+    }
+    
+    private var storageQuestion3Id: Int = 0
+    private let question3IdKey = "question_id"
+    var question3Id: Int {
+        get {
+            storageQuestion3Id = UserDefaults.standard.integer(forKey: question3IdKey)
+            return storageQuestion3Id
+        }
+        set {
+            storageQuestion3Id = newValue
+            UserDefaults.standard.setValue(newValue, forKey: question3IdKey)
+            UserDefaults.standard.synchronize()
+        }
+    }
+    
+    private var storageQuestion4Id: Int = 0
+    private let question4IdKey = "question_id"
+    var question4Id: Int {
+        get {
+            storageQuestion4Id = UserDefaults.standard.integer(forKey: question4IdKey)
+            return storageQuestion4Id
+        }
+        set {
+            storageQuestion4Id = newValue
+            UserDefaults.standard.setValue(newValue, forKey: question4IdKey)
+            UserDefaults.standard.synchronize()
+        }
+    }
+    
+    private var storageNoStars: Int = 0
+    private let noStarsKey = "no_stars"
+    var noStars: Int {
+        get {
+            storageNoStars = UserDefaults.standard.integer(forKey: noStarsKey)
+            return storageNoStars
+        }
+        set {
+            storageNoStars = newValue
+            UserDefaults.standard.setValue(newValue, forKey: noStarsKey)
+            UserDefaults.standard.synchronize()
+        }
+    }
+    
+    private var storageCounter: Int = 0
+    private let counterKey = "counter"
+    var counter: Int {
+        get {
+            storageCounter = UserDefaults.standard.integer(forKey: counterKey)
+            return storageCounter
+        }
+        set {
+            storageCounter = newValue
+            UserDefaults.standard.setValue(newValue, forKey: counterKey)
+            UserDefaults.standard.synchronize()
+        }
+    }
+    
 }

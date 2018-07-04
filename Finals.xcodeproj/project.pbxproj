@@ -16,6 +16,9 @@
 		320DFD1720D2339600A62D10 /* AllMedalsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 320DFD1520D2339600A62D10 /* AllMedalsCell.xib */; };
 		320DFD1A20D233AC00A62D10 /* TypeMedalsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320DFD1820D233AC00A62D10 /* TypeMedalsCell.swift */; };
 		320DFD1B20D233AC00A62D10 /* TypeMedalsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 320DFD1920D233AC00A62D10 /* TypeMedalsCell.xib */; };
+		321B4AA820ED801700E73F38 /* StarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B4AA720ED801700E73F38 /* StarsViewModel.swift */; };
+		321B4AAA20ED802600E73F38 /* StarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B4AA920ED802600E73F38 /* StarsViewController.swift */; };
+		321B4AAC20ED803100E73F38 /* StarsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B4AAB20ED803100E73F38 /* StarsPresenter.swift */; };
 		321D26E02098C42B0089B2E0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321D26DF2098C42B0089B2E0 /* LoginViewModel.swift */; };
 		321D26E22098C4380089B2E0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321D26E12098C4380089B2E0 /* LoginViewController.swift */; };
 		321D26E42098C4440089B2E0 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321D26E32098C4440089B2E0 /* LoginPresenter.swift */; };
@@ -99,6 +102,9 @@
 		320DFD1520D2339600A62D10 /* AllMedalsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllMedalsCell.xib; sourceTree = "<group>"; };
 		320DFD1820D233AC00A62D10 /* TypeMedalsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeMedalsCell.swift; sourceTree = "<group>"; };
 		320DFD1920D233AC00A62D10 /* TypeMedalsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TypeMedalsCell.xib; sourceTree = "<group>"; };
+		321B4AA720ED801700E73F38 /* StarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsViewModel.swift; sourceTree = "<group>"; };
+		321B4AA920ED802600E73F38 /* StarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsViewController.swift; sourceTree = "<group>"; };
+		321B4AAB20ED803100E73F38 /* StarsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsPresenter.swift; sourceTree = "<group>"; };
 		321D26DF2098C42B0089B2E0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		321D26E12098C4380089B2E0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		321D26E32098C4440089B2E0 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
@@ -210,6 +216,16 @@
 				320DFD1920D233AC00A62D10 /* TypeMedalsCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		321B4AA620ED7FFB00E73F38 /* StarsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				321B4AA720ED801700E73F38 /* StarsViewModel.swift */,
+				321B4AA920ED802600E73F38 /* StarsViewController.swift */,
+				321B4AAB20ED803100E73F38 /* StarsPresenter.swift */,
+			);
+			path = StarsScreen;
 			sourceTree = "<group>";
 		};
 		321D26DE2098C3ED0089B2E0 /* LoginScreen */ = {
@@ -451,6 +467,7 @@
 				321D26EF2098C4F40089B2E0 /* LearnScreen */,
 				32505AD820C96F900030CB6C /* ChallengeScreen */,
 				320DFD0C20D22FEE00A62D10 /* Question */,
+				321B4AA620ED7FFB00E73F38 /* StarsScreen */,
 				3229148720C133EB001EEC8B /* MedalsScreen */,
 				3253C98F20C7E5E4003E71AE /* TopListScreen */,
 				3253C99620C7EC23003E71AE /* StatisticsScreen */,
@@ -720,6 +737,7 @@
 				32505ADE20C96FC90030CB6C /* ChallengePresenter.swift in Sources */,
 				3229149020C141FF001EEC8B /* MedalsPopoverViewController.swift in Sources */,
 				321D26E42098C4440089B2E0 /* LoginPresenter.swift in Sources */,
+				321B4AAA20ED802600E73F38 /* StarsViewController.swift in Sources */,
 				3253C99A20C7EC4B003E71AE /* StatisticsViewController.swift in Sources */,
 				321D26FB2098C57D0089B2E0 /* LearnSingleViewController.swift in Sources */,
 				32D345BA207CD563003CFC7B /* RequestError.swift in Sources */,
@@ -740,6 +758,7 @@
 				32D345AA207CD3F9003CFC7B /* BaseViewModel.swift in Sources */,
 				320DFD1220D2302800A62D10 /* QuestionPresenter.swift in Sources */,
 				3229148B20C13415001EEC8B /* MedalsViewModel.swift in Sources */,
+				321B4AAC20ED803100E73F38 /* StarsPresenter.swift in Sources */,
 				321D26EC2098C4DD0089B2E0 /* MainViewController.swift in Sources */,
 				3229149320C179FB001EEC8B /* CategoryCell.swift in Sources */,
 				321D26F52098C54C0089B2E0 /* LearnListViewController.swift in Sources */,
@@ -751,6 +770,7 @@
 				32505ADA20C96FB20030CB6C /* ChallengeViewModel.swift in Sources */,
 				3253C99C20C7EC59003E71AE /* StatisticsPresenter.swift in Sources */,
 				3294A4AD20CAB1FC0008204F /* TopListSingleViewModel.swift in Sources */,
+				321B4AA820ED801700E73F38 /* StarsViewModel.swift in Sources */,
 				32A2B0AA20C5351A00FD6736 /* RMQuestion.swift in Sources */,
 				32812193207CF1CC00FF4A23 /* AlamofireNetworking.swift in Sources */,
 				32D345A8207CD3F9003CFC7B /* BasePresenter.swift in Sources */,

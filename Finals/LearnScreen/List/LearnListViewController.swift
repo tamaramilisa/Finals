@@ -67,7 +67,7 @@ class LearnListViewController: BaseViewController {
         cell.challengeButton.rx.tap.subscribe(onNext: { [weak self] () in
             guard let `self` = self else { return }
             
-            self.viewModel.navigationService.pushToChallengeScreen(navigationController: self.navigationController)
+            self.viewModel.navigationService.pushToChallengeScreen(navigationController: self.navigationController, type: cell.titleLabel.text!)
             },onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: cell.bag)
     }
     

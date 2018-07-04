@@ -14,6 +14,7 @@ import ObjectMapper_Realm
 class RMQuestion: Object, Mappable {
 
     @objc dynamic var id: Int = 0
+    @objc dynamic var prKey: Int = 0
     @objc dynamic var text: String?
     @objc dynamic var photoName: String?
     @objc dynamic var answerId: Int = 0
@@ -32,7 +33,7 @@ class RMQuestion: Object, Mappable {
         self.init()
     }
     
-    convenience init(id: Int, text: String, answer1: String, answer2: String, answer3: String, answer4: String, correct: Int, type: Int) {
+    convenience init(id: Int, text: String, answer1: String, answer2: String, answer3: String, answer4: String, correct: Int, type: Int, prKey: Int, photoName: String) {
         self.init()
         self.id = id
         self.text = text
@@ -42,6 +43,8 @@ class RMQuestion: Object, Mappable {
         self.answer4 = answer4
         self.correct = correct
         self.type = type
+        self.prKey = prKey
+        self.photoName = photoName
     }
 
     func mapping(map: Map) {

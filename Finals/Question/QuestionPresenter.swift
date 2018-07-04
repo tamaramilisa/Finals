@@ -23,7 +23,7 @@ class QuestionPresenter: BasePresenter {
     
     func setUp() {
         if let question = viewController.question {
-            if let photo = question.photoName {
+            if let photo = question.photoName, photo != "" {
                 viewController.photoImageView.image = UIImage(named: photo)
                 viewController.photoImageView.isHidden = false
                 viewController.photoImageViewHeight.constant = 150

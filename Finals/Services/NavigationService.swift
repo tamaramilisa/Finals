@@ -119,8 +119,10 @@ struct NavigationService {
         navigationController?.pushViewController(viewController, animated: true)
     }
     
-    func pushToChallengeScreen(navigationController: UINavigationController?) {
+    func pushToChallengeScreen(navigationController: UINavigationController?, type: String) {
         let viewController: ChallengeViewController = controllerFactory(ViewModelType: ChallengeViewModel.self, PresenterType: ChallengePresenter.self, storyboard: categoriesStoryboard)
+        
+        viewController.type = type
         
         viewController.hidesBottomBarWhenPushed = true
         navigationController?.isNavigationBarHidden = false
@@ -132,6 +134,16 @@ struct NavigationService {
         
         viewController.question = question
         UserStorage.shared.questionId += 1
+        
+        viewController.hidesBottomBarWhenPushed = true
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func pushToStarsScreen(navigationController: UINavigationController?) {
+        let viewController: StarsViewController = controllerFactory(ViewModelType: StarsViewModel.self, PresenterType: StarsPresenter.self, storyboard: questionStoryboard)
+        
+        viewController.noStars = UserStorage.shared.noStars
         
         viewController.hidesBottomBarWhenPushed = true
         navigationController?.isNavigationBarHidden = false

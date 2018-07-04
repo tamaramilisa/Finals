@@ -5,7 +5,6 @@
 //  Created by tamara on 01/06/2018.
 //  Copyright © 2018 tamara. All rights reserved.
 //
-
 import Foundation
 import RxSwift
 import SVProgressHUD
@@ -21,11 +20,17 @@ class MedalsViewController: BaseViewController {
         return basePresenter as! MedalsPresenter
     }
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var firstMedalImageView: UIImageView!
+    @IBOutlet weak var secondMedalImageView: UIImageView!
+    @IBOutlet weak var thirdMedalImageView: UIImageView!
+    @IBOutlet weak var fourthMedalImageView: UIImageView!
+    @IBOutlet weak var fifthMedalImageView: UIImageView!
+    @IBOutlet weak var sixthMedalImageView: UIImageView!
+    @IBOutlet weak var seventhMedalImageView: UIImageView!
+    @IBOutlet weak var eightMedalImageView: UIImageView!
     
     let bag = DisposeBag()
-//    var dataSource: RxTableViewSectionedAnimatedDataSource<MedalsSectionModel>!
-//    var user: RMUser?
+    //    var user: RMUser?
     
     var fromWelcome: Bool = false
     
@@ -38,37 +43,13 @@ class MedalsViewController: BaseViewController {
     }
     
     func setupRx() {
-        tableView.registerWithNib(AllMedalsCell.self)
-        tableView.registerWithNib(TypeMedalsCell.self)
         
-        let dataSource = RxTableViewSectionedReloadDataSource<MedalsSectionModel>(configureCell: { [weak self] (dataSrc, tv, idxPath, item) in
-            guard let `self` = self else { return UITableViewCell() }
-            
-            switch dataSrc[idxPath.section] {
-            case .AllMedalsSection(let images):
-                let cell: AllMedalsCell = tv.dequeueReusableCell()
-                return self.presenter.configureAllMedalsCell(cell: cell, item: images)
-            case .BasicMedalsSection(let basics):
-                let cell: TypeMedalsCell = tv.dequeueReusableCell()
-                return self.presenter.configureTypeMedalsCell(cell: cell, item: basics)
-            case .FlagsMedalsSection(let flags):
-                let cell: TypeMedalsCell = tv.dequeueReusableCell()
-                return self.presenter.configureTypeMedalsCell(cell: cell, item: flags)
-            case .EuropeMedalsSection(let europe):
-                let cell: TypeMedalsCell = tv.dequeueReusableCell()
-                return self.presenter.configureTypeMedalsCell(cell: cell, item: europe)
-            case .CroMedalsSection(let cro):
-                let cell: TypeMedalsCell = tv.dequeueReusableCell()
-                return self.presenter.configureTypeMedalsCell(cell: cell, item: cro)
-            }
-        })
-        
-        viewModel.medalsVariable.asObservable().bind(to: tableView.rx.items(dataSource: dataSource)).disposed(by: bag)
-        
-        tableView.rx.itemSelected.subscribe( onNext: { [weak self] (indexPath) in
-            guard let `self` = self else { return }
-            
-        }).disposed(by: bag)
+        addTapRecognizer(imageView: firstMedalImageView, medalNo: "1")
+        addTapRecognizer(imageView: secondMedalImageView, medalNo: "2")
+        addTapRecognizer(imageView: thirdMedalImageView, medalNo: "3")
+        addTapRecognizer(imageView: fourthMedalImageView, medalNo: "4")
+        addTapRecognizer(imageView: fifthMedalImageView, medalNo: "5")
+        addTapRecognizer(imageView: sixthMedalImageView, medalNo: "6")
         
     }
     
@@ -80,7 +61,7 @@ class MedalsViewController: BaseViewController {
             guard let `self` = self else { return }
             
             self.showMedalPopover(sourceView: self.view, medalNo: medalNo)
-        }, onCompleted: nil, onDisposed: nil).disposed(by: bag)
+            }, onCompleted: nil, onDisposed: nil).disposed(by: bag)
         
     }
     

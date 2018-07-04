@@ -22,7 +22,7 @@ class UserLoginData: Mappable, ModelType {
     
     func mapping(map: Map) {
         user <- map["data.user"]
-        token <- map["data.auth_token"]
+        token <- map["auth_token"]
         status <- map["success"]
 //        registered <- map["data.now_registered"]
         errors <- map["error"]

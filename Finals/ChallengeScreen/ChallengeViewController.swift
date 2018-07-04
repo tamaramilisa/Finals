@@ -55,7 +55,7 @@ class ChallengeViewController: BaseViewController {
             guard let `self` = self else { return }
             print(self.viewModel.realmManager.getQuestionById(id: 1).first)
             
-            if let question = self.viewModel.realmManager.getQuestionById(id: 1).first
+            if let question = self.viewModel.realmManager.getQuestionById(id: UserStorage.shared.questionId).first
             {
                 self.viewModel.navigationService.pushToQuestionScreen(navigationController: self.navigationController, question: question)
             }
@@ -69,6 +69,7 @@ class ChallengeViewController: BaseViewController {
         let question2 = RMQuestion(id: 2, text: "Koji je drugi naziv na zemljopis?", answer1: "Biologija", answer2: "Geografija", answer3: "Fizika", answer4: "Matematika", correct: 2)
         let question3 = RMQuestion(id: 3, text: "Što proučava geografija?", answer1: "Međuovisnost utjecaja prirodnih i društvenih procesa", answer2: "Računalne sustave", answer3: "Eroziju tla", answer4: "Biljni i životinjski svijet", correct: 1)
         let question4 = RMQuestion(id: 4, text: "Tko je prvi koristio riječ geografija?", answer1: "Aristotel", answer2: "Eratosten", answer3: "Pitagora", answer4: "Platon", correct: 2)
+        
         
         self.viewModel.realmManager.saveQuestion(question: question1)
         self.viewModel.realmManager.saveQuestion(question: question2)

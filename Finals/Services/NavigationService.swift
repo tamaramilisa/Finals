@@ -131,6 +131,7 @@ struct NavigationService {
         let viewController: QuestionViewController = controllerFactory(ViewModelType: QuestionViewModel.self, PresenterType: QuestionPresenter.self, storyboard: questionStoryboard)
         
         viewController.question = question
+        UserStorage.shared.questionId += 1
         
         viewController.hidesBottomBarWhenPushed = true
         navigationController?.isNavigationBarHidden = false

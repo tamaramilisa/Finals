@@ -115,6 +115,11 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
 //                    self.register()
 //                }
 //            }
+            
+//            UserStorage.shared.questionId = 0
+            if UserStorage.shared.questionId == 0 {
+                UserStorage.shared.questionId = 1
+            }
             self.viewModel.navigationService.pushToMainScreen(navigationController: self.navigationController)
         }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)
     }

@@ -128,4 +128,18 @@ class UserStorage {
         }
     }
     
+    private var storageQuestionId: Int = 0
+    private let questionIdKey = "question_id"
+    var questionId: Int {
+        get {
+            storageQuestionId = UserDefaults.standard.integer(forKey: questionIdKey)
+            return storageQuestionId
+        }
+        set {
+            storageQuestionId = newValue
+            UserDefaults.standard.setValue(newValue, forKey: questionIdKey)
+            UserDefaults.standard.synchronize()
+        }
+    }
+    
 }

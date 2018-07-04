@@ -23,6 +23,7 @@ class QuestionViewController: BaseViewController {
     
     let bag = DisposeBag()
     var question: RMQuestion?
+    var counter: Int = 0
     
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!

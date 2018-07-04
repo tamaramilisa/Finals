@@ -22,6 +22,7 @@ class RMQuestion: Object, Mappable {
     @objc dynamic var answer3: String?
     @objc dynamic var answer4: String?
     @objc dynamic var correct: Int = 0
+    @objc dynamic var type: Int = 0
     
     override static func primaryKey() -> String {
         return "id"
@@ -31,7 +32,7 @@ class RMQuestion: Object, Mappable {
         self.init()
     }
     
-    convenience init(id: Int, text: String, answer1: String, answer2: String, answer3: String, answer4: String, correct: Int) {
+    convenience init(id: Int, text: String, answer1: String, answer2: String, answer3: String, answer4: String, correct: Int, type: Int) {
         self.init()
         self.id = id
         self.text = text
@@ -40,6 +41,7 @@ class RMQuestion: Object, Mappable {
         self.answer3 = answer3
         self.answer4 = answer4
         self.correct = correct
+        self.type = type
     }
 
     func mapping(map: Map) {

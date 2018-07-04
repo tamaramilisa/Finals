@@ -83,10 +83,11 @@ struct RealmManager {
         }
     }
     
-    func getQuestionById(id: Int) -> Results<RMQuestion> {
+    func getQuestionById(id: Int, type: Int) -> Results<RMQuestion> {
         let theRealm = try! Realm()
-        let predicate = NSPredicate(format: "id==%d", id)
-        return theRealm.objects(RMQuestion.self).filter(predicate)
+        let predicate = NSPredicate(format: "id == %d", id)
+        let typePredicate = NSPredicate(format: "type == %d", type)
+        return theRealm.objects(RMQuestion.self).filter(typePredicate).filter(predicate)
     }
     
     func softDelete() {

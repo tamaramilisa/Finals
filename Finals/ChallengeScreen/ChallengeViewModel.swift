@@ -11,24 +11,46 @@ import RxSwift
 import RxDataSources
 import Alamofire
 
-enum ChallengeSectionModel {
-    case ChallengeSection(lists: Array<String>)
+
+struct ChallengeSectionModel {
+    
+    var levels: [RMLevel]
+    var id: String
+    
+    init(levels: [RMLevel], id: String) {
+        self.levels = levels
+        self.id = id
+    }
 }
 
 
 extension ChallengeSectionModel: SectionModelType {
-    typealias Item = String
+    typealias Item = RMLevel
+    typealias Identity = String
+    
+    var identity: String {
+        return id
+    }
     
     var items: [Item] {
-        switch  self {
-        case .ChallengeSection(let lists):
-            return lists
-        }
+        return levels
     }
     
     init(original: ChallengeSectionModel, items: [Item]) {
-        self = original
+        self = ChallengeSectionModel(levels: items, id: original.id)
     }
+}
+
+extension RMLevel: IdentifiableType {
+    typealias Identity = String
+    
+    var identity: String {
+        return id.description
+    }
+}
+
+func == (lhs: RMLevel, rhs: RMLevel) -> Bool {
+    return (lhs.id == rhs.id)
 }
 
 class ChallengeViewModel: BaseViewModel {
@@ -47,13 +69,14 @@ class ChallengeViewModel: BaseViewModel {
     
     func setChallengeVariable() {
         
-        var lists: [String] = []
+        let level1 = RMLevel(id: 1, name: "Lako", isLocked: false)
+        let level2 = RMLevel(id: 2, name: "Srednje", isLocked: true)
+        let level3 = RMLevel(id: 3, name: "Teško", isLocked: true)
         
-        lists = ["Lako","Srednje", "Teško"]
+        var feedModels: [ChallengeSectionModel] = []
+        feedModels.append(ChallengeSectionModel(levels: [level1, level2, level3], id: "Categories"))
         
-        let challengeModels = [ChallengeSectionModel.ChallengeSection(lists: lists)]
-        
-        challengeVariable.value = challengeModels
+        self.challengeVariable.value = feedModels
         
     }
 }

@@ -46,7 +46,7 @@ class LearnListViewController: BaseViewController {
             
             let cell: CategoryCell = tv.dequeueReusableCell()
             
-            self.listenToCellTaps(cell: cell)
+            self.listenToCellTaps(cell: cell, desc: item.desc!)
             return self.presenter.configureCategoryCell(cell: cell, title: item.name!)
         })
         
@@ -54,24 +54,14 @@ class LearnListViewController: BaseViewController {
         
         viewModel.categoriesVariable.asObservable().bind(to: tableView.rx.items(dataSource: dataSource)).disposed(by: bag)
         
-//        tableView.rx.itemSelected.subscribe(onNext: { [weak self] (indexPath) in
-//            guard let `self` = self else { return }
-//
-//            self.tableView.deselectRow(at: indexPath, animated: true)
-//            let item = self.dataSource[indexPath]
-//
-////            self.viewModel.navigationService.pushToFeedSingleScreen(navigationController: self.navigationController, news: item)
-//
-//            }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)
-        
     }
     
-    func listenToCellTaps(cell: CategoryCell) {
+    func listenToCellTaps(cell: CategoryCell, desc: String) {
         
         cell.learnButton.rx.tap.subscribe(onNext: { [weak self] () in
             guard let `self` = self else { return }
             
-            self.viewModel.navigationService.pushToLearnSingleScreen(navigationController: self.navigationController, title: "Naslov")
+            self.viewModel.navigationService.pushToLearnSingleScreen(navigationController: self.navigationController, title: cell.titleLabel.text!, desc: desc)
             },onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: cell.bag)
         
         cell.challengeButton.rx.tap.subscribe(onNext: { [weak self] () in

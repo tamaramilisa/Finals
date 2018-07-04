@@ -28,12 +28,12 @@ class StatisticsPresenter: BasePresenter {
         
         viewController.navigationItem.title = StatisticsStatic.title
         
-        viewController.noAnsweredQuestionsLabel.text = "\(StatisticsStatic.questions) 3/10"
-        viewController.questionsProgressView.setProgress(3/10, animated: true)
-        viewController.noDoneCategoriesLabel.text = "\(StatisticsStatic.categories) 1/5"
-        viewController.categoriesProgressView.setProgress(1/5, animated: true)
-        viewController.noWonMedalsLabel.text = "\(StatisticsStatic.medals) 3/6"
-        viewController.medalsProgressView.setProgress(3/6, animated: true)
+        viewController.noAnsweredQuestionsLabel.text = "\(StatisticsStatic.questions) \(UserStorage.shared.userQuestions)/20"
+        viewController.questionsProgressView.setProgress(Float(UserStorage.shared.userQuestions)/20, animated: true)
+        viewController.noDoneCategoriesLabel.text = "\(StatisticsStatic.categories) \(UserStorage.shared.userCategories)/4"
+        viewController.categoriesProgressView.setProgress(Float(UserStorage.shared.userCategories)/4, animated: true)
+        viewController.noWonMedalsLabel.text = "\(StatisticsStatic.medals) \(UserStorage.shared.userMedals)/6"
+        viewController.medalsProgressView.setProgress(Float(UserStorage.shared.userMedals)/6, animated: true)
         
     }
     

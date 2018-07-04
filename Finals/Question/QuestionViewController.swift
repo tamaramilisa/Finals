@@ -22,9 +22,16 @@ class QuestionViewController: BaseViewController {
     }
     
     let bag = DisposeBag()
-    var titlee: String?
+    var question: RMQuestion?
     
-    
+    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var answer1Lane: UILabel!
+    @IBOutlet weak var answer2Label: UILabel!
+    @IBOutlet weak var answer3Label: UILabel!
+    @IBOutlet weak var answer4Label: UILabel!
+    @IBOutlet weak var photoImageViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var photoImageViewBottom: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()

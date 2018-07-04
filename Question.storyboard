@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -150,6 +150,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hwj-hP-ENI"/>
                     </view>
+                    <connections>
+                        <outlet property="answer1Lane" destination="Tdf-8f-Tan" id="be9-6i-hpZ"/>
+                        <outlet property="answer2Label" destination="eeG-R9-ngL" id="JK7-Eh-Apk"/>
+                        <outlet property="answer3Label" destination="ZDX-zz-TSI" id="6yL-rd-kk9"/>
+                        <outlet property="answer4Label" destination="K1B-SY-h7r" id="Zd1-Qi-865"/>
+                        <outlet property="photoImageView" destination="7wg-DL-hea" id="4Hq-NA-Fuv"/>
+                        <outlet property="photoImageViewBottom" destination="BXE-ry-3kK" id="41I-a0-xv7"/>
+                        <outlet property="photoImageViewHeight" destination="waG-oM-ci7" id="4xU-Tb-VYf"/>
+                        <outlet property="titleLabel" destination="yNv-lx-i1O" id="jz0-zM-K92"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aad-hZ-kQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

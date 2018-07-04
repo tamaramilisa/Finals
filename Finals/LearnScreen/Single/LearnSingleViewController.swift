@@ -23,6 +23,7 @@ class LearnSingleViewController: BaseViewController {
     
     let bag = DisposeBag()
     var titlee: String?
+    var desc: String?
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentTextView: UITextView!

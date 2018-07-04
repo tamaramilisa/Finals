@@ -53,11 +53,77 @@ class UserStorage {
         }
         set {
             storageUserEmail = newValue
-            if newValue != nil {
-                UserDefaults.standard.setValue(newValue, forKey: userEmailKey)
-            } else {
-                UserDefaults.standard.removeObject(forKey: userEmailKey)
-            }
+            UserDefaults.standard.setValue(newValue, forKey: userEmailKey)
+            UserDefaults.standard.synchronize()
+        }
+    }
+    
+    private var storageUserName: String?
+    private let userNameKey = "user_name"
+    var userName: String? {
+        get {
+            storageUserName = storageUserName ?? UserDefaults.standard.string(forKey: userNameKey)
+            return storageUserName
+        }
+        set {
+            storageUserName = newValue
+            UserDefaults.standard.setValue(newValue, forKey: userNameKey)
+            UserDefaults.standard.synchronize()
+        }
+    }
+    
+    private var storageUserLastName: String?
+    private let userLastNameKey = "user_lastname"
+    var userLastName: String? {
+        get {
+            storageUserLastName = storageUserLastName ?? UserDefaults.standard.string(forKey: userLastNameKey)
+            return storageUserLastName
+        }
+        set {
+            storageUserLastName = newValue
+            UserDefaults.standard.setValue(newValue, forKey: userLastNameKey)
+            UserDefaults.standard.synchronize()
+        }
+    }
+    
+    private var storageQuestions: Int = 0
+    private let userQuestionsKey = "user_questions"
+    var userQuestions: Int {
+        get {
+            storageQuestions = UserDefaults.standard.integer(forKey: userQuestionsKey)
+            return storageQuestions
+        }
+        set {
+            storageQuestions = newValue
+            UserDefaults.standard.setValue(newValue, forKey: userQuestionsKey)
+            UserDefaults.standard.synchronize()
+        }
+    }
+    
+    private var storageCategories: Int = 0
+    private let userCategoriesKey = "user_categories"
+    var userCategories: Int {
+        get {
+            storageCategories = UserDefaults.standard.integer(forKey: userCategoriesKey)
+            return storageCategories
+        }
+        set {
+            storageCategories = newValue
+            UserDefaults.standard.setValue(newValue, forKey: userCategoriesKey)
+            UserDefaults.standard.synchronize()
+        }
+    }
+    
+    private var storageMedals: Int = 0
+    private let userMedalsKey = "user_medals"
+    var userMedals: Int {
+        get {
+            storageMedals = UserDefaults.standard.integer(forKey: userMedalsKey)
+            return storageMedals
+        }
+        set {
+            storageMedals = newValue
+            UserDefaults.standard.setValue(newValue, forKey: userMedalsKey)
             UserDefaults.standard.synchronize()
         }
     }

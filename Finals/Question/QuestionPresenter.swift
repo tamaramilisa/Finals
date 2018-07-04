@@ -22,7 +22,23 @@ class QuestionPresenter: BasePresenter {
     }
     
     func setUp() {
-        
+        if let question = viewController.question {
+            if let photo = question.photoName {
+                viewController.photoImageView.image = UIImage(named: photo)
+                viewController.photoImageView.isHidden = false
+                viewController.photoImageViewHeight.constant = 150
+                viewController.photoImageViewBottom.constant = 40
+            } else {
+                viewController.photoImageView.isHidden = true
+                viewController.photoImageViewHeight.constant = 0
+                viewController.photoImageViewBottom.constant = 0
+            }
+            viewController.titleLabel.text = question.text
+            viewController.answer1Lane.text = question.answer1
+            viewController.answer2Label.text = question.answer2
+            viewController.answer3Label.text = question.answer3
+            viewController.answer4Label.text = question.answer4
+        }
     }
     
 }

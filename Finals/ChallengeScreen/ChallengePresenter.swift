@@ -24,12 +24,12 @@ class ChallengePresenter: BasePresenter {
     func setUp() {
         
         viewController.navigationItem.title = ChallengeStatic.title
-        
-        
     }
     
-    func configureLevelCell(cell: LevelCell, item: String) -> LevelCell {
-        cell.titleLabel.text = item
+    func configureLevelCell(cell: LevelCell, item: RMLevel) -> LevelCell {
+        cell.titleLabel.text = item.name
+        cell.checkImageView.isHidden = item.isLocked
+        cell.isUserInteractionEnabled = !item.isLocked
         
         cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, 2000)
         

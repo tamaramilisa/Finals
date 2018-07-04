@@ -108,10 +108,11 @@ struct NavigationService {
     }
     
     //prenesi cijelu kategoriju, za sad samo title
-    func pushToLearnSingleScreen(navigationController: UINavigationController?, title: String) {
+    func pushToLearnSingleScreen(navigationController: UINavigationController?, title: String, desc: String) {
         let viewController: LearnSingleViewController = controllerFactory(ViewModelType: LearnSingleViewModel.self, PresenterType: LearnSinglePresenter.self, storyboard: categoriesStoryboard)
         
         viewController.titlee = title
+        viewController.desc = desc
         
         viewController.hidesBottomBarWhenPushed = true
         navigationController?.isNavigationBarHidden = false
@@ -126,8 +127,10 @@ struct NavigationService {
         navigationController?.pushViewController(viewController, animated: true)
     }
     
-    func pushToQuestionScreen(navigationController: UINavigationController?) {
+    func pushToQuestionScreen(navigationController: UINavigationController?, question: RMQuestion) {
         let viewController: QuestionViewController = controllerFactory(ViewModelType: QuestionViewModel.self, PresenterType: QuestionPresenter.self, storyboard: questionStoryboard)
+        
+        viewController.question = question
         
         viewController.hidesBottomBarWhenPushed = true
         navigationController?.isNavigationBarHidden = false

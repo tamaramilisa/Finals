@@ -108,14 +108,14 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
         signinButton.rx.tap.subscribe(onNext: { [weak self] () in
             guard let `self` = self else { return }
             
-            if self.textFieldsValid() {
-                if self.nameTextField.isHidden == true {
-                    self.login()
-                } else {
-                    self.register()
-                }
-            }
-//            self.viewModel.navigationService.pushToMainScreen(navigationController: self.navigationController)
+//            if self.textFieldsValid() {
+//                if self.nameTextField.isHidden == true {
+//                    self.login()
+//                } else {
+//                    self.register()
+//                }
+//            }
+            self.viewModel.navigationService.pushToMainScreen(navigationController: self.navigationController)
         }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)
     }
     

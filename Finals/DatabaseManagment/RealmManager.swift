@@ -73,11 +73,21 @@ struct RealmManager {
     func getUserByEmail(email: String) -> Results<RMUser> {
         let theRealm = try! Realm()
         let predicate = NSPredicate(format: "email == %s", email)
-//        let deletedPredicate = NSPredicate(format: "deleted == 0")
         return theRealm.objects(RMUser.self).filter(predicate)
     }
     
+    func saveQuestion(question: RMQuestion) {
+        let theRealm = try! Realm()
+        try! theRealm.write {
+            theRealm.add(question, update: true)
+        }
+    }
     
+    func getQuestionById(id: Int) -> Results<RMQuestion> {
+        let theRealm = try! Realm()
+        let predicate = NSPredicate(format: "id==%d", id)
+        return theRealm.objects(RMQuestion.self).filter(predicate)
+    }
     
     func softDelete() {
         realm.beginWrite()

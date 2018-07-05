@@ -212,4 +212,32 @@ class UserStorage {
         }
     }
     
+    private var storagenoStarsGeneral: Int = 0
+    private let noStarsGeneralKey = "noStars_general"
+    var noStarsGeneral: Int {
+        get {
+            storagenoStarsGeneral = UserDefaults.standard.integer(forKey: noStarsGeneralKey)
+            return storagenoStarsGeneral
+        }
+        set {
+            storagenoStarsGeneral = newValue
+            UserDefaults.standard.setValue(newValue, forKey: noStarsGeneralKey)
+            UserDefaults.standard.synchronize()
+        }
+    }
+    
+    private var storagenoStarsFlags: Int = 0
+    private let noStarsFlagsKey = "noStars_flags"
+    var noStarsFlags: Int {
+        get {
+            storagenoStarsFlags = UserDefaults.standard.integer(forKey: noStarsFlagsKey)
+            return storagenoStarsFlags
+        }
+        set {
+            storagenoStarsFlags = newValue
+            UserDefaults.standard.setValue(newValue, forKey: noStarsFlagsKey)
+            UserDefaults.standard.synchronize()
+        }
+    }
+    
 }

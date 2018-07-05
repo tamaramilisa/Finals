@@ -28,7 +28,22 @@ class LearnListPresenter: BasePresenter {
     
     func configureCategoryCell(cell: CategoryCell, title: String) -> CategoryCell {
         cell.titleLabel.text = title
-        cell.progressBar.setProgress(0.2, animated: true)
+        if title == "Opće znanje"{
+            cell.lockImageView.isHidden = true
+            cell.isUserInteractionEnabled = true
+            cell.lockImageRight.constant = 75
+            cell.progressBar.setProgress(Float(UserStorage.shared.noStarsGeneral)/9, animated: true)
+        } else if title == "Zastave" {
+            cell.lockImageView.isHidden = true
+            cell.isUserInteractionEnabled = true
+            cell.lockImageRight.constant = 100
+            cell.progressBar.setProgress(Float(UserStorage.shared.noStarsFlags)/9, animated: true)
+        } else {
+            cell.lockImageView.isHidden = false
+            cell.lockImageRight.constant = 100
+            cell.progressBar.setProgress(0, animated: true)
+            cell.isUserInteractionEnabled = false
+        }
         
         cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, 2000)
         

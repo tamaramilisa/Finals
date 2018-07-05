@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,10 +21,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pfu-xy-LN8">
-                        <rect key="frame" x="8" y="3" width="398" height="208"/>
+                        <rect key="frame" x="8" y="9.5" width="398" height="208"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqW-Jh-E0X">
-                                <rect key="frame" x="36" y="20" width="326" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqW-Jh-E0X">
+                                <rect key="frame" x="36" y="20" width="241" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="X3b-Z7-cqX"/>
                                 </constraints>
@@ -78,6 +78,13 @@
                                     <color key="titleColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="JlW-S5-kjE">
+                                <rect key="frame" x="293" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="TAu-WS-49Y"/>
+                                    <constraint firstAttribute="height" constant="30" id="Yey-pK-Gd6"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -86,6 +93,8 @@
                             <constraint firstItem="iMT-dF-r27" firstAttribute="leading" secondItem="Pfu-xy-LN8" secondAttribute="leadingMargin" constant="72" id="6eK-Bm-GCD"/>
                             <constraint firstItem="xXI-By-Vd6" firstAttribute="top" secondItem="uE9-A0-pxj" secondAttribute="bottom" id="8Lj-XL-5aV"/>
                             <constraint firstAttribute="trailing" secondItem="3LP-6d-hCW" secondAttribute="trailing" constant="20" id="Cx2-8z-fAi"/>
+                            <constraint firstAttribute="trailing" secondItem="JlW-S5-kjE" secondAttribute="trailing" constant="75" id="EZh-AE-6wq"/>
+                            <constraint firstItem="JlW-S5-kjE" firstAttribute="top" secondItem="fqW-Jh-E0X" secondAttribute="top" id="EmT-Ot-IXS"/>
                             <constraint firstItem="3LP-6d-hCW" firstAttribute="top" secondItem="xXI-By-Vd6" secondAttribute="bottom" id="H7a-RK-fIA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PSr-ak-CQB" secondAttribute="trailing" constant="64" id="KUj-nT-gXB"/>
                             <constraint firstAttribute="trailing" secondItem="xXI-By-Vd6" secondAttribute="trailing" constant="44" id="LoM-OG-Mnb"/>
@@ -93,8 +102,8 @@
                             <constraint firstItem="fqW-Jh-E0X" firstAttribute="top" secondItem="Pfu-xy-LN8" secondAttribute="top" constant="20" id="NzW-FN-6DV"/>
                             <constraint firstItem="iMT-dF-r27" firstAttribute="top" secondItem="fqW-Jh-E0X" secondAttribute="bottom" constant="24" id="TTY-D0-wmR"/>
                             <constraint firstItem="uE9-A0-pxj" firstAttribute="top" secondItem="iMT-dF-r27" secondAttribute="bottom" constant="8" id="aSb-P9-qc9"/>
+                            <constraint firstItem="JlW-S5-kjE" firstAttribute="leading" secondItem="fqW-Jh-E0X" secondAttribute="trailing" constant="16" id="icL-Ud-ibY"/>
                             <constraint firstItem="PSr-ak-CQB" firstAttribute="top" secondItem="3LP-6d-hCW" secondAttribute="bottom" id="jNV-Zl-q7S"/>
-                            <constraint firstAttribute="trailing" secondItem="fqW-Jh-E0X" secondAttribute="trailing" constant="36" id="jdf-Cb-Qqz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iMT-dF-r27" secondAttribute="trailing" constant="72" id="kJR-WU-dK4"/>
                             <constraint firstAttribute="bottom" secondItem="PSr-ak-CQB" secondAttribute="bottom" constant="8" id="r7T-KC-F9z"/>
                             <constraint firstItem="PSr-ak-CQB" firstAttribute="leading" secondItem="Pfu-xy-LN8" secondAttribute="leadingMargin" constant="64" id="ro0-hK-EoC"/>
@@ -109,20 +118,22 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="Pfu-xy-LN8" secondAttribute="bottom" constant="3.5" id="6sK-kk-asu"/>
                     <constraint firstItem="Pfu-xy-LN8" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ELg-0H-8eD"/>
-                    <constraint firstItem="Pfu-xy-LN8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="EjO-wK-5Kg"/>
+                    <constraint firstItem="Pfu-xy-LN8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9.5" id="P4O-o5-OC1"/>
                     <constraint firstAttribute="trailing" secondItem="Pfu-xy-LN8" secondAttribute="trailing" constant="8" id="YqV-Fh-jN5"/>
                     <constraint firstItem="Pfu-xy-LN8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="fZR-p0-ZNj"/>
+                    <constraint firstAttribute="bottom" secondItem="Pfu-xy-LN8" secondAttribute="bottom" constant="9" id="iTt-kl-OKz"/>
                     <constraint firstItem="Pfu-xy-LN8" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="lhs-OS-BVl"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="challengeButton" destination="PSr-ak-CQB" id="vbX-ri-S9I"/>
-                <outlet property="contentViewBottom" destination="6sK-kk-asu" id="aMO-My-9Ei"/>
-                <outlet property="contentViewTop" destination="EjO-wK-5Kg" id="DnX-h5-Bi8"/>
+                <outlet property="contentViewBottom" destination="iTt-kl-OKz" id="Biy-pk-inJ"/>
+                <outlet property="contentViewTop" destination="P4O-o5-OC1" id="eZB-tD-l4o"/>
                 <outlet property="learnButton" destination="xXI-By-Vd6" id="LAB-fH-Xrp"/>
+                <outlet property="lockImageRight" destination="EZh-AE-6wq" id="ZTa-2f-ruw"/>
+                <outlet property="lockImageView" destination="JlW-S5-kjE" id="jUY-Zj-a6r"/>
                 <outlet property="progressBar" destination="iMT-dF-r27" id="UCP-Kh-gmy"/>
                 <outlet property="stuffView" destination="Pfu-xy-LN8" id="oof-ed-uK5"/>
                 <outlet property="titleLabel" destination="fqW-Jh-E0X" id="2AU-2z-yks"/>
@@ -130,4 +141,7 @@
             <point key="canvasLocation" x="30" y="36.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="lock" width="216" height="233"/>
+    </resources>
 </document>

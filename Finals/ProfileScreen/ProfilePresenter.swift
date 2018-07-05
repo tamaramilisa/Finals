@@ -22,7 +22,11 @@ class ProfilePresenter: BasePresenter {
         viewController.navigationItem.title = "Profil"
         addBorder(button: viewController.firstButton)
         addBorder(button: viewController.settingsButton)
-//        addBorder(button: viewController.statisticsButton)
+        
+        if let name = UserStorage.shared.userName, let lastName = UserStorage.shared.userLastName {
+            viewController.firstButton.setTitle("\(name) \(lastName)", for: .normal)
+        }
+        viewController.settingsButton.setTitle(UserStorage.shared.userEmail, for: .normal)
         
     }
     

@@ -122,6 +122,7 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
             UserStorage.shared.question4Id = 0
             UserStorage.shared.noStars = 0
             UserStorage.shared.counter = 0
+            UserStorage.shared.userQuestions = 0
             if UserStorage.shared.questionId == 0 {
                 UserStorage.shared.questionId = 1
             }
@@ -134,6 +135,11 @@ class LoginViewController: BaseViewController , UITextFieldDelegate {
             if UserStorage.shared.question4Id == 0 {
                 UserStorage.shared.question4Id = 1
             }
+            
+            UserStorage.shared.userName = "Tamara"
+            UserStorage.shared.userLastName = "Miliša"
+            UserStorage.shared.userEmail = "tamara.milisa@fer.hr"
+            
             self.viewModel.navigationService.pushToMainScreen(navigationController: self.navigationController)
         }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)
     }

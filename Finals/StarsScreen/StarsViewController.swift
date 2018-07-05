@@ -35,6 +35,8 @@ class StarsViewController: BaseViewController {
         
         presenter.setUp()
         
+        checkNoStars()
+        
         setupRx()
     }
     
@@ -46,6 +48,12 @@ class StarsViewController: BaseViewController {
             UserStorage.shared.noStars = 0
             self.viewModel.navigationService.pushToMainScreen(navigationController: self.navigationController)
             }, onCompleted: nil, onDisposed: nil).disposed(by: bag)
+    }
+    
+    func checkNoStars() {
+        if (noStars - 1) > UserStorage.shared.noStarsGeneral {
+            UserStorage.shared.noStarsGeneral = noStars
+        }
     }
 
 }

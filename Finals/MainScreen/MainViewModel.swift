@@ -20,19 +20,6 @@ class MainViewModel: BaseViewModel, NetworkRequestHandler {
     
     required init() {}
     
-//    func createUser(firstName: String, lastName: String, email: String, password: String) -> Observable<Result<RMUser?>> {
-//
-//        return networking.createUser(firstName: firstName, lastName: lastName, email: email, password: password).map { (response, data) -> Result<RMUser?> in
-//            let userData = UserLoginData(JSON: data as! Dictionary<String, AnyObject>)
-//
-//            if let err = self.extractError(response: response, data: userData) {
-//                return .failure(err)
-//            } else {
-//                return .success(userData?.user)
-//            }
-//        }
-//    }
-//
     func getUserByEmail(email: String) {
 
         networking.getUserByEmail(email: email).map{ [weak self] (response, data) -> Result<ObjectResponse<RMUser>> in

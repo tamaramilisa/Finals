@@ -29,6 +29,8 @@ class TopListViewController: BaseViewController {
         
         presenter.setUp()
         
+        mockUsers()
+        
         setupRx()
     }
     
@@ -70,6 +72,18 @@ class TopListViewController: BaseViewController {
 
             }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)
         
+    }
+    
+    func mockUsers() {
+        let user1 = RMUser(id: 1, firstName: "Tamara", lastName: "Miliša", points: 40)
+        let user2 = RMUser(id: 2, firstName: "Ana", lastName: "Visković", points: 45)
+        let user3 = RMUser(id: 3, firstName: "Toma", lastName: "Majić", points: 60)
+        let user4 = RMUser(id: 4, firstName: "Filip", lastName: "Fajdetić", points: 15)
+        
+        self.viewModel.realmManager.saveUser(user: user1)
+        self.viewModel.realmManager.saveUser(user: user2)
+        self.viewModel.realmManager.saveUser(user: user3)
+        self.viewModel.realmManager.saveUser(user: user4)
     }
         
 }

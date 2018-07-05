@@ -67,35 +67,42 @@ func addTapRecognizer(label: UILabel, item: Int) {
         
         if UserStorage.shared.counter == 3 {
             UserStorage.shared.counter = 0
+            UserStorage.shared.userQuestions += 1
             self.viewModel.navigationService.pushToStarsScreen(navigationController: self.navigationController)
         } else {
-            switch self.question?.type {
-            case 1:
-                if let question = self.viewModel.realmManager.getQuestionById(id: UserStorage.shared.questionId, type: 1).first
-                {
-                    UserStorage.shared.counter += 1
-                    self.viewModel.navigationService.pushToQuestionScreen(navigationController: self.navigationController, question: question)
+            if let type = self.question?.type {
+                switch type {
+                case 1:
+                    if let question = self.viewModel.realmManager.getQuestionById(id: UserStorage.shared.questionId, type: 1).first
+                    {
+                        UserStorage.shared.counter += 1
+                        UserStorage.shared.userQuestions += 1
+                        self.viewModel.navigationService.pushToQuestionScreen(navigationController: self.navigationController, question: question)
+                    }
+                case 2:
+                    if let question = self.viewModel.realmManager.getQuestionById(id: UserStorage.shared.question2Id, type: 2).first
+                    {
+                        UserStorage.shared.counter += 1
+                        UserStorage.shared.userQuestions += 1
+                        self.viewModel.navigationService.pushToQuestionScreen(navigationController: self.navigationController, question: question)
+                    }
+                case 3:
+                    if let question = self.viewModel.realmManager.getQuestionById(id: UserStorage.shared.question3Id, type: 3).first
+                    {
+                        UserStorage.shared.counter += 1
+                        UserStorage.shared.userQuestions += 1
+                        self.viewModel.navigationService.pushToQuestionScreen(navigationController: self.navigationController, question: question)
+                    }
+                case 4:
+                    if let question = self.viewModel.realmManager.getQuestionById(id: UserStorage.shared.question4Id, type: 4).first
+                    {
+                        UserStorage.shared.counter += 1
+                        UserStorage.shared.userQuestions += 1
+                        self.viewModel.navigationService.pushToQuestionScreen(navigationController: self.navigationController, question: question)
+                    }
+                default:
+                    return
                 }
-            case 2:
-                if let question = self.viewModel.realmManager.getQuestionById(id: UserStorage.shared.question2Id, type: 2).first
-                {
-                    UserStorage.shared.counter += 1
-                    self.viewModel.navigationService.pushToQuestionScreen(navigationController: self.navigationController, question: question)
-                }
-            case 3:
-                if let question = self.viewModel.realmManager.getQuestionById(id: UserStorage.shared.question3Id, type: 3).first
-                {
-                    UserStorage.shared.counter += 1
-                    self.viewModel.navigationService.pushToQuestionScreen(navigationController: self.navigationController, question: question)
-                }
-            case 4:
-                if let question = self.viewModel.realmManager.getQuestionById(id: UserStorage.shared.question4Id, type: 4).first
-                {
-                    UserStorage.shared.counter += 1
-                    self.viewModel.navigationService.pushToQuestionScreen(navigationController: self.navigationController, question: question)
-                }
-            default:
-                return
             }
         }
         

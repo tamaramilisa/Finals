@@ -18,6 +18,8 @@ class CategoryCell: UITableViewCell {
     @IBOutlet weak var contentViewTop: NSLayoutConstraint!
     @IBOutlet weak var contentViewBottom: NSLayoutConstraint!
     @IBOutlet weak var stuffView: UIView!
+    @IBOutlet weak var lockImageView: UIImageView!
+    @IBOutlet weak var lockImageRight: NSLayoutConstraint!
     
     private(set) var bag = DisposeBag()
     

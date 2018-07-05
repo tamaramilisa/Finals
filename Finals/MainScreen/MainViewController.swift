@@ -32,6 +32,14 @@ class MainViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        print("Stat:")
+        print(UserStorage.shared.noStars)
+        print(UserStorage.shared.counter)
+        print(UserStorage.shared.questionId)
+        print(UserStorage.shared.question2Id)
+        print(UserStorage.shared.question3Id)
+        print(UserStorage.shared.question4Id)
+//        print(UserStorage.shared.)
         
         setupRx()
     }
@@ -39,7 +47,6 @@ class MainViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
-        viewModel.getUserByEmail(email: UserStorage.shared.userEmail!)
     }
     
     func setupRx() {
